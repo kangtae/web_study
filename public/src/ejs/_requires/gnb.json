@@ -30,6 +30,45 @@
       }
     }
   },
+  "product": {
+    "view": true,
+    "title": {
+      "ko": "상품관리",
+      "en": ""
+    },
+    "state": "",
+    "link": "",
+    "children": {
+      "목록": {
+        "title": "상품관리",
+        "view": true,
+        "state": "완료",
+        "type": "목록",
+        "link": "상품관리_01목록"
+      },
+      "상세": {
+        "title": "상품관리",
+        "view": true,
+        "state": "완료",
+        "type": "상세",
+        "link": "상품관리_02상세"
+      },
+      "등록": {
+        "title": "상품관리",
+        "view": true,
+        "state": "완료",
+        "type": "등록",
+        "link": "상품관리_03등록"
+      },
+      "수정": {
+        "title": "상품관리",
+        "view": true,
+        "state": "완료",
+        "type": "수정",
+        "link": "상품관리_04수정"
+      }
+    }
+  },
   "notice" : {
     "view" : true,
     "title" : {

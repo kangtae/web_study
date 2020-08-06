@@ -1,0 +1,75 @@
+<% 
+  let gnb = locals.require('gnb.json')
+  var page = 'product'
+  let sub = '상세'
+  let heading = (sub && (gnb[page].children[sub].hasOwnProperty('view') === false || gnb[page].children[sub].view !== false )) ? ((gnb[page].children[sub].hasOwnProperty('title') === false || gnb[page].children[sub].title == "" ) ? sub : gnb[page].children[sub].title) : ((gnb[page].children[sub].hasOwnProperty('title') === false || gnb[page].children[sub].title == "" ) ? gnb[page].title.ko : gnb[page].children[sub].title)
+-%>
+<% locals.setLayout('_base.ejs') -%>
+<% locals.block('page',page) %>
+<% locals.block('sub',sub) %>
+<% locals.block('heading',heading) %>
+<% locals.block('title', heading + ' | ','append') -%>
+
+<div class="row">
+  <div class="col-sm-12">
+    
+    <table class="table table-bordered">
+      <colgroup>
+        <col style="width:100px;">
+        <col>
+        <col style="width:100px;">
+        <col>
+      </colgroup>
+      <tbody>
+        <tr>
+          <th class="active">제목</th>
+          <td colspan="3">2018년 신입사원 채용</td>
+        </tr>
+        <tr>
+          <th class="active">등록일</th>
+          <td>2018-11-21</td>
+          <th class="active">조회수</th>
+          <td>275</td>
+        </tr>
+        <tr>
+          <th class="active">접수기간</th>
+          <td colspan="3">2018-11-21 ~ 2018-12-31</td>
+        </tr>
+        <tr>
+          <th class="active">첨부파일</th>
+          <td colspan="3">
+            <a href="" class="board-link"><i class="fa fa-download" aria-hidden="true"></i> 2018년 신입사원-입사지원서.docx</a><br>
+            <a href="" class="board-link"><i class="fa fa-download" aria-hidden="true"></i> 2018년 신입사원-자기소개서.docx</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            ㆍ시공(공사, 공무) 및 견적<br>
+            ㆍ현장지원<br><br>
+            ㆍ 자격요건<br>
+            - 4년제 건축/토목공학과 졸업(예정)자<br>
+            - 건축/토목기사 자격증<br><br>
+
+            ㆍ 우대사항<br>
+            - 건설안전기사/조경기사 자격증 소지자<br>
+            - CAD 능통자
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- //table -->
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4 text-left">
+    <a class="btn btn-danger" href="" role="button"><i class="fa fa-trash" aria-hidden="true"></i> 삭제</a>
+  </div>
+  <div class="col-sm-4 text-center">
+  </div>
+  <div class="col-sm-4 text-right">
+    <a class="btn btn-success" href="<%- gnb[page].children['수정'].link %>.html" role="button"><i class="fa fa-wrench" aria-hidden="true"></i> 수정</a>
+    <a class="btn btn-default" href="<%- gnb[page].children['목록'].link %>.html" role="button"><i class="fa fa-list" aria-hidden="true"></i> 목록</a>
+  </div>
+</div>
