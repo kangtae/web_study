@@ -1,0 +1,20 @@
+.line-ellipsis {
+  // max-height: 6em;
+  overflow: hidden;
+  position: relative;
+  // display: block;
+  // line-height: 1.3;
+  // outline: solid 1px red;
+  // background-color: white;
+}
+
+.line-ellipsis:before {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
+  content: '\200C';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom:0;
+  width: 25%;
+  text-align: center;
+}

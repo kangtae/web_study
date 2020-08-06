@@ -1,0 +1,267 @@
+{
+  "sigle" : {
+    "title" : {
+      "ko" : "로그인",
+      "en" : ""
+    },
+    "state" : "",
+    "link" : "",
+    "single" : true,
+    "children" : { 
+      "로그인" : {
+        "state" : "완료",
+        "link" : "로그인"
+      }
+    }
+  },
+  "account" : {
+    "view" : true,
+    "title" : {
+      "ko" : "계정관리",
+      "en" : ""
+    },
+    "state" : "",
+    "link" : "",
+    "children" : {
+      "비밀번호 변경" : {
+        "view" : true,
+        "state" : "완료",
+        "link" : "계정관리_01비밀번호변경"
+      }
+    }
+  },
+  "notice" : {
+    "view" : true,
+    "title" : {
+      "ko" : "공지사항",
+      "en" : ""
+    },
+    "state" : "",
+    "link" : "",
+    "children" : {
+      "목록" : {
+        "title" : "공지사항",
+        "view" : false,
+        "state" : "완료",
+        "type" : "목록",
+        "link" : "공지사항_01목록"
+      },
+      "상세" : {
+        "title" : "공지사항",
+        "view" : false,
+        "state" : "완료",
+        "type" : "상세",
+        "link" : "공지사항_02상세"
+      },
+      "등록" : {
+        "title" : "공지사항",
+        "view" : false,
+        "state" : "완료",
+        "type" : "등록",
+        "link" : "공지사항_03등록"
+      },
+      "수정" : {
+        "title" : "공지사항",
+        "view" : false,
+        "state" : "완료",
+        "type" : "수정",
+        "link" : "공지사항_04수정"
+      }
+    }
+  },
+  "news" : {
+    "view" : true,
+    "title" : {
+      "ko" : "언론보도",
+      "en" : ""
+    },
+    "state" : "",
+    "link" : "",
+    "children" : {
+      "목록" : {
+        "title" : "언론보도",
+        "view" : false,
+        "state" : "완료",
+        "type" : "목록",
+        "link" : "언론보도_01목록"
+      },
+      "상세" : {
+        "title" : "언론보도",
+        "view" : false,
+        "state" : "완료",
+        "type" : "상세",
+        "link" : "언론보도_02상세"
+      },
+      "등록" : {
+        "title" : "언론보도",
+        "view" : false,
+        "state" : "완료",
+        "type" : "등록",
+        "link" : "언론보도_03등록"
+      },
+      "수정" : {
+        "title" : "언론보도",
+        "view" : false,
+        "state" : "완료",
+        "type" : "수정",
+        "link" : "언론보도_04수정"
+      }
+    }
+  },
+  "reference" : {
+    "view" : true,
+    "title" : {
+      "ko" : "자료실",
+      "en" : ""
+    },
+    "state" : "",
+    "link" : "",
+    "children" : {
+      "목록" : {
+        "title" : "자료실",
+        "view" : false,
+        "state" : "완료",
+        "type" : "목록",
+        "link" : "자료실_01목록"
+      },
+      "상세" : {
+        "title" : "자료실",
+        "view" : false,
+        "state" : "완료",
+        "type" : "상세",
+        "link" : "자료실_02상세"
+      },
+      "등록" : {
+        "title" : "자료실",
+        "view" : false,
+        "state" : "완료",
+        "type" : "등록",
+        "link" : "자료실_03등록"
+      },
+      "수정" : {
+        "title" : "자료실",
+        "view" : false,
+        "state" : "완료",
+        "type" : "수정",
+        "link" : "자료실_04수정"
+      }
+    }
+  },
+  "announce" : {
+    "view" : true,
+    "title" : {
+      "ko" : "전자공고",
+      "en" : ""
+    },
+    "state" : "",
+    "link" : "",
+    "children" : {
+      "목록" : {
+        "title" : "전자공고",
+        "view" : false,
+        "state" : "완료",
+        "type" : "목록",
+        "link" : "전자공고_01목록"
+      },
+      "상세" : {
+        "title" : "전자공고",
+        "view" : false,
+        "state" : "완료",
+        "type" : "상세",
+        "link" : "전자공고_02상세"
+      },
+      "등록" : {
+        "title" : "전자공고",
+        "view" : false,
+        "state" : "완료",
+        "type" : "등록",
+        "link" : "전자공고_03등록"
+      },
+      "수정" : {
+        "title" : "전자공고",
+        "view" : false,
+        "state" : "완료",
+        "type" : "수정",
+        "link" : "전자공고_04수정"
+      }
+    }
+  },
+  "recruit" : {
+    "view" : true,
+    "title" : {
+      "ko" : "채용공고",
+      "en" : ""
+    },
+    "state" : "",
+    "link" : "",
+    "children" : {
+      "목록" : {
+        "title" : "채용공고",
+        "view" : false,
+        "state" : "완료",
+        "type" : "목록",
+        "link" : "채용공고_01목록"
+      },
+      "상세" : {
+        "title" : "채용공고",
+        "view" : false,
+        "state" : "완료",
+        "type" : "상세",
+        "link" : "채용공고_02상세"
+      },
+      "등록" : {
+        "title" : "채용공고",
+        "view" : false,
+        "state" : "완료",
+        "type" : "등록",
+        "link" : "채용공고_03등록"
+      },
+      "수정" : {
+        "title" : "채용공고",
+        "view" : false,
+        "state" : "완료",
+        "type" : "수정",
+        "link" : "채용공고_04수정"
+      }
+    }
+  },
+  "build" : {
+    "view" : true,
+    "title" : {
+      "ko" : "건설",
+      "en" : ""
+    },
+    "state" : "",
+    "link" : "",
+    "children" : {
+      "목록" : {
+        "title" : "건설",
+        "view" : false,
+        "state" : "완료",
+        "type" : "목록",
+        "link" : "건설_01목록"
+      },
+      "상세" : {
+        "title" : "건설",
+        "view" : false,
+        "state" : "완료",
+        "type" : "상세",
+        "link" : "건설_02상세"
+      },
+      "등록" : {
+        "title" : "건설",
+        "view" : false,
+        "state" : "완료",
+        "type" : "등록",
+        "link" : "건설_03등록"
+      },
+      "수정" : {
+        "title" : "건설",
+        "view" : false,
+        "state" : "완료",
+        "type" : "수정",
+        "link" : "건설_04수정"
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<% let base = locals.require('base.json') -%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%- locals.blocks.title %> <%- base.name %></title>
+  <link rel="stylesheet" href="../../libs/normalize/normalize.css">
+  <link rel="stylesheet" href="../../libs/arita-dotum/css/arita-dotum.css">
+  <link rel="stylesheet" href="../../libs/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../libs/bootstrap/css/bootstrap-custom.css">
+  <link rel="stylesheet" href="../../libs/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="../../libs/dropify/css/dropify.min.css">
+  <link rel="stylesheet" href="../../libs/ez-space-css/css/ez-space.css">
+  <%- locals.blocks.libsStyle %>
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <%- locals.blocks.pageStyle %>
+
+  <%- locals.blocks.headerScript %>
+</head>
+<body class="<%- locals.blocks.page %>">
+  <% if (locals.blocks.single) { -%>
+    <%- locals.body %>
+  <% } else {-%>
+    <%- locals.widget('_header.ejs', {base: base}) %>
+    <div class="site-container">
+      <div class="container-fluid">
+        <%- locals.widget('_snb.ejs') %>
+        <%- locals.widget('_page-header.ejs', {title: locals.blocks.heading}) %>
+        <%- locals.body %>
+      </div>
+      <!-- //container-fluid -->
+    </div>
+    <!-- //site-container -->
+    <%- locals.widget('_footer.ejs', {base: base}) %>
+  <% } -%>
+  <script src="../../libs/jquery/jquery.min.js"></script>
+  <script src="../../libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../../libs/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+  <script src="../../libs/dropify/js/dropify.min.js"></script>
+  <script src="../../js/common.js"></script>
+  <%- locals.blocks.footerScript %>
+</body>
+</html>

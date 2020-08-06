@@ -1,0 +1,81 @@
+<% 
+  let gnb = locals.require('gnb.json')
+  var page = 'build'
+  let sub = '상세'
+  let heading = (sub && (gnb[page].children[sub].hasOwnProperty('view') === false || gnb[page].children[sub].view !== false )) ? ((gnb[page].children[sub].hasOwnProperty('title') === false || gnb[page].children[sub].title == "" ) ? sub : gnb[page].children[sub].title) : ((gnb[page].children[sub].hasOwnProperty('title') === false || gnb[page].children[sub].title == "" ) ? gnb[page].title.ko : gnb[page].children[sub].title)
+-%>
+<% locals.setLayout('_base.ejs') -%>
+<% locals.block('page',page) %>
+<% locals.block('sub',sub) %>
+<% locals.block('heading',heading) %>
+<% locals.block('title', heading + ' | ','append') -%>
+
+<div class="row">
+  <div class="col-sm-12">
+    
+    <table class="table table-bordered">
+      <colgroup>
+        <col style="width:100px;">
+        <col>
+        <col style="width:100px;">
+        <col>
+      </colgroup>
+      <tbody>
+        <tr>
+          <th class="active">구분</th>
+          <td>건축</td>
+          <th class="active">등록일</th>
+          <td>2018-11-21</td>
+        </tr>
+        <tr>
+          <th class="active">공사명</th>
+          <td colspan="3">종로구 평창동 타운하우스 신축공사</td>
+        </tr>
+        <tr>
+          <th class="active">발주처</th>
+          <td colspan="3">이엠개발</td>
+        </tr>
+        <tr>
+          <th class="active">공사개요</th>
+          <td colspan="3">연면적 1,900평, 지하 1층~지상 6층</td>
+        </tr>
+        <tr>
+          <th class="active">착공일</th>
+          <td>2014.01</td>
+          <th class="active">준공일</th>
+          <td>2014.07</td>
+        </tr>
+        <tr>
+          <th class="active">이미지</th>
+          <td colspan="3">
+            <div class="row">
+              <div class="col-xs-1">
+                <a href="#" data-toggle="modal" data-target="#myModal"><img src="http://i.imgur.com/4XHiOmI.jpg" alt="" class="img-thumbnail"></a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th class="active">상세내용</th>
+          <td colspan="3">
+            북한산과 북안산 사이에 위치하고 한강을 바라보는 배산임수의 정석이라 할 수 있으며, 한적하고 기품있는 분위기 속에서 단독주택식의 독립적인 삶을 영위 하 실 수 있습니다.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- //table -->
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4 text-left">
+    <a class="btn btn-danger" href="" role="button"><i class="fa fa-trash" aria-hidden="true"></i> 삭제</a>
+  </div>
+  <div class="col-sm-4 text-center">
+  </div>
+  <div class="col-sm-4 text-right">
+    <a class="btn btn-success" href="<%- gnb[page].children['수정'].link %>.html" role="button"><i class="fa fa-wrench" aria-hidden="true"></i> 수정</a>
+    <a class="btn btn-default" href="<%- gnb[page].children['목록'].link %>.html" role="button"><i class="fa fa-list" aria-hidden="true"></i> 목록</a>
+  </div>
+</div>

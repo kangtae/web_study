@@ -1,0 +1,64 @@
+<% 
+  let gnb = locals.require('gnb.json')
+  var page = 'announce'
+  let sub = '상세'
+  let heading = (sub && (gnb[page].children[sub].hasOwnProperty('view') === false || gnb[page].children[sub].view !== false )) ? ((gnb[page].children[sub].hasOwnProperty('title') === false || gnb[page].children[sub].title == "" ) ? sub : gnb[page].children[sub].title) : ((gnb[page].children[sub].hasOwnProperty('title') === false || gnb[page].children[sub].title == "" ) ? gnb[page].title.ko : gnb[page].children[sub].title)
+-%>
+<% locals.setLayout('_base.ejs') -%>
+<% locals.block('page',page) %>
+<% locals.block('sub',sub) %>
+<% locals.block('heading',heading) %>
+<% locals.block('title', heading + ' | ','append') -%>
+
+<div class="row">
+  <div class="col-sm-12">
+    
+    <table class="table table-bordered">
+      <colgroup>
+        <col style="width:100px;">
+        <col>
+        <col style="width:100px;">
+        <col>
+      </colgroup>
+      <tbody>
+        <tr>
+          <th class="active">제목</th>
+          <td colspan="3">현대아산 새롭게 출발하다</td>
+        </tr>
+        <tr>
+          <th class="active">등록일</th>
+          <td>2018-11-21</td>
+          <th class="active">조회수</th>
+          <td>275</td>
+        </tr>
+        <tr>
+          <th class="active">첨부파일</th>
+          <td colspan="3">
+            <a href="" class="board-link"><i class="fa fa-download" aria-hidden="true"></i> 워크숍-참가신청서.docx</a><br>
+            <a href="" class="board-link"><i class="fa fa-download" aria-hidden="true"></i> 워크숍_최종공지-상세내용.pdf</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            현대 아산이 새시대를 맞아 새롭게 출발합니다.~<br><br>
+            많은 성원 부탁드립니다.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- //table -->
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4 text-left">
+    <a class="btn btn-danger" href="" role="button"><i class="fa fa-trash" aria-hidden="true"></i> 삭제</a>
+  </div>
+  <div class="col-sm-4 text-center">
+  </div>
+  <div class="col-sm-4 text-right">
+    <a class="btn btn-success" href="<%- gnb[page].children['수정'].link %>.html" role="button"><i class="fa fa-wrench" aria-hidden="true"></i> 수정</a>
+    <a class="btn btn-default" href="<%- gnb[page].children['목록'].link %>.html" role="button"><i class="fa fa-list" aria-hidden="true"></i> 목록</a>
+  </div>
+</div>

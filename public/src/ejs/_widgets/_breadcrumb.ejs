@@ -1,0 +1,17 @@
+<% 
+  let gnb = locals.require('gnb.json')
+  let depth1 = locals.entry.depth1
+  let depth2 = locals.entry.depth2
+  if (gnb[depth1].hasOwnProperty('children') && (Object.keys(gnb[depth1].children).length > 0)) { 
+    var children = gnb[depth1].children;
+    var subLink = (children[Object.keys(children)[0]].link == '') ? children[Object.keys(children)[0]].children[Object.keys(children[Object.keys(children)[0]].children)[0]].link : children[Object.keys(children)[0]].link
+    var link = (gnb[depth1].link == '') ? subLink : gnb[depth1].link
+  } else { 
+    var link = gnb[depth1].link
+  }
+ %>
+<ol class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="<%- link %>"><%- gnb[depth1].title.ko %></a></li>
+  <li class="active"><%- depth2 %></li>
+</ol>

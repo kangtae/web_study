@@ -1,0 +1,219 @@
+<% let base = locals.require('base.json') %>
+<% let gnb = locals.require('gnb.json') %>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%- base.name %> <%- base.type %> 화면목록</title>
+  <style>
+    body { font-family:'Malgun Gothic', sans-serif; margin:20px; }
+    .title { margin:0 0 .5em; font-size:30px; line-height:1.3; color:#333; }
+    .table { width:100%; margin-top:15px; border-collapse:collapse; font-size:12px; color:#333; background-color:#fff; }
+
+    .table tbody+tbody tr:first-child td { border-top-width:5px; }
+    .table th,
+    .table td { border:1px solid #e3e3e3; padding:5px 7px; }
+    .table th { background-color:#ddd; }
+    .table td { }
+    .table td.no { text-align:right; }
+    .table tbody tr:hover { background-color:#f7f7f7; }
+    .table a { color:inherit; }
+    .table a:hover { color:#d20e0e; }
+    .text-center { text-align:center; }
+    .text-left { text-align:left; }
+    .text-right { text-align:right; }
+  </style>
+</head>
+<body>
+  <h1 class="title"><%- base.name %> <%- base.type %> 화면목록</h1>
+  <table class="table">
+    <thead>
+      <th>No.</th>
+      <th>Depth1</th>
+      <th>Depth2</th>
+      <th>Depth3</th>
+      <th>Depth4</th>
+      <th>Type</th>
+      <th>Folder</th>
+      <th>File</th>
+      <th>생성일</th>
+      <th>완료일</th>
+      <th>상태</th>
+      <th>수정일</th>
+      <th>비고</th>
+    </thead>
+    <% // start depth1 for
+      for (var depth1 in gnb) {
+        var i = Object.keys(gnb).indexOf(depth1);
+    %>
+    <tbody>
+    <% // start depth2 if
+      if (gnb[depth1].hasOwnProperty('children') && (Object.keys(gnb[depth1].children).length > 0)) {
+      var children2 = gnb[depth1].children;
+      var subLink2 = children2[Object.keys(children2)[0]].link
+      var link1 = (gnb[depth1].link == '') ? subLink2 : gnb[depth1].link
+      var type1 = (gnb[depth1].hasOwnProperty('type')) ? gnb[depth1].type : ''
+      var etc1 = (gnb[depth1].hasOwnProperty('etc')) ? gnb[depth1].etc : ''
+    %>
+      <% // start depth1.link if 
+        if ((gnb[depth1].link != '')) { 
+      %>
+        <tr>
+          <td class="no"></td>
+          <td><%- gnb[depth1].title.ko %></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><%- type1 %></td>
+          <td><%- depth1 %></td>
+          <td><a href="html/<%- depth1 %>/<%- link1 %>.html" target="_blank"><%- link1 %>.html</a></td>
+          <td class="text-center"></td>
+          <td class="text-center"></td>
+          <td class="text-center"><%- gnb[depth1].state %></td>
+          <td class="text-center"></td>
+          <td><%- etc1 %></td>
+        </tr>
+      <% // end depth1.link if
+        } 
+      %>
+      <% // start depth2 for
+        for (var depth2 in children2) {
+          var j = Object.keys(children2).indexOf(depth2);
+          var parent1 = ((j == 0) && (gnb[depth1].link == '') || (j == 1) && (gnb[depth1].children.hasOwnProperty('view'))) ? gnb[depth1].title.ko : ''
+          var type2 = (children2[depth2].hasOwnProperty('type')) ? children2[depth2].type : ''
+          var etc2 = (children2[depth2].hasOwnProperty('etc')) ? children2[depth2].etc : ''
+          var title2 = (children2[depth2].hasOwnProperty('type') === false || children2[depth2].hasOwnProperty('view') === false || children2[depth2].view != false ) ? depth2 : ''
+      %>
+      <% // start depth3 if
+        if (children2[depth2].hasOwnProperty('children') && (Object.keys(children2[depth2].children).length > 0)) {
+          var children3 = children2[depth2].children
+          var subLink3 = children3[Object.keys(children3)[0]].link
+          var link2 = (children2[depth2].link == '') ? subLink3 : children2[depth2].link
+      %>
+        <% // start depth2.link if
+          if ((children2[depth2].link != '') ) { 
+        %>
+          <tr>
+            <td class="no"></td>
+            <td><%- parent1 %></td>
+            <td><%- title2 %></td>
+            <td></td>
+            <td></td>
+            <td><%- type2 %></td>
+            <td><%- depth1 %></td>
+            <td><a href="html/<%- depth1 %>/<%- link2 %>.html" target="_blank"><%- link2 %>.html</a></td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"><%- children2[depth2].state %></td>
+            <td class="text-center"></td>
+            <td><%- etc2 %></td>
+          </tr>
+        <% // end depth2.link if
+          }
+        %>
+        <% // start depth3 for
+          for (var depth3 in children3) {
+            var j2 = Object.keys(children3).indexOf(depth3);
+            var parent1 = ( (((j2 == 0) && (gnb[depth1].link == '')) && ((j2 == 0) && (children2[depth2].link == ''))) || ((j == 1) && (gnb[depth1].children.hasOwnProperty('view'))) ) ? gnb[depth1].title.ko : ''
+            var parent2 = ( ((j2 == 0) && (children2[depth2].link == '')) || (j2 == 1) && (children2[depth2].children.hasOwnProperty('view'))) ? depth2 : ''
+            var type3 = (children3[depth3].hasOwnProperty('type')) ? children3[depth3].type : ''
+            var etc3 = (children3[depth3].hasOwnProperty('etc')) ? children3[depth3].etc : ''
+            var title3 = (children3[depth3].hasOwnProperty('type') === false || children3[depth3].hasOwnProperty('view') || children3[depth3].view != false) ? depth3 : ''
+        %>
+          <% // start depth3.view if
+            if(depth3 != 'view'){ 
+          %>
+            <tr>
+              <td class="no"></td>
+              <td><%- parent1 %></td>
+              <td><%- parent2 %></td>
+              <td><%- title3 %></td>
+              <td></td>
+              <td><%- type3 %></td>
+              <td><%- depth1 %></td>
+              <td><a href="html/<%- depth1 %>/<%- children3[depth3].link %>.html" target="_blank"><%- children3[depth3].link %>.html</a></td>
+              <td class="text-center"></td>
+              <td class="text-center"></td>
+              <td class="text-center"><%- children3[depth3].state %></td>
+              <td class="text-center"></td>
+              <td><%- etc3 %></td>
+            </tr>
+          <% // end depth3.view if
+            }
+          %>
+        <% // end depth3 for
+          }
+        %>
+      <% // end depth3 if, start depth3 else 
+        } else {
+      %>
+        <% // start depth2.view if
+          if(depth2 != 'view'){ 
+        %>
+          <tr>
+            <td class="no"></td>
+            <td><%- parent1 %></td>
+            <td><%- title2 %></td>
+            <td></td>
+            <td></td>
+            <td><%- type2 %></td>
+            <td><%- depth1 %></td>
+            <td><a href="html/<%- depth1%>/<%- children2[depth2].link %>.html" target="_blank"><%- children2[depth2].link %>.html</a></td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"><%- children2[depth2].state %></td>
+            <td class="text-center"></td>
+            <td><%- etc2 %></td>
+          </tr>
+        <% // end depth2.view if
+          }
+        %>
+      <% // end depth3 else
+        }
+      %>
+      <% // end depth2 for
+        }
+      %>
+    <% // end depth2 if, start depth2 else
+      } else {
+    %>
+      <tr>
+        <td class="no"></td>
+        <td><%- gnb[depth1].title.ko %></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><%- type1 %></td>
+        <td><%- depth1%></td>
+        <td><a href="html/<%- depth1 %>/<%- gnb[depth1].link %>.html" target="_blank"><%- gnb[depth1].link %>.html</a></td>
+        <td class="text-center"></td>
+        <td class="text-center"></td>
+        <td class="text-center"><%- gnb[depth1].state %></td>
+        <td class="text-center"></td>
+        <td><%- etc1 %></td>
+      </tr>
+      <% // end depth2 else
+        }
+      %>
+    </tbody>
+    <% // end depth1 for 
+      }
+    %>
+  </table>
+  <script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $(".table").each(function(){
+        $(this).find("tbody tr").each(function(index){
+          $(".no", this).text(index+1);
+        });
+        $(this).find("tbody tr:even").each(function(index){
+          $(this).addClass("even");
+        });
+      });
+    })
+  </script>
+</body>
+</html>

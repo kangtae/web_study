@@ -1,0 +1,67 @@
+<% 
+  let gnb = locals.require('gnb.json')
+  var page = 'account'
+  let sub = '비밀번호 변경'
+  let heading = (sub && (gnb[page].children[sub].hasOwnProperty('view') === false || gnb[page].children[sub].view !== false )) ? ((gnb[page].children[sub].hasOwnProperty('title') === false || gnb[page].children[sub].title == "" ) ? sub : gnb[page].children[sub].title) : ((gnb[page].children[sub].hasOwnProperty('title') === false || gnb[page].children[sub].title == "" ) ? gnb[page].title.ko : gnb[page].children[sub].title)
+-%>
+<% locals.setLayout('_base.ejs') -%>
+<% locals.block('page',page) %>
+<% locals.block('sub',sub) %>
+<% locals.block('heading',heading) %>
+<% locals.block('title', heading + ' | ','append') -%>
+
+<div class="row">
+  <div class="col-xs-12">
+    <table class="table table-bordered">
+      <colgroup>
+        <col style="width:150px;">
+        <col>
+      </colgroup>
+      <tbody>
+        <tr>
+          <th class="active">현재 비밀번호 <small class="text-danger"><i class="fa fa-asterisk" aria-hidden="true"></i></small></th>
+          <td>
+            <div class="form-inline">
+              <input type="password" name="" id="" class="form-control input-sm" size="30">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th class="active">새 비밀번호 <small class="text-danger"><i class="fa fa-asterisk" aria-hidden="true"></i></small></th>
+          <td>
+            <div class="form-inline">
+              <input type="password" name="" id="" class="form-control input-sm" size="30">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th class="active">새 비밀번호 확인 <small class="text-danger"><i class="fa fa-asterisk" aria-hidden="true"></i></small></th>
+          <td>
+            <div class="form-inline">
+              <input type="password" name="" id="" class="form-control input-sm" size="30">
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- //table -->
+    <ul class="list-unstyled">
+      <li><i class="fa fa-info-circle" aria-hidden="true"></i> 비밀번호 작성 규칙
+        <ul>
+          <li>비밀번호는 영어 , 숫자, 2종류 조합한 6자리 이상이어야 합니다.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4 text-left">
+    
+  </div>
+  <div class="col-sm-4 text-center">
+    <a class="btn btn-default" href="" role="button">취소</a>
+    <a class="btn btn-success" href="" role="button">비밀번호 번경</a>
+  </div>
+  <div class="col-sm-4 text-right"> </div>
+</div>

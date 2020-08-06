@@ -1,0 +1,59 @@
+<% 
+  let base = locals.require('base.json')
+  let gnb = locals.require('gnb.json')
+  var page = 'sigle'
+  let sub = ''
+  let heading = (sub) ? sub : gnb[page].title.ko
+  let single = true
+-%>
+<% locals.setLayout('_base.ejs') -%>
+<% locals.block('page',page) %>
+<% locals.block('sub',sub) %>
+<% locals.block('single',single) %>
+<% locals.block('heading',heading) %>
+<% locals.block('title', heading + ' | ','append') -%>
+<% locals.block('pageStyle','<link rel="stylesheet" href="../../css/login.css">','append') %>
+
+<div class="login-wrap">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title text-center"><%- base.name %> <%- base.type %></h1>
+    </div>
+    <div class="panel-body">
+      
+      <form class="form-horizontal">
+        <div class="form-group">
+          <div class="col-sm-12">
+            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input id="username" type="text" placeholder="ID" class="form-control"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-12">
+            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span><input id="password" type="password" placeholder="Password" class="form-control"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-12">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> 아이디 저장
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-12">
+            <button type="submit" class="btn btn-primary btn-block">로그인</button>
+          </div>
+        </div>
+      </form>
+      <!-- //form-horizontal -->
+      
+    </div>
+    <!-- //panel-body -->
+  </div>
+  <!-- //panel -->
+</div>
+<!-- //login-wrap -->
+
+    

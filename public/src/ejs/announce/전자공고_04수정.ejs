@@ -1,0 +1,88 @@
+<% 
+  let gnb = locals.require('gnb.json')
+  var page = 'announce'
+  let sub = '수정'
+  let heading = (sub && (gnb[page].children[sub].hasOwnProperty('view') === false || gnb[page].children[sub].view !== false )) ? ((gnb[page].children[sub].hasOwnProperty('title') === false || gnb[page].children[sub].title == "" ) ? sub : gnb[page].children[sub].title) : ((gnb[page].children[sub].hasOwnProperty('title') === false || gnb[page].children[sub].title == "" ) ? gnb[page].title.ko : gnb[page].children[sub].title)
+-%>
+<% locals.setLayout('_base.ejs') -%>
+<% locals.block('page',page) %>
+<% locals.block('sub',sub) %>
+<% locals.block('heading',heading) %>
+<% locals.block('title', heading + ' | ','append') -%>
+
+<div class="row">
+  <div class="col-sm-12">
+    
+    <table class="table table-bordered">
+      <colgroup>
+        <col style="width:100px;">
+        <col>
+        <col style="width:100px;">
+        <col>
+      </colgroup>
+      <tbody>
+        <tr>
+          <th class="active">제목</th>
+          <td colspan="3">
+            <input type="text" name="" id="" class="form-control input-sm" value="현대아산 새롭게 출발하다">
+          </td>
+        </tr>
+        <tr>
+          <th class="active">등록일</th>
+          <td>2018-11-21</td>
+          <th class="active">조회수</th>
+          <td>275</td>
+        </tr>
+        <tr>
+          <th class="active">첨부파일</th>
+          <td colspan="3">
+            
+            <div class="hidden">
+              <div class="col-xs-2 input-file-box model">
+                <input type="file" data-height="100" data-default-file="" />
+                <button class="btn btn-xs btn-danger btn-remove"><i class="fa fa-times" aria-hidden="true"></i><span class="sr-only">삭제</span></button>
+                <button class="btn btn-xs btn-primary btn-duplicator"><i class="fa fa-plus" aria-hidden="true"></i><span class="sr-only">추가</span></button>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-xs-2 input-file-box">
+                <input type="file" class="dropify" data-height="100" data-default-file="워크숍-참가신청서.docx" />
+                <button class="btn btn-xs btn-primary btn-duplicator"><i class="fa fa-plus" aria-hidden="true"></i><span class="sr-only">추가</span></button>
+              </div>
+              <div class="col-xs-2 input-file-box">
+                <input type="file" class="dropify" data-height="100" data-default-file="워크숍_최종공지-상세내용.pdf" />
+                <button class="btn btn-xs btn-danger btn-remove"><i class="fa fa-times" aria-hidden="true"></i><span class="sr-only">삭제</span></button>
+                <button class="btn btn-xs btn-primary btn-duplicator"><i class="fa fa-plus" aria-hidden="true"></i><span class="sr-only">추가</span></button>
+              </div>
+            </div>
+            
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <div>
+              
+              <div style="padding:200px;background-color:skyblue;text-align:center;">에디터</div>
+              
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- //table -->
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4 text-left">
+    <a class="btn btn-danger" href="<%- gnb[page].children['목록'].link %>.html" role="button"><i class="fa fa-trash" aria-hidden="true"></i> 삭제</a>
+  </div>
+  <div class="col-sm-4 text-center">
+    <a class="btn btn-default" href="<%- gnb[page].children['목록'].link %>.html" role="button"><i class="fa fa-times" aria-hidden="true"></i> 취소</a>
+    <a class="btn btn-success" href="<%- gnb[page].children['상세'].link %>.html" role="button"><i class="fa fa-check" aria-hidden="true"></i> 수정</a>
+  </div>
+  <div class="col-sm-4 text-right">
+  </div>
+</div>

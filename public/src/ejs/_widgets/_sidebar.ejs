@@ -1,0 +1,14 @@
+<% let base = locals.entry.base || 'Default title'; %>
+<h1 class="modu-logo">
+  <%- base.name %>
+  <img src="../../images/common/gsk-logo.png" alt="" class="modu-logo-sub-image"><!-- add 180409 -->
+</h1>
+<!-- //modu-logo -->
+<a class="modu-header-toogle" data-toggle="collapse" href="#gnb" aria-expanded="false" aria-controls="collapseExample"> <%- locals.blocks.heading %> <span class="caret pull-right"></span></a>
+
+<%- locals.widget('_gnb.ejs') %>
+
+<div class="modu-state">
+  <a class="btn btn-default btn-block" href="" role="button"> <i class="fa fa-sign-out" aria-hidden="true"></i> 로그아웃</a>
+</div>
+<div class="modu-code">2003-VAL-18-0020-WEB</div> <!-- add 180410 -->

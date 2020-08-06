@@ -1,0 +1,33 @@
+<% 
+  let gnb = locals.require('gnb.json') 
+  let depth1 = locals.blocks.page
+  let children = gnb[depth1].children
+-%>
+
+<% 
+  var depth2View = 0
+  for (var d2 in children) {
+    if (children[d2].hasOwnProperty('view') === false || children[d2].view == true) depth2View ++
+  }
+  if ( gnb[depth1].hasOwnProperty('children') && (Object.keys(gnb[depth1].children).length > 1) && (depth2View > 0) ) {
+  %>
+  <div class="site-snb">
+    <ul class="nav nav-pills">
+      <% // start depth2 for, if
+        for (var depth2 in children) {
+          if (children[depth2].hasOwnProperty('view')) {
+            var subLocation = (depth2 == locals.blocks.sub) ? 'active' : ''
+            var link2 = (children[depth2].link == '') ? children[depth2].children[Object.keys(children[depth2].children)[0]].link : children[depth2].link
+        -%>
+        <li role="presentation" class="<%- subLocation %>"><a href="<%= link2 %>.html"><%= depth2 %></a></li>
+      <% // end depth2 for, if
+          }
+        }
+        -%>
+    </ul>
+  </div>
+  <!-- //site-snb -->
+<%    
+  }
+  -%>
+

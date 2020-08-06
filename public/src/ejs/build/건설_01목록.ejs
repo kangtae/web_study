@@ -1,0 +1,71 @@
+<% 
+  let gnb = locals.require('gnb.json')
+  var page = 'build'
+  let sub = '목록'
+  let heading = (sub && (gnb[page].children[sub].hasOwnProperty('view') === false || gnb[page].children[sub].view !== false )) ? ((gnb[page].children[sub].hasOwnProperty('title') === false || gnb[page].children[sub].title == "" ) ? sub : gnb[page].children[sub].title) : ((gnb[page].children[sub].hasOwnProperty('title') === false || gnb[page].children[sub].title == "" ) ? gnb[page].title.ko : gnb[page].children[sub].title)
+-%>
+<% locals.setLayout('_base.ejs') -%>
+<% locals.block('page',page) %>
+<% locals.block('sub',sub) %>
+<% locals.block('heading',heading) %>
+<% locals.block('title', heading + ' | ','append') -%>
+
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="pull-right">
+      <div class="form-inline">
+        <div class="input-group">
+          <select class="form-control">
+            <option value="">구분</option>
+            <option value="">토목</option>
+            <option value="">건축</option>
+            <option value="">플랜트</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <input type="text" class="form-control">
+          <span class="input-group-btn">
+                <button type="button" class="btn btn-primary" onclick="window.location.href='<%- gnb[page].children['목록'].link %>.html'"><span class="fa fa-search" aria-hidden="true"></span><span class="text-hide">검색</span></button>
+              </span>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="space-vertical"></div>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <th class="text-center" style="width:60px;">번호</th>
+        <th class="text-center" style="width:100px;">구분</th>
+        <th class="text-center">공사명</th>
+        <th class="text-center" style="width:100px;">등록일</th>
+      </thead>
+      <tbody>
+        <% for (var i=10; i > 0; i--) { %>
+          <tr>
+            <td class="text-center"><%- i %></td>
+            <td class="text-center">건축</td>
+            <td><a href="<%- gnb[page].children['상세'].link %>.html" class="board-link board-nowrap">종로구 평창동 타운하우스 신축공사</a></td>
+            <td class="text-center">2018-11-21</td>
+          </tr>
+        <% } -%>
+      </tbody>
+    </table>
+    <!-- //table -->
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <%- locals.widget('_pagination.ejs') %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4 text-left">
+  </div>
+  <div class="col-sm-4 text-center"></div>
+  <div class="col-sm-4 text-right">
+    <a class="btn btn-success" href="<%- gnb[page].children['등록'].link %>.html" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> 등록</a>
+  </div>
+</div>
