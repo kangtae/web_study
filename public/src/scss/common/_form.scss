@@ -59,6 +59,9 @@ select.form-control {
 .date-width-default { width:15em; }
 .time-width-default { width:10em; }
 
+.width-default{width:15em;}
+.width-sm{width:5em;}
+
 .datetimepicker table tr td.active:active, .datetimepicker table tr td.active:hover:active, .datetimepicker table tr td.active.disabled:active, .datetimepicker table tr td.active.disabled:hover:active, .datetimepicker table tr td.active.active, .datetimepicker table tr td.active:hover.active, .datetimepicker table tr td.active.disabled.active, .datetimepicker table tr td.active.disabled:hover.active { background-color:#4d90fd; background-image:none; }
 .datetimepicker table tr td span.active:active, .datetimepicker table tr td span.active:hover:active, .datetimepicker table tr td span.active.disabled:active, .datetimepicker table tr td span.active.disabled:hover:active, .datetimepicker table tr td span.active.active, .datetimepicker table tr td span.active:hover.active, .datetimepicker table tr td span.active.disabled.active, .datetimepicker table tr td span.active.disabled:hover.active { background-color:#4d90fd; background-image:none; }
 .daterangepicker td.active, .daterangepicker td.active:hover { background-color:#4d90fd; }
