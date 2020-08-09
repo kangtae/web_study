@@ -10,9 +10,10 @@
 <% locals.block('heading',heading) %>
 <% locals.block('title', heading + ' | ','append') -%>
 
+
 <div class="row">
   <div class="col-sm-12">
-    
+    <h4 class="lead">표시설정</h4>
     <table class="table table-bordered">
       <colgroup>
         <col style="width:100px;">
@@ -43,6 +44,65 @@
               <span class="form-radio"><input type="radio" name="sellState" id="sellState_n" value="option2"
                   checked><i></i></span> 판매안함
             </label>
+          </td>
+        </tr>
+        <tr>
+          <th class="active">상품분류 선택</th>
+          <td colspan="3">
+            <div class="form-inline">
+              <div class="input-group">
+                <select class="form-control">
+                  <option value="">대분류</option>
+                  <option value="">여성</option>
+                  <option value="">남성</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <select class="form-control">
+                  <option value="">중분류</option>
+                  <option value="">여성복</option>
+                  <option value="">실크액세서리</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <select class="form-control">
+                  <option value="">소분류</option>
+                  <option value="">여성</option>
+                  <option value="">남성</option>
+                </select>
+              </div>
+            </div>        
+          </td>
+        </tr>
+        <tr>
+          <th class="active">메인진열</th>
+          <td colspan="3">
+            <table class="table table-bordered">
+                <colgroup>
+                    <col style="width:100px;">
+                    <col>
+                    <col style="width:100px;">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th class="active">추천상품</th>
+                        <td>
+                            <label class="checkbox-inline">
+                                <input type="checkbox"> 진열함
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="active">신상품</th>
+                        <td>
+                            <label class="checkbox-inline">
+                                <input type="checkbox"> 진열함
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
           </td>
         </tr>
         <tr>
