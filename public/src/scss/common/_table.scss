@@ -27,3 +27,5 @@
   tbody td a:after  { content:''; position:absolute; bottom:-1000%; top:0; padding:8px; left:-100%; width:1000%;z-index:1; background-color:rgba(255,255,255,.0); }
 }
 .table-layout-fixed { table-layout:fixed; }
+
+.vertical-middle{vertical-align: middle !important;}

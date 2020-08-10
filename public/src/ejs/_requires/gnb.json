@@ -30,6 +30,45 @@
       }
     }
   },
+  "banner": {
+    "view": true,
+    "title": {
+      "ko": "배너관리",
+      "en": ""
+    },
+    "state": "",
+    "link": "",
+    "children": {
+      "목록": {
+        "title": "메인배너관리",
+        "view": true,
+        "state": "완료",
+        "type": "목록",
+        "link": "메인배너관리_01목록"
+      },
+      "상세": {
+        "title": "메인배너관리",
+        "view": true,
+        "state": "완료",
+        "type": "상세",
+        "link": "메인배너관리_02상세"
+      },
+      "등록": {
+        "title": "메인배너관리",
+        "view": true,
+        "state": "완료",
+        "type": "등록",
+        "link": "메인배너관리_03등록"
+      },
+      "수정": {
+        "title": "메인배너관리",
+        "view": true,
+        "state": "완료",
+        "type": "수정",
+        "link": "메인배너관리_04수정"
+      }
+    }
+  },
   "product": {
     "view": true,
     "title": {
