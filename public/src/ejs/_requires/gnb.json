@@ -30,42 +30,24 @@
       }
     }
   },
-  "banner": {
-    "view": true,
-    "title": {
-      "ko": "배너관리",
-      "en": ""
+  "display" : {
+    "view" : true,
+    "title" : {
+      "ko" : "전시관리",
+      "en" : ""
     },
-    "state": "",
-    "link": "",
-    "children": {
-      "목록": {
-        "title": "메인배너관리",
-        "view": true,
-        "state": "완료",
-        "type": "목록",
-        "link": "메인배너관리_01목록"
+    "state" : "",
+    "link" : "",
+    "children" : {
+      "메인 영상" : {
+        "view" : true,
+        "state" : "완료",
+        "link" : "전시관리_01메인영상"
       },
-      "상세": {
-        "title": "메인배너관리",
-        "view": true,
-        "state": "완료",
-        "type": "상세",
-        "link": "메인배너관리_02상세"
-      },
-      "등록": {
-        "title": "메인배너관리",
-        "view": true,
-        "state": "완료",
-        "type": "등록",
-        "link": "메인배너관리_03등록"
-      },
-      "수정": {
-        "title": "메인배너관리",
-        "view": true,
-        "state": "완료",
-        "type": "수정",
-        "link": "메인배너관리_04수정"
+      "메인 컬렉션" : {
+        "view" : true,
+        "state" : "완료",
+        "link" : "전시관리_02메인컬렉션"
       }
     }
   },

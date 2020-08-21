@@ -1,0 +1,78 @@
+<% 
+  let gnb = locals.require('gnb.json')
+  var page = 'display'
+  let sub = '메인 영상'
+  let heading = (sub && (gnb[page].children[sub].hasOwnProperty('view') === false || gnb[page].children[sub].view !== false )) ? ((gnb[page].children[sub].hasOwnProperty('title') === false || gnb[page].children[sub].title == "" ) ? sub : gnb[page].children[sub].title) : ((gnb[page].children[sub].hasOwnProperty('title') === false || gnb[page].children[sub].title == "" ) ? gnb[page].title.ko : gnb[page].children[sub].title)
+-%>
+<% locals.setLayout('_base.ejs') -%>
+<% locals.block('page',page) %>
+<% locals.block('sub',sub) %>
+<% locals.block('heading',heading) %>
+<% locals.block('title', heading + ' | ','append') -%>
+
+<div class="row">
+    <div class="col-sm-12">
+        <h4 class="lead">남성</h4>
+        <table class="table table-bordered">
+            <colgroup>
+                <col style="width:120px;">
+                <col>
+                <col style="width:120px;">
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th class="active">영상 주소</th>
+                    <td colspan="3">
+                        <input type="text" name="" id="" class="form-control input-sm">
+
+                        <div class="xs-mt-5">
+                            - 영상주소 예시(굵게 표시 된 부분 복사 후 붙여넣기)<br>
+                            &lt;iframe width="560" height="315" src="<b>https://www.youtube.com/embed/qf8Si5eQ1Ko</b>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- //table -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <h4 class="lead">여성</h4>
+        <table class="table table-bordered">
+            <colgroup>
+                <col style="width:120px;">
+                <col>
+                <col style="width:120px;">
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th class="active">영상 주소</th>
+                    <td colspan="3">
+                        <input type="text" name="" id="" class="form-control input-sm">
+
+                        <div class="xs-mt-5">
+                            - 영상주소 예시(굵게 표시 된 부분 복사 후 붙여넣기)<br>
+                            &lt;iframe width="560" height="315" src="<b>https://www.youtube.com/embed/qf8Si5eQ1Ko</b>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- //table -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4 text-left">
+        
+    </div>
+    <div class="col-sm-4 text-center">
+        <a class="btn btn-default" href="" role="button">취소</a>
+        <a class="btn btn-success" href="" role="button">저장</a>
+    </div>
+    <div class="col-sm-4 text-right"> </div>
+</div>
