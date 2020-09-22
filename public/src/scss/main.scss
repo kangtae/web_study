@@ -1,0 +1,117 @@
+@charset "UTF-8";
+@import "mixins";
+
+.main{ box-sizing:border-box; text-align:center;
+    &__tit{margin-top:146px;}
+    &__txt{margin:34px 0 0 0; color:$grey5;font-size:$sizeTit3; font-weight:$medium; font-style: italic; line-height:1.6;}
+}
+.main-search{display:inline-block; position:relative; width:560px; margin-top:54px;
+    &__input{width:100%; height:46px; padding:0 60px 0 30px; box-sizing:border-box; border-radius:23px; border:1px solid $grey3; font-size:$sizeTxt3; color:#000; font-family: $font-normal; font-weight:$medium;
+        @include placeholder-color($grey4); outline:0;
+    }
+    &__btn{position:absolute;}
+    &__btn{display:block; position:absolute; top:0; bottom:0; right:20px; width:40px; height:48px; margin:auto 0; border:none;
+        background:url('../img/main/main_search_icon.png') no-repeat center center; font-size:0; outline:0; cursor:pointer;
+    }
+}
+
+.main-recommend{position:relative; overflow:hidden; margin-top:26px; border-radius:8px; border:1px solid $grey3; box-sizing:border-box;
+    $this:&;
+    &__list{height:100%; margin:0; padding:0; font-size:0;
+        .slick-list,.slick-track{height:100%;}
+    }
+    &__item{display:inline-block; height:100%; list-style:none; outline:0;
+        &.nth-1{background:url('../../img/main/main_recommend_1.jpg') #f5f5f5 no-repeat right bottom; }
+        &.nth-2{background:url('../../img/main/main_recommend_2.jpg') $point1 no-repeat right bottom; }
+    }
+    &__header{overflow:hidden; position:absolute; top:0; left:0; bottom:0;   width:490px; box-sizing:border-box;
+        #{$this}__item{padding:57px 60px;}
+    }
+    &__body{overflow:hidden;  width:100%; padding-left:490px; box-sizing:border-box;
+        #{$this}__list{overflow:hidden;}
+        #{$this}__item{padding:57px 30px;}
+        #{$this}__wrap{position:relative; padding-left:30px; padding-right:30px;
+            &:before,&:after{display:block; position:absolute; top:0; bottom:0; width:26px; content:''; z-index:20; background:red;}
+            &:before{left:30px; background:url('../../img/main/main_thumbnail_left.png') center right;}
+            &:after{right:30px; background:url('../../img/main/main_thumbnail_right.png') center left;}
+        }
+    }
+    &__tit{font-size:$sizeTit5; font-weight:$bold; color:#000; line-height:1.3;}
+    &__subtit{display:inline-block;font-size:$sizeTit3; }
+    &__txt{margin-top:28px; font-size:$sizeTxt3; font-weight:$light; color:#888; line-height:1.8; }
+    &__btn{margin-top:46px;}
+    &__emphasis{font-size:$sizeTxt2; font-weight:$light; color:#888;}
+    &__subject{font-size:$sizeTit3; color:#000;}
+}
+
+
+.hash-banner{
+    &__list{margin:30px 0 0 -20px; padding:0; font-size:0;}
+    &__item{display:inline-block; width:20%; padding-left:20px; box-sizing:border-box;list-style:none; vertical-align:middle; }
+    &__wrap{position:relative; overflow:hidden; border-radius:8px;}
+    &__box{position:absolute; bottom:0; left:0;  width:100%; padding:24px; box-sizing:border-box;}
+    &__tit{margin:0; font-size:$sizeTxt2; color:#fff; font-weight:$medium;}
+    &__txt{margin:2px 0 0 0; font-size:$sizeTxt4; color:#fff; font-weight:$medium;}
+    &__link{display:block; overflow:hidden; position:absolute; top:0; left:0; width:100%; height:100%; z-index:10; text-indent:-9999px;}
+}
+
+
+.summary{margin-top:50px;
+    &__list{margin:0; padding:0;}
+    &__item{position:relative;  padding:0 110px 0 140px; box-sizing:border-box; list-style:none;
+        & + &{margin-top:56px;}
+    }
+    &__thumbnail{overflow:hidden; position:absolute; top:0; left:0; bottom:0; width:110px; height:110px; margin:auto 0; border-radius: 50%;}
+    &__img{position:absolute; top:50%; left:50%; height:100%; @include vendor('transform','translate(-50%,-50%)');}
+    &__rank{display:block; position:absolute;  top:-5px; left:0; width:42px; height:42px; line-height:42px; border-radius:50%; text-align:center; color:#fff; font-size:$sizeTxt4; font-weight:$medium; z-index:20;
+        &.type-a{background:$point1;}
+        &.type-b{background:#00c01e;}
+        &.type-c{background:#feca06;}
+        &.type-d{background:#ff8c05;}
+        &.type-e{background:#000;}
+    }
+    &__tit{margin:0; font-size:$sizeTxt1; font-weight:$medium; color:#000;}
+    &__txt{margin:4px 0 0 0;  color:$grey5; font-size:0; font-weight:$light;
+        & + &{margin-top:10px;}
+        & + & + &{margin-top:6px;}
+    }
+    &__hash{font-size:$sizeTxt4;
+        & + &{margin-left:3px;}
+    }
+    &__price{position:absolute; top:50%; right:0; margin:0;  @include vendor('transform','translateY(-50%)')}
+    &__number{color:$grey5; font-size:$sizeTit3; font-weight:$medium; font-family: $font-roboto;}
+    &__unit{color:$grey5; font-size:$sizeTxt1; font-weight:$light;}
+    &__link{display:block; overflow:hidden; position:absolute; top:0; left:0; width:100%; height:100%; text-indent:-9999px; z-index:10;}
+}
+
+.summary-v2{
+    &__list{margin:24px 0 0 -24px; padding:0; font-size:0;}
+    &__item{display:inline-block; width:25%; padding-left:24px; vertical-align:top; box-sizing:border-box;}
+    &__wrap{position:relative; padding-top:130px; box-sizing:border-box;}
+    &__thumbnail{overflow:hidden; position:absolute; top:0; left:0; width:110px; height:110px; margin:auto 0; border-radius: 50%; z-index:10;}
+    &__img{position:absolute; top:50%; left:50%; height:100%; @include vendor('transform','translate(-50%,-50%)');}
+    &__relative{position:relative;}
+    &__link{overflow:hidden; display:block; position:absolute; top:0; left:0; width:100%; height:100%; font-size:0; text-indent:-9999px; z-index:20;}
+}
+
+
+.main-plan{overflow:hidden; margin-top:26px;
+    &__list{margin:0 0 0 -20px; padding:0; font-size:0; }
+    &__item{display:inline-block; width:20%; padding-left:20px; list-style:none; text-align:center; box-sizing:border-box; outline:0;}
+    &__wrap{position:relative;}
+    &__img{overflow:hidden; border-radius:8px;}
+    &__tit{margin:24px 0 0 0; font-size:$sizeTxt2; font-weight:$medium; color:#000;}
+    &__txt{margin:2px 0 0 0; color:$grey5; font-weight:$light;}
+    &__hash{font-size:$sizeTxt3;
+        & + &{margin-left:4px;}
+    }
+    &__link{overflow:hidden; display:block; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; text-indent:-9999px; outline:0;}
+}
+
+.car-info{
+    &__rank,&__price{font-size:$sizeTxt2;}
+    &__rank{color:$point1;}
+    &__price,&__name{color:#000;}
+    &__price{margin-left:8px;}
+    &__name{margin-top:4px; font-size:$sizeTxt4; font-weight:$light; color:#888;}
+}

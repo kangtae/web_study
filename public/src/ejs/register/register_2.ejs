@@ -1,0 +1,82 @@
+<%
+page_type = "register"
+	page = "register"
+	header = "true"
+%>
+<% include ../_include/_header %>
+    <!--container-->
+    <div class="container type-grey type-fullbg">
+        <div class="wrap">
+            <div class="container__wrap">
+                <div class="register">
+                    <h3 class="register__tit">휴대폰 인증</h3>
+                    <div class="register__box register-2">
+                        <h4 class="register__subtit type-titv2">보다 안전한 서비스를 위해</h4>
+                        <form action="../../html/register/register_3.html" id="register_form2" method="get" class="registerform">
+                            <ul class="registerform__list">
+                            	<li class="registerform__item">
+                            	    <label htmlFor="register__name" class="register__label">이름</label>
+                            	    <input type="text" id="register__name" class="input-v2 js-r-input2 js-error-check" placeholder="걱정마세요. 외부에 노출되지 않아요" autocomplete="off" name="">
+                            		<!-- 형식 오류시 -->
+                            	    <!-- <p class="input-errortxt">아이디 형식이 올바르지 않습니다.</p> -->
+                            	</li>
+                            	<li class="registerform__item">
+                            	    <label htmlFor="" class="register__label">생년월일</label>
+                            	    <div class="register__innerbox type-birth">
+                            	        <div class="register__inputwrap type-3">
+                            	            <input type="text" id="register__birth" class="input-v2 js-r-input2 type-center type-check1 type-num" placeholder="******" autocomplete="off"  name="" maxlength="6">
+                            	        </div>
+                            	        <div class="register__inputwrap type-3 type-before">
+                            	            <div class="js-select">
+                            	            	<select id="register__birth2" class="type-birth select-v1 type-register type-check1 js-r-input2" name="" >
+                            	            	    <option value="">선택</option>
+                            	            	    <option value="1">1</option>
+                            	            	    <option value="2">2</option>
+                            	            	    <option value="3">3</option>
+                            	            	    <option value="4">4</option>
+                            	            	</select>
+                            	            </div>
+                            	        </div>
+                            	    </div>
+									<!-- 형식 오류시 -->
+                            	    <!-- <p class="input-errortxt">생년월일을 확인후 재입력 해주세요.</p> -->
+                            	</li>
+                            	<li class="registerform__item">
+                            	    <label htmlFor="" class="register__label">연락처</label>
+                            	    <div class="register__innerbox">
+                            	        <div class="register__inputwrap type-3 ">
+                            	            <div class="js-select">
+                            	            	<select id="register__phone1" class="type-birth select-v1 type-register type-check1 js-r-input2" name="" >
+                            	            	    <option value="">선택</option>
+                            	            	    <option value="010">010</option>
+                            	            	    <option value="011">011</option>
+                            	            	    <option value="019">019</option>
+                            	            	</select>
+                            	            </div>
+                            	        </div>
+                            	        <div class="register__inputwrap type-3 type-before">
+                            	            <input type="text" id="register__phone2" class="input-v2 js-r-input2 type-center type-check1 type-num" placeholder="****" autocomplete="off" maxlength="4"  name="">
+                            	        </div>
+                            	        <div class="register__inputwrap type-3 type-before">
+                            	            <input type="text" id="register__phone3" class="input-v2 js-r-input2 type-center type-check1 type-num" placeholder="****" autocomplete="off" maxlength="4"  name="">
+                            	        </div>
+                            	    </div>
+									<!-- 형식 오류시 -->
+									<!-- <p class="input-errortxt">연락처를 확인후 재입력 해주세요.</p> -->
+	                                <div class="register__innerbox type-certify clb">
+                                        <input type="text"  class="input-v2 js-r-certify type-certify fl type-num block-focus" placeholder="인증번호 발송을 눌러주세요" autocomplete="off" name="" maxlength="4" readonly>
+                                        <!-- 인증 처음 발송 누르기전 -->
+                                        <button type="button" class="register__certify__btn fr is-start"><span class="btn-span">인증번호 발송</span></button>
+                                        <button type="button" class="register__certify__btn fr is-during bld"><span class="btn-span">인증번호 확인</span></button>
+                                        <button type="button" id="certify__num" class="register__certify__btn fr is-done bld"><span class="btn-span">인증완료</span></button>
+	                                </div>
+                            	</li>
+                            </ul>
+                            <button type="submit" class="register__submit js-register-submit button-v2 w-100" disabled><span class="btn-span">다음</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<% include ../_include/_footer %>

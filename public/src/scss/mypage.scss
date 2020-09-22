@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@import "mixins";
+
+.mypage-header{padding:50px 0; background:#fafafa; box-sizing:border-box;}
+.profile{position:relative;
+    &__thumbnail{overflow:hidden; position:relative; width:inherit; height:inherit; border-radius:50%;}
+    &__wrap{position:relative; width:80px; height:80px;}
+    &__box{position:absolute; top:50%; left:0; padding-left:110px; @include vendor('transform','translateY(-50%)')}
+    &__name{margin:0; font-size:$sizeTxt1; color:#333;}
+    &__email{margin:4px 0 0 0;font-size:$sizeTxt2;}
+    &__btn{position:absolute; top:19px; right:0; text-decoration:none; cursor:pointer; font-size:$sizeTxt3;}
+    &__plus{position:absolute; top:0; left:0; width:100%; height:100%; z-index:10; font-size:0;
+        &:after{display:block; position:absolute; bottom:8px; right:2px;  width:18px; height:18px; background:url('../../img/mypage/black_plus.png') no-repeat center center / contain; content:''; }
+    }
+}
+
+// 마이페이지내 알림 리스트
+
+.alarm-list{text-align: center;
+    &__table{border-collapse:collapse;width:100%;}
+    &__tr{cursor: pointer;border-bottom:1px solid #eee;
+        &:hover{background-color:$grey1 }
+    }
+    &__td{position:relative;padding: 30px 0;vertical-align: middle;font-size:$sizeTxt3;
+        &.type-center{text-align: center;}
+        &.type-left{text-align: left;}
+    }
+    &__num{color:#aaa;}
+    &__box{display: inline-block;
+        &.type-img{overflow:hidden;position:absolute;left:50%;top:50%; @include vendor('transform','translate(-50%,-50%)');width:54px;height:54px; border-radius:50%;}
+    }
+    &__img{position:absolute; top:50%; left:50%; height:100%; @include vendor('transform','translate(-50%,-50%)');}
+    &__txt{position:relative;padding: 0 48px;font-weight:$light;color:#000;}
+    &__state{padding-left:22px;color:$point1;}
+    &__point{font-weight:$medium;}
+    &__date{font-weight:$light;color:$grey5;}
+}

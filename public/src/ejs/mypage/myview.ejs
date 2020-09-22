@@ -1,0 +1,155 @@
+<%
+page_type = "mypage"
+	page = "mycar"
+	header = "true"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="mypage">
+		<div class="mypage-header">
+			<div class="container__wrap">
+				<div class="profile">
+					<div class="profile__wrap"">
+						<div class="profile__thumbnail img-border">
+							<img src="../../img/mypage/profile_img.jpg" alt="" class="profile__img"/>
+						</div>
+						<a href="" class="profile__plus">자세히 보기</a>
+					</div>
+					<div class="profile__box">
+						<p class="profile__name">머글킴</p>
+						<p class="profile__email">muggle-kim@naver.com</p>
+					</div>
+					<a href="" class="profile__btn button-v2">개인정보 수정</a>
+				</div>
+			</div>
+		</div>
+		<div class="mypage-body">
+			<div class="container__wrap">
+				<div class="tab-v2">
+					<ul class="tab-v2__list">
+						<li class="tab-v2__item is-active"><a href="myview.html" class="tab-v2__link">최근본차량 <span class="tab-v2__num">23</span></a></li>
+						<li class="tab-v2__item"><a href="wishlist.html" class="tab-v2__link">관심차량 <span class="tab-v2__num">23</span></a></li>
+					</ul>
+				</div>
+				<div class="tab-v2__content">
+					<div class="tab-v2__header">
+						<div class="align-style">
+							<ul class="align-style__list">
+								<li class="align-style__item is-active">
+									<a href="" class="align-style__link"><span class="align-style__wrap">최근등록순</span></a>
+								</li>
+								<li class="align-style__item">
+									<a href="" class="align-style__link"><span class="align-style__wrap">높은가격순</span></a>
+								</li>
+								<li class="align-style__item">
+									<a href="" class="align-style__link"><span class="align-style__wrap">낮은가격순</span></a>
+								</li>
+								<li class="align-style__item">
+									<a href="" class="align-style__link"><span class="align-style__wrap">품질순</span></a>
+								</li>
+								<li class="align-style__item">
+									<a href="" class="align-style__link"><span class="align-style__wrap">주행거리순</span></a>
+								</li>
+								<li class="align-style__item">
+									<a href="" class="align-style__link"><span class="align-style__wrap">연식순</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="remove-box type-mypage">
+							<input type="checkbox" name="mypageChkAll" id="mypageChkAll" class="checkbox-v2"><label for="mypageChkAll">전체선택</label>
+							<button class="button-v4 is-disabled remove-box__btn js-mypage-remove"><span class="btn-span">선택차량 삭제</span></button>
+						</div>
+					</div>
+					<div class="product type-four">
+						<ul class="product__list js-product-list">
+							<li class="product__item bld no-message">
+								<div class="notice">
+									<h4 class="notice__tit">최근 본 차량이 없습니다.</h4>
+									<p class="notice__txt">
+										최근 본 차량을 계속 보관하려면<br> 로그인 후 관심차량에 담아주세요.
+									</p>
+								</div>
+							</li>
+							<!-- <li class="product__item">
+								<img src="../../img/search/product_skeleton.jpg" alt="" class="img-w100"/>
+							</li> -->
+							<li class="product__item">
+								<div class="product__wrap">
+									<div class="product__img img-border">
+										<div class="remove-check">
+											<input type="checkbox" name="mypageChk" id="mypageChk1" class="checkbox-only"><label for="mypageChk1">선택</label>
+										</div>
+										<img src="../../img/search/product_no_img.png" class="img-w100" alt=""/>
+									</div>
+									<div class="product__box">
+										<div class="product__brand">
+											<img src="../../img/common/brand_sk.png" class="img-w100"alt="sk_encar"/>
+										</div>
+										<p class="product__txt">
+											<span class="product__rank">SA+</span>
+											<span class="product__price"> 1,960만원</span>
+										</p>
+										<p class="product__txt">
+											<span class="product__name">BMW 3시리즈 (F30) 320d</span>
+										</p>
+										<p class="product__txt">
+											<span class="product__info info-style">19러9780</span>
+											<span class="product__info info-style">10년04월</span>
+											<span class="product__info info-style">197,458km</span>
+										</p>
+										<p class="product__txt">
+											<span class="product__mark mark-style type-eye">113</span>
+											<span class="product__mark mark-style type-top">상위 10%</span>
+										</p>
+									</div>
+									<a href="" class="product__link">자세히보기</a>
+								</div>
+							</li>
+							<% for(var i = 2; i<=10; i++){%>
+								<li class="product__item">
+									<div class="product__wrap">
+										<div class="product__img img-border">
+											<div class="remove-check">
+												<input type="checkbox" name="mypageChk" id="mypageChk<%=i%>" class="checkbox-only"><label for="mypageChk<%=i%>">선택</label>
+											</div>
+											<img src="https://carfora.co.kr/data/goods/kb/20191114011852_1.jpg" class="img-center" alt=""/>
+										</div>
+										<div class="product__box">
+											<div class="product__brand">
+												<img src="../../img/common/brand_sk.png" class="img-w100"alt="sk_encar"/>
+											</div>
+											<p class="product__txt">
+												<span class="product__rank">SA+</span>
+												<span class="product__price"> 1,960만원</span>
+											</p>
+											<p class="product__txt">
+												<span class="product__name">BMW 3시리즈 (F30) 320d</span>
+											</p>
+											<p class="product__txt">
+												<span class="product__info info-style">19러9780</span>
+												<span class="product__info info-style">10년04월</span>
+												<span class="product__info info-style">197,458km</span>
+											</p>
+											<p class="product__txt">
+												<span class="product__mark mark-style type-eye">113</span>
+												<span class="product__mark mark-style type-top">상위 10%</span>
+											</p>
+										</div>
+										<a href="" class="product__link">자세히보기</a>
+									</div>
+								</li>
+							<%}%>
+						</ul>
+						<a href="" class="product__btn button-v3 w-l">
+							<span class="button-v3__wrap">
+								더 보기<span class="plus"><span class="plus__wrap">plus</span></span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include ../_include/_footer %>

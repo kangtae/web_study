@@ -1,0 +1,36 @@
+<%
+page_type = "login"
+	page = "login"
+	header = "true"
+%>
+<% include ../_include/_header %>
+    <!--container-->
+    <div class="container type-fullbg type-login">
+        <div class="wrap">
+            <div class="container__wrap">
+                <div class="loginbox">
+                    <h3 class="loginbox__tit">내 차 쉽게 찾을 땐<span class="loginbox__tit__point"> 카포라 2.0</span></h3>
+                    <!-- 입력오류시 기존과 동일하게 alert로 처리한다고 합니다. -->
+                    <form action="" class="loginbox__form">
+                        <div class="loginbox__inputwrap inputwrap type-login">
+                            <input type="email" id="id" class="loginbox__id input-v2 type-login" placeholder="카포라 아이디 (이메일 형식)" autocomplete="off"  name="">
+                        </div>
+                        <div class="loginbox__inputwrap inputwrap type-login">
+                            <input type="password" id="id" class="loginbox__pw input-v2 type-login" placeholder="비밀번호" autocomplete="off"  name="">
+                        </div>
+                        <button type="submit" class="loginbox__btn button-v2 w-100"><span class="btn-span">로그인</span></button>
+                    </form>
+                    <p class="loginbox__findbox">
+                        <a href="../../html/register/find_id.html" class="loginbox__findbox__id">아이디</a>
+                        <a href="../../html/register/find_pw.html" class="loginbox__findbox__pw type-before">비밀번호 찾기</a>
+                    </p>
+                    <p class="login-or type-login"></p>
+                    <div class="buttonbox">
+                        <button type="button" class="buttonbox__btn button-v2 w-100 type-kakao"><span class="btn-span">카카오톡으로 로그인</span></button>
+                        <button type="button" class="buttonbox__btn button-v2 w-100 type-facebook"><span class="btn-span">페이스북으로 로그인</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<% include ../_include/_footer %>

@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@import "mixins";
+.quality{
+    $this:&;
+    &__dl{margin:0;}
+    &__dt{position:relative; padding-left:14px;font-size:$sizeTxt2; color:#000;
+        &:before{display:block; position:absolute; top:7px; left:0; width:3px; height:3px; background:$grey5; content:'';}
+    }
+    &__dd{margin:12px 0 0 0; padding-left:14px; font-size:$sizeTxt2; font-weight:$light; color:#000; line-height:1.8; box-sizing:border-box;
+        & + #{$this}__dt{margin-top:24px;}
+    }
+}
+
+.quality-header{padding:100px 0; background:$point1; color:#fff;
+    &__subtit{margin-bottom:16px;font-size:$sizeTit3; color:rgba(255,255,255,0.5);}
+    &__tit{font-size:$sizeTit1; font-weight:$bold;}
+    &__txt{margin-top:44px; font-size:$sizeTxt1; line-height:1.8; font-weight:$light;}
+    &__wrap{position:relative; padding-right:460px; box-sizing:border-box;}
+    &__box{position:absolute; right:120px; top:0; bottom:0; width:322px; height:200px; margin:auto 0; background:url('../../img/quality/slot_border.png') no-repeat center center;}
+    &__vertical{display:table-cell; width:1%; height:inherit; text-align:center; vertical-align:middle;}
+}
+.quality-body{padding-top:80px;}
+
+.quality-bar{
+    $this:&;
+    &__tit{position:absolute; top:6px; left:0; display:inline-block; font-size:$sizeTxt2; color:#000; vertical-align:middle;}
+    &__box{display:inline-block; width:240px; margin-left:120px; vertical-align:middle; box-sizing:border-box;}
+    &__list{margin:0; padding:0;}
+    &__item{position:relative;
+        & + &{margin-top:46px;}
+        &.type-one{
+            #{$this}__tit{top:0px;}
+        }
+    }
+}
+
+
+.quality-info{
+    &__tit{margin-bottom:34px; font-size:$sizeTit3; color:#000;}
+    &__list{margin:0; padding:0;}
+    &__item{font-size:$sizeTxt2; color:#000;
+        & + &{margin-top:14px;}
+    }
+}

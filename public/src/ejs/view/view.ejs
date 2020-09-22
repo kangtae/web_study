@@ -1,0 +1,701 @@
+<%
+page_type = "view"
+	page = "view"
+	header = "true"
+%>
+<% include ../_include/_header %>
+    <div class="container">
+        <div class="wrap">
+			<div class="container__wrap">
+				<div class="view">
+					<section class="view-header__wrap clb ">
+						<div class="view-header__outer type-img fl">
+							<div class="header-img__box img-border">
+								<img src="../../img/view/view_car_img.jpg" alt="차량이미지" class="header-img__img "/>
+								<!-- <img src="../../img/view/view_car_error.jpg" alt="" class="view-header__img "/> -->
+							</div>
+						</div>
+						<div class="view-header__outer type-txt fr">
+							<h3 class="view-header__tit">아우디 Q5 2.0 TDI 콰트로 다이나믹 8R</h3>
+							<p class="header-info">
+								<span class="header-info__txt">19러9780</span>
+								<span class="header-info__txt type-dot">10년 04월식</span>
+								<span class="header-info__txt type-dot">197,458km</span>
+							</p>
+							<div class="view-header__hash hash">
+								<ul class="hash__list type-view">
+									<li class="hash__item"><a href="" class="hash__link">장거리출퇴근</a></li>
+									<li class="hash__item"><a href="" class="hash__link">기아</a></li>
+									<li class="hash__item"><a href="" class="hash__link">직장인</a></li>
+									<li class="hash__item"><a href="" class="hash__link">장거리출퇴근</a></li>
+									<li class="hash__item"><a href="" class="hash__link">기아</a></li>
+									<li class="hash__item"><a href="" class="hash__link">직장인</a></li>
+									<li class="hash__item"><a href="" class="hash__link">장거리출퇴근</a></li>
+								</ul>
+							</div>
+							<ul class="icon-info__list clb">
+								<li class="icon-info__item type-price fl">
+									<p class="icon-info__name">차량가격</p>
+									<p class="icon-info__val type-blue">2,250만원</p>
+								</li>
+								<li class="icon-info__item type-monthlyprice fl">
+									<p class="icon-info__name">36개월 할부</p>
+									<p class="icon-info__val">월 702,777만원</p>
+								</li>
+								<li class="icon-info__item type-local fl">
+									<p class="icon-info__name">지역</p>
+									<p class="icon-info__val">서울</p>
+								</li>
+								<li class="icon-info__item type-fuel fl">
+									<p class="icon-info__name">변속기/연료</p>
+									<p class="icon-info__val">오토/가솔린</p>
+								</li>
+								<li class="icon-info__item type-displacement fl">
+									<p class="icon-info__name">배기량</p>
+									<p class="icon-info__val">3,342cc</p>
+								</li>
+							</ul>
+							<div class="header-box type-btn clb">
+								<button type="button" class="add_btn add_btn__btn-like"></button>
+								<button type="button" class="add_btn add_btn__btn-interest"></button>
+								<a href="../" class="othersite-link button-v1  type-encar">
+									엔카에서 확인하기
+								</a>
+							</div>
+						</div>
+					</section>
+					<div class="clb">
+						<div class="fl view-outer type-left">
+							<section class="view-cont">
+								<h4 class="view-cont__tit">가격비교</h4>
+								<div class="view-tab">
+									<ul>
+										<li class="view-tab__item is-active">최저가순</li>
+										<li class="view-tab__item">가성비순</li>
+										<li class="view-tab__item">품질순</li>
+									</ul>
+								</div>
+								<div class="view-list is-active tabarea">
+									<table class="view-list__box">
+										<tbody>
+											<%for(var i=1; i<=5; i++){%>
+											<tr class="view-list__line" onclick="location.href='#'">
+												<td class="list-column type-num">#<%=i%></td>
+												<td class="list-column">
+													<span class="list-img img-border">
+														<img src="../../img/view/list_img.jpg" alt="차량이미지" class="list-img__item"/>
+													</span>
+												</td>
+												<td class="list-column type-carinfo">
+													<p class="list-column__name">현대 아반떼 MD M16 GDI 럭셔리</p>
+													<p class="list-column__box">
+														<span class="list-column__info">01주1498</span>
+														<span class="list-column__info type-before">17년03월</span>
+														<span class="list-column__info type-before">100,214km</span>
+													</p>
+												</td>
+												<!-- 사이트 로고 스타일:type-encar,type-kb,type-aj,type-mpark  클래스명 변경해주면 됩니다.-->
+												<td class="list-column type-site type-encar"></td>
+												<td class="list-column type-score"><span class="list-column__score">AA+</span></td>
+												<td class="list-column type-price"><%if(i == 1){%><span class="list-column__first">초저가</span><%}%>780만원</td>
+											</tr>
+											<%}%>
+										</tbody>
+									</table>
+								</div>
+								<div class="view-list tabarea">
+									<table class="view-list__box">
+										<tbody>
+											<%for(var i=1; i<=5; i++){%>
+											<tr class="view-list__line" onclick="location.href='#'">
+												<td class="list-column type-num">#<%=i%></td>
+												<td class="list-column">
+													<span class="list-img img-border">
+														<img src="../../img/view/list_img.jpg" alt="차량이미지" class="list-img__item"/>
+													</span>
+												</td>
+												<td class="list-column type-carinfo">
+													<p class="list-column__name">현대 아반떼 MD M16 GDI 럭셔리</p>
+													<p class="list-column__box">
+														<span class="list-column__info">01주1498</span>
+														<span class="list-column__info type-before">17년03월</span>
+														<span class="list-column__info type-before">100,214km</span>
+													</p>
+												</td>
+												<!-- 사이트 로고 스타일:type-encar,type-kb,type-aj,type-mpark  클래스명 변경해주면 됩니다.-->
+												<td class="list-column type-site type-encar"></td>
+												<td class="list-column type-score"><span class="list-column__score">AA+</span></td>
+												<td class="list-column type-price"><%if(i == 1){%><span class="list-column__first">초저가</span><%}%>780만원</td>
+											</tr>
+											<%}%>
+										</tbody>
+									</table>
+								</div>
+								<div class="view-list tabarea">
+									<table class="view-list__box">
+										<tbody>
+											<%for(var i=1; i<=5; i++){%>
+											<tr class="view-list__line" onclick="location.href='#'">
+												<td class="list-column type-num">#<%=i%></td>
+												<td class="list-column">
+													<span class="list-img img-border">
+														<img src="../../img/view/list_img.jpg" alt="차량이미지" class="list-img__item"/>
+													</span>
+												</td>
+												<td class="list-column type-carinfo">
+													<p class="list-column__name">현대 아반떼 MD M16 GDI 럭셔리</p>
+													<p class="list-column__box">
+														<span class="list-column__info">01주1498</span>
+														<span class="list-column__info type-before">17년03월</span>
+														<span class="list-column__info type-before">100,214km</span>
+													</p>
+												</td>
+												<!-- 사이트 로고 스타일:type-encar,type-kb,type-aj,type-mpark  클래스명 변경해주면 됩니다.-->
+												<td class="list-column type-site type-encar"></td>
+												<td class="list-column type-score"><span class="list-column__score">A</span></td>
+												<td class="list-column type-price"><%if(i == 1){%><span class="list-column__first">초저가</span><%}%>780만원</td>
+											</tr>
+											<%}%>
+										</tbody>
+									</table>
+								</div>
+
+							</section>
+							<section class="view-cont">
+								<h4 class="view-cont__tit">차량분포도</h4>
+								<div class="view-tab">
+									<ul>
+										<li class="view-tab__item is-active">품질등급</li>
+										<li class="view-tab__item">가성비등급</li>
+										<li class="view-tab__item">주행거리</li>
+									</ul>
+								</div>
+
+								<div class="view-chart is-active tabarea">
+									<p class="view-chart__tit">품질등급</p>
+									<div class="view-chart__wrap">
+										<div class="view-chart__box">
+											<span class="view-chart__score type-s1">S</span>
+											<span class="view-chart__score type-s2">A</span>
+											<span class="view-chart__score type-s3">B</span>
+											<span class="view-chart__score type-s4">C</span>
+											<span class="view-chart__score type-s5">D</span>
+
+											<span class="view-chart__price type-p1 type-first">1,000만원</span>
+											<span class="view-chart__price type-p2 type-center">2,000만원</span>
+											<span class="view-chart__price type-p3 type-center">3,000만원</span>
+											<span class="view-chart__price type-p4 type-center">4,000만원</span>
+											<span class="view-chart__price type-p5 type-end">5,000만원</span>
+											<!--  점 시작 -스타일안에 수치 넣으시면 됩니다.-->
+											<div class="dot" style="bottom:50%; left:50%;">
+												<ul class="dot-info">
+													<li class="dot-info__item clb">
+														<span class=" dot-info__name fl">금액</span>
+														<span class="dot-info__val fr">1,546만원</span>
+													</li>
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">주행거리</span>
+														<span class="dot-info__val fr">861,521km</span>
+													</li>
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">연식</span>
+														<span class="dot-info__val fr">2019년 06월식</span>
+													</li>
+												</ul>
+											</div>
+											<div class="dot" style="bottom:20%; left:80%;">
+												<ul class="dot-info">
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">금액</span>
+														<span class="dot-info__val fr">1,546만원</span>
+													</li>
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">주행거리</span>
+														<span class="dot-info__val fr">861,521km</span>
+													</li>
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">연식</span>
+														<span class="dot-info__val fr">2019년 06월식</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="view-chart tabarea">
+									<h5 class="view-chart__tit">품질등급</h5>
+									<div class="view-chart__wrap">
+										<div class="view-chart__box">
+											<span class="view-chart__score type-s1">S</span>
+											<span class="view-chart__score type-s2">A</span>
+											<span class="view-chart__score type-s3">B</span>
+											<span class="view-chart__score type-s4">C</span>
+											<span class="view-chart__score type-s5">D</span>
+
+											<span class="view-chart__price type-p1 type-first">1,000만원</span>
+											<span class="view-chart__price type-p2 type-center">2,000만원</span>
+											<span class="view-chart__price type-p3 type-center">3,000만원</span>
+											<span class="view-chart__price type-p4 type-center">4,000만원</span>
+											<span class="view-chart__price type-p5 type-end">5,000만원</span>
+											<!--  점 시작 -스타일안에 수치 넣으시면 됩니다.-->
+											<div class="dot thiscar" style="bottom:30%; left:90%;">
+												<ul class="dot-info">
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">금액</span>
+														<span class="dot-info__val fr">1,546만원</span>
+													</li>
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">주행거리</span>
+														<span class="dot-info__val fr">861,521km</span>
+													</li>
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">연식</span>
+														<span class="dot-info__val fr">2019년 06월식</span>
+													</li>
+												</ul>
+											</div>
+											<div class="dot" style="bottom:20%; left:80%;">
+												<ul class="dot-info">
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">금액</span>
+														<span class="dot-info__val fr">1,546만원</span>
+													</li>
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">주행거리</span>
+														<span class="dot-info__val fr">861,521km</span>
+													</li>
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">연식</span>
+														<span class="dot-info__val fr">2019년 06월식</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="view-chart tabarea">
+									<h5 class="view-chart__tit">품질등급</h5>
+									<div class="view-chart__wrap">
+										<div class="view-chart__box">
+											<span class="view-chart__score type-s1">S</span>
+											<span class="view-chart__score type-s2">A</span>
+											<span class="view-chart__score type-s3">B</span>
+											<span class="view-chart__score type-s4">C</span>
+											<span class="view-chart__score type-s5">D</span>
+
+											<span class="view-chart__price type-p1 type-first">1,000만원</span>
+											<span class="view-chart__price type-p2 type-center">2,000만원</span>
+											<span class="view-chart__price type-p3 type-center">3,000만원</span>
+											<span class="view-chart__price type-p4 type-center">4,000만원</span>
+											<span class="view-chart__price type-p5 type-end">5,000만원</span>
+											<!--  점 시작 -스타일안에 수치 넣으시면 됩니다.-->
+											<div class="dot" style="bottom:90%; left:10%;">
+												<ul class="dot-info">
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">금액</span>
+														<span class="dot-info__val fr">1,546만원</span>
+													</li>
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">주행거리</span>
+														<span class="dot-info__val fr">861,521km</span>
+													</li>
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">연식</span>
+														<span class="dot-info__val fr">2019년 06월식</span>
+													</li>
+												</ul>
+											</div>
+											<div class="dot" style="bottom:20%; left:80%;">
+												<ul class="dot-info">
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">금액</span>
+														<span class="dot-info__val fr">1,546만원</span>
+													</li>
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">주행거리</span>
+														<span class="dot-info__val fr">861,521km</span>
+													</li>
+													<li class="dot-info__item clb">
+														<span class="dot-info__name fl">연식</span>
+														<span class="dot-info__val fr">2019년 06월식</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section class="cluster view-cont">
+								<h4 class="view-cont__tit">같은 모델 지역정보</h4>
+								<div class="cluster view-cont__box type-a">
+									<h5 class="cluster__tit">아우디 Q5 2.0 TDI 콰트로 다이나믹 8R</h5>
+									<div class="cluster__box">
+    									<div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+	   								 </div>
+								</div>
+							</section>
+							<section class="view-cont">
+								<h4 class="view-cont__tit">도움이 되셨나요?</h4>
+								<div class="feed view-cont__box type-a">
+									<h5 class="feed__tit">피드백하고 기프티콘 받자<i>!</i></h5>
+									<p class="feed__sub">카포라의 차량분석이 얼마나 도움이 되었는지 평가해 주세요!<br>평가에 참여하시면 매월 10명을 추첨하여 기프티콘을 발송해 드립니다.</p>
+									<form action="" method="post">
+										<ul class="clb feed-icon__list">
+											<li class="fl feed-icon__item">
+												<input type="radio" id="best" name="feed-score" class="feed-icon__radio sr-only" value="5" checked/>
+												<label for="best" class="feed-icon__label type-5">최고에요</label>
+											</li>
+											<li class="fl feed-icon__item">
+												<input type="radio" id="good" name="feed-score" class="feed-icon__radio sr-only" value="4"/>
+												<label for="good" class="feed-icon__label type-4">도움돼요</label>
+											</li>
+											<li class="fl feed-icon__item">
+												<input type="radio" id="soso" name="feed-score" class="feed-icon__radio sr-only" value="3"/>
+												<label for="soso" class="feed-icon__label type-3">평범해요</label>
+											</li>
+											<li class="fl feed-icon__item">
+												<input type="radio" id="notgood" name="feed-score" class="feed-icon__radio sr-only" value="2"/>
+												<label for="notgood" class="feed-icon__label type-2">그럭저럭</label>
+											</li>
+											<li class="fl feed-icon__item">
+												<input type="radio" id="bad" name="feed-score" class="feed-icon__radio sr-only" value="1"/>
+												<label for="bad" class="feed-icon__label type-1">별로에요</label>
+											</li>
+										</ul>
+										<textarea name="name" rows="8" cols="80" 	class="feed__textarea" placeholder="평가이유를 작성해주세요!&#13;&#10;자세히 작성할수록 추첨확률이 올라갑니다."></textarea>
+										<button type="submit" class="button-v2 w-l feed__submit"><span class="btn-span">작성하기</span></button>
+									</form>
+								</div>
+							</section>
+							<div class="viewinfo">
+								<p class="viewinfo__txt">· 카포라 종합 평가는 차량의 정보를 기반으로 평가되므로 실제 차량의 상태와 다를 수 있습니다.</p>
+								<p class="viewinfo__txt">· 차량 구매 시 꼭 실물을 확인하시기 바랍니다.</p>
+							</div>
+						</div>
+						<!-- 오른쪽 영역 -->
+						<aside class="fr view-outer type-right">
+							<section class="view-cont">
+								<h4 class="view-cont__tit">종합평가</h4>
+								<div class="tooltip-v1  type-right">
+									<button type="button" class="tooltip-v1__icon">평가정보 설명</button>
+									<div class="tooltip-v1__box">
+										<img src="../../img/common/tooltip-v1-bg.png" alt="" class="tooltip-v1__bg"/>
+										<div class="graph type-tooltip">
+											<h5 class="content-border__tit">등급별 선정 기준</h5>
+											<div class="clb">
+												<p class="graph__info fl">(상위등급)</p>
+												<p class="graph__info fr">(하위등급)</p>
+											</div>
+											<ul class="graph__list">
+												<li class="graph__item type-s">
+													<div class="graph__bar">S</div>
+													<div class="graph__txt">10%</div>
+												</li>
+												<li class="graph__item type-a">
+													<div class="graph__bar">A</div>
+													<div class="graph__txt">15%</div>
+												</li>
+												<li class="graph__item type-b">
+													<div class="graph__bar">B</div>
+													<div class="graph__txt">50%</div>
+												</li>
+												<li class="graph__item type-c">
+													<div class="graph__bar">C</div>
+													<div class="graph__txt">15%</div>
+												</li>
+												<li class="graph__item type-d">
+													<div class="graph__bar">D</div>
+													<div class="graph__txt">10%</div>
+												</li>
+											</ul>
+											<div class="graph-info">
+												<ul class="graph-info__list">
+													<li class="graph-info__item type-s">S등급</li>
+													<li class="graph-info__item type-a">A등급</li>
+													<li class="graph-info__item type-b">B등급</li>
+													<li class="graph-info__item type-c">C등급</li>
+													<li class="graph-info__item type-d">D등급</li>
+												</ul>
+											</div>
+										</div>
+										<div class="tinfo">
+											<ul class="tinfo__list">
+												<li class="tinfo__item bullet-square">국내 주요 사이트의 매물을 통합으로 비교분석하여 순위와 점수를 부여합니다. </li>
+												<li class="tinfo__item bullet-square">AI기술을 통한 각 항목별 평가 가중치를 두어 품질평가에 반영합니다. </li>
+												<li class="tinfo__item bullet-square">종합평가를 통하여 제시된 등급별 분포 비율은 매일마다 정기적으로 업데이트 됩니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="carscore view-cont__box type-b">
+									<div class="carscore__namebox">
+											<div class="carscore__inbox">
+												<p class="carscore__model ellipsis">아우디 Q5</p>
+												<p class="carscore__grade ellipsis">2.0 TDI 콰트로 다이나믹 8R</p>
+											</div>
+									</div>
+									<div class="carscore__level">
+										<div class="slot">
+											<div class="slot__score">
+												<div class="slot__box js-score-box">
+			                                        <span class="slot__origin">A</span>
+			                                        <div class="slot__text js-slot-text">
+			                                            <p class="slot__alpha js-alpha bld">A</p>
+			                                            <% for(i=0; i<4; i++){ %>
+			                                            <span class="slot__word">S</span>
+			                                            <span class="slot__word">A</span>
+			                                            <span class="slot__word">B</span>
+			                                            <span class="slot__word">C</span>
+			                                            <span class="slot__word">D</span>
+			                                            <span class="slot__word">E</span>
+			                                            <span class="slot__word">F</span>
+			                                            <% } %>
+			                                        </div>
+			                                    </div>
+												<p class="slot__tit">품질</p>
+											</div>
+											<div class="slot__score">
+												<div class="slot__box js-score-box">
+													<span class="slot__origin">A</span>
+			                                        <div class="slot__text js-slot-text2">
+														<p class="slot__alpha js-alpha2 bld">A</p>
+			                                            <% for(i=0; i<4; i++){ %>
+			                                            <span class="slot__word">S</span>
+			                                            <span class="slot__word">A</span>
+			                                            <span class="slot__word">B</span>
+			                                            <span class="slot__word">C</span>
+			                                            <span class="slot__word">D</span>
+			                                            <span class="slot__word">E</span>
+			                                            <span class="slot__word">F</span>
+			                                            <% } %>
+			                                        </div>
+			                                    </div>
+												<p class="slot__tit">가성비</p>
+											</div>
+											<div class="slot__score">
+												<div class="slot__box js-score-box">
+													<span class="slot__origin">A</span>
+													<div class="slot__text js-slot-text3">
+														<p class="slot__alpha js-alpha3 bld">+</p>
+														<% for(i=0; i<7; i++){ %>
+			                                            <span class="slot__word">+</span>
+			                                            <span class="slot__word">0</span>
+			                                            <span class="slot__word">-</span>
+			                                            <% } %>
+			                                        </div>
+			                                    </div>
+												<p class="slot__tit">사고</p>
+											</div>
+										</div>
+									</div>
+									<div class="levelscore">
+										<div class="levelscore__box">
+											<h5 class="levelscore__tit">품질평가</h5>
+											<div class="rank-bar">
+												<ul class="rank-bar__list">
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">S</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item is-active">
+														<span class="rank-bar__text">A</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">B</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">C</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">D</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="levelscore__box">
+											<h5 class="levelscore__tit">가성비 평가</h5>
+											<div class="rank-bar">
+												<ul class="rank-bar__list">
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">S</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item is-active">
+														<span class="rank-bar__text">A</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">B</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">C</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">D</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="levelscore__box">
+											<h5 class="levelscore__tit">사고여부</h5>
+											<div class="accident-style">
+												<span class="accident-style__span type-plus is-active">없음</span>
+												<span class="accident-style__span type-minus">있음</span>
+											</div>
+										</div>
+									</div>
+									<div class="carscore__info">
+										<div class="carscore__inbox">
+											<div class="carscore__listwrap">
+												<h5 class="carscore__tit">품질평가 세부내역</h5>
+												<ul class="carscore__list">
+													<li class="carscore__listitem clb">
+														<span class="carscore__name fl">주행거리</span>
+														<span class="carscore__val fr">A+</span>
+													</li>
+													<li class="carscore__listitem clb">
+														<span class="carscore__name fl">수리이력</span>
+														<span class="carscore__val fr">D</span>
+													</li>
+													<li class="carscore__listitem clb">
+														<span class="carscore__name fl">소유자이전</span>
+														<span class="carscore__val fr">A</span>
+													</li>
+													<li class="carscore__listitem clb">
+														<span class="carscore__name fl">특수사고</span>
+														<span class="carscore__val fr">C-</span>
+													</li>
+													<li class="carscore__listitem clb">
+														<span class="carscore__name fl">사고이력</span>
+														<span class="carscore__val fr">B+</span>
+													</li>
+												</ul>
+											</div>
+											<div class="carscore__listwrap">
+												<h5 class="carscore__tit">가성비 평가 세부내역</h5>
+												<ul class="carscore__list">
+													<li class="carscore__listitem clb">
+														<span class="carscore__name fl">동일모델</span>
+														<span class="carscore__val fr">15건</span>
+													</li>
+													<li class="carscore__listitem clb">
+														<span class="carscore__name fl">평균금액</span>
+														<span class="carscore__val fr">1,543 만원</span>
+													</li>
+													<li class="carscore__listitem clb">
+														<span class="carscore__name fl">A품질 평균금액</span>
+														<span class="carscore__val fr">2,050 만원</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="scoreinfo">
+										<p class="scoreinfo__txt">카포라 빅데이터 봇을 통해 차량의 상품가치와 가격의 적정성을 분석합니다.</p>
+										<a href="" class="scoreinfo__link">카포라 차량 종합평가 더 알아보기</a>
+									</div>
+								</div>
+								<div class="pricechange view-cont__box type-c">
+									<div>
+										<h5 class="pricechange__tit">가격 변동 내역</h5>
+										<ul class="pricechange__list clb">
+											<li class="pricechange__item fl">
+												<span class="pricechange__name">가격변동</span>
+												<span class="pricechange__val">2건</span>
+											</li>
+											<li class="pricechange__item fl type-before">
+												<span class="pricechange__name">최저가</span>
+												<span class="pricechange__val">2,000 만원</span>
+											</li>
+										</ul>
+										<!-- 가격변동 내역 범위그래프 부분 - 스타일width에 맥분율로 넣으시면 됩니다. 최소사이즈는 1억단위까지 감쌀수 있는정도로 주었습니다. -->
+										<div class="pricerange">
+											<div class="pricerange__box">
+												<div class="pricerange__limit">
+													<div class="pricerange__bar type-grey" style="width:80%; min-width:90px;">
+														<span class="pricerange__price type-grey">2,250 만원</span>
+													</div>
+												</div>
+												<p class="pricerange__date">19.11.01</p>
+											</div>
+											<div class="pricerange__box">
+												<div class="pricerange__limit">
+													<div class="pricerange__bar type-blue" style="width:0%;min-width:90px;">
+														<span class="pricerange__price type-blue">2,250 만원</span>
+													</div>
+												</div>
+												<p class="pricerange__date">19.12.25</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="gomycar view-cont__box type-b">
+									<div class="gomycar__top">
+										<div class="gomycar__wrap">
+											<p class="gomycar__inbox">지금 다른 차주들과 내차를 비교해 보세요!</p>
+										</div>
+									</div>
+									<div class="gomycar__bottom">
+										<div class="gomycar__wrap type-bottom">
+											<div class="gomycar__inbox clb">
+												<p class="gomycar__sub fl">내차는<br>지금 괜찮을까?</p>
+												<button type='button' class="button-v1 fr"><span class="btn-span">내차어때?</span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="reply view-cont__box type-b">
+									<div class="reply__top">
+										<div class="reply__inbox">
+											<h5 class="reply__tit">아우디 Q5차량은 어떠신가요?</h5>
+											<form action="">
+												<textarea name="name" rows="8" cols="80" class="reply__textarea" placeholder="댓글을 입력해 주세요." required></textarea>
+												<button type="submit" class="button-v1 w-100" disabled><span class="btn-span">작성하기</span></button>
+												<p class="reply__info">로그인후 입력 가능합니다.</p>
+											</form>
+										</div>
+									</div>
+									<div class="replylist reply__bottom">
+										<div class="reply__inbox">
+											<div class="clb">
+												<p class="replylist__tit fl">댓글 21개</p>
+											</div>
+											<ul class="replylist__list">
+												<li class="replylist__item">
+													<p class="replylist__txt">수입/무사고 운행 차량임을 강조하며 차량상태가 아주 우수함</p>
+													<p class="replylist__bottom">
+														<span class="replylist__writer">방명희</span><span class="replylist__date">20.01.01</span>
+													</p>
+												</li>
+												<li class="replylist__item">
+													<p class="replylist__txt">수입/무사고 운행 차량임을 강조하며 차량상태가 아주 우수함</p>
+													<p class="replylist__bottom">
+														<span class="replylist__writer">방명희</span><span class="replylist__date">20.01.01</span>
+													</p>
+												</li>
+												<li class="replylist__item">
+													<p class="replylist__txt">수입/무사고 운행 차량임을 강조하며 차량상태가 아주 우수함</p>
+													<p class="replylist__bottom">
+														<span class="replylist__writer">방명희</span><span class="replylist__date">20.01.01</span>
+													</p>
+												</li>
+											</ul>
+											<button type="button" class="replylist__morebtn">+ 더보기 </button>
+										</div>
+									</div>
+								</div>
+							</section>
+						</aside>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+<% include ../_include/_footer %>

@@ -1,0 +1,265 @@
+<%
+	page_type = "auction"
+	page = "auction"
+	header = "true"
+%>
+<% include ../_include/_header %>
+<div class="container">
+	<div class="content-banner type-auction">
+		<div class="content-banner__vertical">
+			<div class="container__wrap">
+				<h3 class="content-banner__tit">카포라 경매장</h3>
+				<p class="content-banner__txt">오늘 새로 올라온 차량 789대 &middot; 현재 경매진행중인 차량 4,567대</p>
+			</div>
+		</div>
+	</div>
+	<div class="mypage-body">
+		<div class="container__wrap">
+			<div class="tab-v2">
+				<ul class="tab-v2__list">
+					<li class="tab-v2__item is-active">
+						<a href="myview.html" class="tab-v2__link">
+							최근본차량 <span class="tab-v2__num">76</span>
+						</a>
+					</li>
+					<li class="tab-v2__item">
+						<a href="myview.html" class="tab-v2__link">
+							내 경매차량
+						</a>
+					</li>
+					<li class="tab-v2__item">
+						<a href="myview.html" class="tab-v2__link">
+							관심경매 <span class="tab-v2__num">9</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="tab-v2__content">
+				<div class="align-style">
+					<ul class="align-style__list">
+						<li class="align-style__item is-active">
+							<a href="" class="align-style__link"><span class="align-style__wrap">최근등록순</span></a>
+						</li>
+						<li class="align-style__item">
+							<a href="" class="align-style__link"><span class="align-style__wrap">마감임박순</span></a>
+						</li>
+						<li class="align-style__item">
+							<a href="" class="align-style__link"><span class="align-style__wrap">낮은가격순</span></a>
+						</li>
+						<li class="align-style__item">
+							<a href="" class="align-style__link"><span class="align-style__wrap">입찰인기순</span></a>
+						</li>
+						<li class="align-style__item">
+							<a href="" class="align-style__link"><span class="align-style__wrap">주행거리순</span></a>
+						</li>
+						<li class="align-style__item">
+							<a href="" class="align-style__link"><span class="align-style__wrap">연식순</span></a>
+						</li>
+					</ul>
+				</div>
+				<div class="tab-v2__select">
+					<select name="" id="" class="select-v1">
+						<option value="">전체</option>
+					</select>
+				</div>
+				<div class="product type-four">
+					<ul class="product__list">
+						<li class="product__item">
+							<div class="product__wrap">
+								<div class="product__img img-border">
+									<img src="https://carfora.co.kr/data/goods/kb/20191114011852_1.jpg" class="img-center" alt="" />
+									<!-- 입찰중일때  type-bidding 클래스 추가-->
+									<div class="product-auction type-bidding">
+										<div class="product-auction__outer">
+											<div class="product-auction__inner">
+												<span class="product-auction__state">남은시간</span>
+												<span class="product-auction__time">00:10:06</span>
+												<!-- 입찰중,계약중일때  추가-->
+												<div class="product-auction__bidding">
+													<span class="product-auction__my">내입찰가</span>
+													<span class="product-auction__price">1,220만원</span>
+												</div>
+												<!-- //입찰중,계약중일때  추가-->
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product__box">
+									<p class="product__txt">
+										<span class="product__span">희망가격</span>
+										<span class="product__price color-point1"> 1,960만원</span>
+									</p>
+									<p class="product__txt">
+										<span class="product__name">BMW 3시리즈 (F30) 320d</span>
+									</p>
+									<p class="product__txt">
+										<span class="product__info info-style">19러9780</span>
+										<span class="product__info info-style">10년04월</span>
+										<span class="product__info info-style">197,458km</span>
+										<span class="product__info info-style">사고</span>
+									</p>
+									<p class="product__txt">
+										<span class="product__mark mark-style type-eye">113</span>
+										<span class="product__mark mark-style type-people ani-tooltip-v2">
+											<span class="tooltip-v2">
+												15
+												<span class="tooltip-v2__outer">
+													<span class="tooltip-v2__inner">입찰자 15명</span>
+												</span>
+											</span>
+										</span>
+										<span class="product__mark mark-style type-no-icon">서울</span>
+									</p>
+								</div>
+								<a href="" class="product__link">자세히보기</a>
+							</div>
+						</li>
+						<!-- 경매종료-->
+						<li class="product__item">
+							<div class="product__wrap">
+								<div class="product__img img-border">
+									<img src="https://carfora.co.kr/data/goods/kb/20191114011852_1.jpg" class="img-center" alt="" />
+									<div class="product-auction type-end">
+										<p class="product-auction__end">경매종료</p>
+									</div>
+								</div>
+								<div class="product__box">
+									<p class="product__txt">
+										<span class="product__span">희망가격</span>
+										<span class="product__price color-point1"> 1,960만원</span>
+									</p>
+									<p class="product__txt">
+										<span class="product__name">BMW 3시리즈 (F30) 320d</span>
+									</p>
+									<p class="product__txt">
+										<span class="product__info info-style">19러9780</span>
+										<span class="product__info info-style">10년04월</span>
+										<span class="product__info info-style">197,458km</span>
+										<span class="product__info info-style">사고</span>
+									</p>
+									<p class="product__txt">
+										<span class="product__mark mark-style type-eye">113</span>
+										<span class="product__mark mark-style type-people ani-tooltip-v2">
+											<span class="tooltip-v2">
+												15
+												<span class="tooltip-v2__outer">
+													<span class="tooltip-v2__inner">입찰자 15명</span>
+												</span>
+											</span>
+										</span>
+										<span class="product__mark mark-style type-no-icon">서울</span>
+									</p>
+								</div>
+								<a href="" class="product__link">자세히보기</a>
+							</div>
+						</li>
+						<!-- 계약중 -->
+						<li class="product__item">
+							<div class="product__wrap">
+								<div class="product__img img-border">
+									<img src="https://carfora.co.kr/data/goods/kb/20191114011852_1.jpg" class="img-center" alt="" />
+									<!-- 계약일때  type-progress 클래스 추가-->
+									<div class="product-auction type-progress">
+										<div class="product-auction__outer">
+											<div class="product-auction__inner">
+												<span class="product-auction__state">계약중</span>
+												<!-- 입찰중,계약중일때  추가-->
+												<div class="product-auction__bidding">
+													<span class="product-auction__my">내입찰가</span>
+													<span class="product-auction__price">1,220만원</span>
+												</div>
+												<!-- //입찰중,계약중일때  추가-->
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product__box">
+									<p class="product__txt">
+										<span class="product__span">희망가격</span>
+										<span class="product__price color-point1"> 1,960만원</span>
+									</p>
+									<p class="product__txt">
+										<span class="product__name">BMW 3시리즈 (F30) 320d</span>
+									</p>
+									<p class="product__txt">
+										<span class="product__info info-style">19러9780</span>
+										<span class="product__info info-style">10년04월</span>
+										<span class="product__info info-style">197,458km</span>
+										<span class="product__info info-style">사고</span>
+									</p>
+									<p class="product__txt">
+										<span class="product__mark mark-style type-eye">113</span>
+										<span class="product__mark mark-style type-people ani-tooltip-v2">
+											<span class="tooltip-v2">
+												15
+												<span class="tooltip-v2__outer">
+													<span class="tooltip-v2__inner">입찰자 15명</span>
+												</span>
+											</span>
+										</span>
+										<span class="product__mark mark-style type-no-icon">서울</span>
+									</p>
+								</div>
+								<a href="" class="product__link">자세히보기</a>
+							</div>
+						</li>
+						<% for(var i = 1; i<=10; i++){%>
+						<li class="product__item">
+							<div class="product__wrap">
+								<div class="product__img img-border">
+									<img src="https://carfora.co.kr/data/goods/kb/20191114011852_1.jpg"
+										class="img-center" alt="" />
+									<div class="product-auction">
+										<div class="product-auction__outer">
+											<div class="product-auction__inner">
+												<span class="product-auction__state">남은시간</span>
+												<span class="product-auction__time">00:10:06</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product__box">
+									<p class="product__txt">
+										<span class="product__span">희망가격</span>
+										<span class="product__price color-point1"> 1,960만원</span>
+									</p>
+									<p class="product__txt">
+										<span class="product__name">BMW 3시리즈 (F30) 320d</span>
+									</p>
+									<p class="product__txt">
+										<span class="product__info info-style">19러9780</span>
+										<span class="product__info info-style">10년04월</span>
+										<span class="product__info info-style">197,458km</span>
+										<span class="product__info info-style">사고</span>
+									</p>
+									<p class="product__txt">
+										<span class="product__mark mark-style type-eye">113</span>
+										<span class="product__mark mark-style type-people ani-tooltip-v2">
+											<span class="tooltip-v2">
+												15
+												<span class="tooltip-v2__outer">
+													<span class="tooltip-v2__inner">입찰자 15명</span>
+												</span>
+											</span>
+										</span>
+										<span class="product__mark mark-style type-no-icon">서울</span>
+									</p>
+								</div>
+								<a href="" class="product__link">자세히보기</a>
+							</div>
+						</li>
+						<%}%>
+						</ul>
+						<a href="" class="product__btn button-v3 w-l">
+							<span class="button-v3__wrap">
+								더 보기<span class="plus"><span class="plus__wrap">plus</span></span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include ../_include/_footer %>

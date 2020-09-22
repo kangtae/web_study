@@ -1,0 +1,84 @@
+@charset "utf-8";
+// Variables
+// 공통으로 사용되는 SCSS 변수들입니다.
+
+//Wrap Size
+$min-size:1440px;
+$inner-size:1260px;
+$mobile-size:680px;
+$mobile-size2:480px;
+$tablet-size:1025px;
+$minpc-size1:1700px;
+$minpc-size2:1280px;
+$minpc-size3:1180px;
+$iphone-size:340px;
+$minH-size:900px;
+
+//Font Weight
+$thin:100;
+$lightDown:200;
+$light:300;
+$regular :400;
+$medium :500;
+$bold:600;
+$black:700;
+
+
+//color
+$black:#000;
+$black1:#000;
+$black2:#444;
+$black3:#777;
+$black4:#999;
+$black5:#555;
+$red:#FF5D54;
+
+$point1:#0d5efe;
+
+$grey1:#FAFAFA;
+$grey2:#F5F5F5;
+$grey3:#dddddd;
+$grey4:#ccc;
+$grey5:#888;
+
+
+$encar:#d50527;
+$kb:#ffb81d;
+$aj:#f56209;
+$mpark:#0b5f36;
+$bg-color:#f8f9fa;
+
+$color-s:#0d5efe;
+$color-a:#00c01e;
+$color-b:#feca06;
+$color-c:#ff8c05;
+$color-d:#000000;
+
+//version
+$ver:190603;
+
+
+//Font Family
+$font-roboto:'Roboto',sans-serif;
+$font-normal:'Apple SD Gothic','Roboto','noto-kr',sans-serif;
+$font-square:'Nanum Square','Dotum','돋움', sans-serif;
+
+
+//Font Size
+$sizeTit1:42px;
+$sizeTit2:28px;
+$sizeTit3:22px;
+$sizeTit4:20px;
+
+$sizeTit5:32px;//메인 .main-recommend__tit
+
+$sizeTxt1:18px;
+$sizeTxt2:15px;
+$sizeTxt3:14px;
+$sizeTxt4:13px;
+
+$sizeTxt5:11px;//스텝 단계 숫자
+$sizeTxt6:10px;//관심차량 숫자
+$sizeTxt7:90px;//커먼 css 슬롯 텍스트 사이즈
+$sizeTxt8:16px;//로딩페이지 테블릿사이즈
+$sizeTxt9:12px;//mycar / .mycar7__header__tag, 뷰페이지 댓글 작성자 날짜

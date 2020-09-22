@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import "mixins";
+.guide-body { height:auto; margin:0; }
+.guide-tit { padding-top:10px; margin-top:1em; font-size:26px; color:#333; font-weight:500; }
+.guide-wrap { margin:10px 0; padding:10px; border:1px solid #aaa;}
+.guide-bg{padding: 10px;background-color: #e3e3e3;}
+.guide-bg2{background-color: #eee;}
+.guide-span{font-size: 14px; color: $black1;}
+.guide-subtit{margin: 30px 0 15px;padding: 0 0 10px 10px;border-bottom: 1px solid #aaa;font-size: 20px;font-weight: $regular;color: $black1;
+    &:first-child{margin-top: 0;}
+    // .new-section + &{margin-top: 30px;}
+}
+
+.syntaxhighlighter{overflow:scroll !important}
+.container{min-width:0;}
+
+.guide-color{font-size: 0;
+    $this:&;
+
+    &__tit{position: relative;margin: 0;font-size: 20px;color: #333;font-weight: 400;}
+    &__box{
+        & + &{margin-top: 20px;}
+        &.type-point{
+            #{$this}__item{
+                &:nth-child(1){
+                    #{$this}__circle{background-color: $point1;}
+                }
+            }
+        }
+        &.type-grey{
+            #{$this}__item{
+                &:nth-child(1){
+                    #{$this}__circle{background-color: $grey1;}
+                }
+                &:nth-child(2){
+                    #{$this}__circle{background-color: $grey2;}
+                }
+                &:nth-child(3){
+                    #{$this}__circle{background-color: $grey3;}
+                }
+                &:nth-child(4){
+                    #{$this}__circle{background-color: $grey4;}
+                }
+                &:nth-child(5){
+                    #{$this}__circle{background-color: $grey5;}
+                }
+            }
+        }
+    }
+    &__list{margin: 10px 0 0;padding: 0;font-size: 0;}
+    &__item{display: inline-block;position: relative;width: 20%;min-height: 48px;list-style: none;vertical-align: middle;
+        &:nth-child(5) ~ #{$this}__item{margin-top: 25px;}
+    }
+    &__circle{display: inline-block;position: absolute;top: 0;left: 0;bottom: 0;width: 45px;height: 45px;margin: auto 0;border-radius: 50%;background-color: #000;text-indent: -999px;overflow: hidden;box-sizing: border-box;}
+    &__desc{padding-left: 60px;font-size: 13px;}
+}
+
+.guide-grid{
+    &__list{margin:0; padding:0; font-size:0;}
+    &__item{display:inline-block; list-style:none;
+        & + &{margin-left:40px;}
+    }
+}
+
+
+.g-gnb{position:fixed; top:0; left:0; bottom:0;  background-color:#f8f8f8; box-sizing:border-box; z-index:100; transition: all 0.3s;
+    &__area{height:100%; width:250px; padding-top:50px;  box-sizing:border-box;}
+    &__scroll{overflow:auto;  height:100%;}
+    &__depth1-list{position: absolute;; top:0; left:0; width:100%; margin:0; padding:0; font-size:0;}
+    &__depth1-item{position:relative; display:inline-block; width:33.33%; height:50px; line-height:50px; background-color:#333; color:#fff; vertical-align:top;
+        &:first-child:before{display:none;}
+        &.is-active{font-weight:$bold; color:orange;}
+        &:before{position:absolute; top:0; bottom:0; left:0; height:calc(100% - 36px); width:1px; margin:auto 0 ;background:#fff; content:'';}
+    }
+    &__depth1-link{ display:block; color:inherit; text-decoration:none; font-size:14px; text-align:center; text-transform: uppercase;}
+    &__depth2-list{margin:0; padding:0; font-size:0;}
+    &__depth2-item{ display:block; padding:0 5%; list-style:none;  box-sizing:border-box;
+        &.is-active{font-weight:$medium; background-color:#ccc; color:#804511;}
+    }
+    &__depth2-link{position:relative; display:block; text-decoration:none; color:inherit; font-size:12px; padding:8px; text-transform:uppercase;
+        &:before{position:absolute; top:0; bottom:0; left:0; height:calc(100% - 16px); width:1px; margin:auto 0 ;background:#666; content:'';}
+    }
+    &__btn{overflow:hidden; position:absolute; top:0; right: -50px; display:block; width:50px; height:50px; margin:auto 0; text-align:center; text-decoration:none; color:#fff;
+        text-indent:-9999px; transform:all 0.3s; @include background('../img/guide/guide_close.png','#555 no-repeat center center');
+        &.is-active{height:100%; width:14px; right:-14px; @include background('../img/guide/guide_btn.png','#555 no-repeat center center');}
+    }
+    @media only screen and (max-width: $tablet-size){
+        &__area{width:300px;}
+    }
+}

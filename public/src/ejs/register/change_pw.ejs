@@ -1,0 +1,38 @@
+<%
+page_type = "register"
+	page = "register"
+	header = "true"
+%>
+<% include ../_include/_header %>
+    <!--container-->
+    <div class="container type-grey type-fullbg">
+        <div class="wrap">
+            <div class="container__wrap">
+                <div class="register">
+                    <h3 class="register__tit">비밀번호 찾기</h3>
+                    <div class="register__box register-2">
+                        <h4 class="register__subtit type-titv2">새로운 비밀번호를 입력하세요</h4>
+                        <form action="../../html/register/done_change_pw.html" id="register_form" class="registerform" method="get">
+                            <ul class="registerform__list">
+                            	<li class="registerform__item">
+                            	    <label htmlFor="register__id" class="register__label">아이디</label>
+                            	    <input type="email" id="register__id" class="input-v2 js-r-input js-error-check form-4__input type-clear" placeholder="" autocomplete="off" name="" readonly value="mugggle-kim@naver.com">
+                            	</li>
+                            	<li class="registerform__item">
+                            	    <label for="register__pw" class="register__label">새로운 비밀번호</label>
+                            	    <input type="password" id="register__pw" class="input-v2 js-r-input js-error-check form-4__input" placeholder="8자리 이상의 영문,숫자,특수문자 조합으로 입력" autocomplete="off" name="">
+                            	    <!-- 비밀번호 형식 오류시 -->
+                            	    <!-- <p class="input-errortxt">비밀번호 형식이 올바르지 않습니다.</p> -->
+                            	    <input type="password" id="register__pw2" class="input-v2 js-r-input js-error-check type-second form-4__input" placeholder="비밀번호 재입력" autocomplete="off" name="">
+                            	    <!-- 비밀번호 일치하지 않을때 오류시 -->
+                            	    <!-- <p class="input-errortxt">비밀번호가 일치하지 않습니다.</p> -->
+                            	</li>
+                            </ul>
+							<button type="submit" class="register__submit js-register-submit button-v2 is-disabled w-100" disabled><span class="btn-span">비밀번호 변경 완료</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<% include ../_include/_footer %>

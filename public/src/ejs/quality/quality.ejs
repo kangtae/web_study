@@ -1,0 +1,298 @@
+<%
+	page_type = "quality"
+	page = "quality"
+	header = "true"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="content">
+		<div class="quality-header">
+			<div class="container__wrap">
+				<div class="quality-header__wrap">
+					<p class="quality-header__subtit">값싸고 품질 좋은 중고차를 찾고 싶다면?</p>
+					<h3 class="quality-header__tit">
+						카포라 종합평가 시스템
+					</h3>
+					<p class="quality-header__txt">
+						카포라는 국내 주요 사이트의 차량을 한번에 상호비교 분석하여<br>
+						좀 더 객관적이고 투명한 평가자료 제공을 위해 노력하고 있습니다.
+					</p>
+					<div class="quality-header__box">
+						<div class="quality-header__vertical">
+							<div class="slot type-quality">
+								<div class="slot__score">
+									<div class="slot__box js-score-box">
+										<span class="slot__origin">S</span>
+										<div class="slot__text js-slot-text">
+											<p class="slot__alpha js-alpha bld">S</p>
+											<% for(i=0; i<4; i++){ %>
+											<span class="slot__word">S</span>
+											<span class="slot__word">A</span>
+											<span class="slot__word">B</span>
+											<span class="slot__word">C</span>
+											<span class="slot__word">D</span>
+											<span class="slot__word">E</span>
+											<span class="slot__word">F</span>
+											<% } %>
+										</div>
+									</div>
+									<p class="slot__tit">품질</p>
+								</div>
+								<div class="slot__score">
+									<div class="slot__box js-score-box">
+										<span class="slot__origin">A</span>
+										<div class="slot__text js-slot-text2">
+											<p class="slot__alpha js-alpha2 bld">A</p>
+											<% for(i=0; i<4; i++){ %>
+											<span class="slot__word">S</span>
+											<span class="slot__word">A</span>
+											<span class="slot__word">B</span>
+											<span class="slot__word">C</span>
+											<span class="slot__word">D</span>
+											<span class="slot__word">E</span>
+											<span class="slot__word">F</span>
+											<% } %>
+										</div>
+									</div>
+									<p class="slot__tit">가성비</p>
+								</div>
+								<div class="slot__score">
+									<div class="slot__box js-score-box">
+										<span class="slot__origin">A</span>
+										<div class="slot__text js-slot-text3">
+											<p class="slot__alpha js-alpha3 bld">+</p>
+											<% for(i=0; i<7; i++){ %>
+											<span class="slot__word">+</span>
+											<span class="slot__word">0</span>
+											<span class="slot__word">-</span>
+											<% } %>
+										</div>
+									</div>
+									<p class="slot__tit">사고</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="quality-body">
+			<div class="container__wrap">
+				<div class="content__box">
+					<h4 class="content-tit type-txt">카포라 품질 등급제란?</h4>
+					<p class="content-txt">
+						자사 자체 개발 AI 기술을 이용한 카포라 빅데이터 봇으로 차량의 상품가치와 가격의 적정성을 분석해 평가 등급을 안내합니다.<br>
+						카포라 평가 등급제를 통해 한눈에 쉽게 차량의 상태를 파악하고, 다양한 차량들과 내차를 비교해 보세요!
+					</p>
+					<div class="content-border type-quality">
+						<div class="content-border__box type-bar">
+							<div class="quality-bar">
+								<ul class="quality-bar__list">
+									<li class="quality-bar__item">
+										<h5 class="quality-bar__tit">품질평가</h5>
+										<div class="quality-bar__box">
+											<div class="rank-bar">
+												<ul class="rank-bar__list">
+													<li class="rank-bar__item is-active">
+														<span class="rank-bar__text">S</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">A</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">B</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">C</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">D</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="quality-bar__item">
+										<h5 class="quality-bar__tit">가성비평가</h5>
+										<div class="quality-bar__box">
+											<div class="rank-bar">
+												<ul class="rank-bar__list">
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">S</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item is-active">
+														<span class="rank-bar__text">A</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">B</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">C</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+													<li class="rank-bar__item">
+														<span class="rank-bar__text">D</span>
+														<span class="rank-bar__bar">bar</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="quality-bar__item type-one">
+										<h5 class="quality-bar__tit">사고평가</h5>
+										<div class="quality-bar__box">
+											<div class="accident-style">
+												<span class="accident-style__span type-plus is-active">없음</span>
+												<span class="accident-style__span type-minus">있음</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="content-border__box type-txt">
+							<dl class="quality__dl">
+								<dt class="quality__dt">품질</dt>
+								<dd class="quality__dd">
+									감가상각에 영향을 미치는 주행거리, 수리이력, 소유자이전, 특수사고, 사고이력과
+									소비자의 니즈에 따른 소유자 이전 정보 등을 종합분석하여 산출합니다.
+								</dd>
+								<dt class="quality__dt">가성비</dt>
+								<dd class="quality__dd">
+									동일 모델의 차량 중에서도 품질평가 등급이 동일한 차량만을 대상으로
+									가격을 한번 더 비교하여 가격대비 품질의 적정성을 산출합니다.
+								</dd>
+								<dt class="quality__dt">사고</dt>
+								<dd class="quality__dd">
+									사고여부는 사고 유무에 따라 무사고일 때 플러스(+)로 유사고일 때 마이너스(-)로 표현합니다.
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<!-- //content__box -->
+				<div class="content__box">
+					<h4 class="content-tit">종합 차량평가 기준표</h4>
+					<table class="table-v1">
+						<colgroup>
+							<col class="table-v1__width">
+							<col class="table-v1__width">
+							<col class="table-v1__width">
+							<col class="table-v1__width">
+						</colgroup>
+						<tbody>
+							<tr class="table-v1__row">
+								<th class="table-v1__th"></th>
+								<th class="table-v1__th">주요평가요소</th>
+								<th class="table-v1__th">반영기준</th>
+								<th class="table-v1__th">평가</th>
+							</tr>
+							<tr class="table-v1__row">
+								<th class="table-v1__th" rowspan="5">품질</th>
+								<td class="table-v1__td">주행거리</td>
+								<td class="table-v1__td" rowspan="4">차종별 평균 수치 산출</td>
+								<td class="table-v1__td" rowspan="4"><strong class="ft-medium">상대평가</strong> (S ~ D등급)</td>
+							</tr>
+							<tr class="table-v1__row">
+								<td class="table-v1__td">수리이력</td>
+							</tr>
+							<tr class="table-v1__row">
+								<td class="table-v1__td">소유자이전</td>
+							</tr>
+							<tr class="table-v1__row">
+								<td class="table-v1__td">사고이력</td>
+							</tr>
+							<tr class="table-v1__row">
+								<td class="table-v1__td">특수사고</td>
+								<td class="table-v1__td">전손, 침수, 도난 여부</td>
+								<td class="table-v1__td">절대평가 (S등급 또는 D등급)</td>
+							</tr>
+							<tr class="table-v1__row">
+								<th class="table-v1__th">가성비</th>
+								<td class="table-v1__td">동일 등급 차량 평균금액</td>
+								<td class="table-v1__td">품질평가 등급</td>
+								<td class="table-v1__td">상대평가 (S ~ D등급)</td>
+							</tr>
+							<tr class="table-v1__row">
+								<th class="table-v1__th">사고</th>
+								<td class="table-v1__td">사고여부</td>
+								<td class="table-v1__td">사고유무</td>
+								<td class="table-v1__td">무사고 (+) / 유사고 (-)</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="table-v1__caption bullet-square">
+						카포라의 평가기준은 현재 판매중인 매물들을 실시간 비교하여 상대평가로 산출됩니다.
+						<span class="table-v1__noti">판매중인 차량들의 수량에 따라 오차범위가 발생되어 등급이 일부 변경될 수 있습니다.</span>
+					</p>
+				</div>
+				<div class="content__box">
+					<h4 class="content-tit">등급별 선정 기준</h4>
+					<div class="content-border type-quality">
+						<div class="content-border__box">
+							<div class="graph">
+								<h5 class="content-border__tit">등급별 선정 기준</h5>
+								<div class="clb">
+									<p class="graph__info fl">(상위등급)</p>
+									<p class="graph__info fr">(하위등급)</p>
+								</div>
+								<ul class="graph__list">
+									<li class="graph__item type-s">
+										<div class="graph__bar">S</div>
+										<div class="graph__txt">10%</div>
+									</li>
+									<li class="graph__item type-a">
+										<div class="graph__bar">A</div>
+										<div class="graph__txt">15%</div>
+									</li>
+									<li class="graph__item type-b">
+										<div class="graph__bar">B</div>
+										<div class="graph__txt">50%</div>
+									</li>
+									<li class="graph__item type-c">
+										<div class="graph__bar">C</div>
+										<div class="graph__txt">15%</div>
+									</li>
+									<li class="graph__item type-d">
+										<div class="graph__bar">D</div>
+										<div class="graph__txt">10%</div>
+									</li>
+								</ul>
+								<div class="graph-info">
+									<ul class="graph-info__list">
+										<li class="graph-info__item type-s">S등급</li>
+										<li class="graph-info__item type-a">A등급</li>
+										<li class="graph-info__item type-b">B등급</li>
+										<li class="graph-info__item type-c">C등급</li>
+										<li class="graph-info__item type-d">D등급</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="content-border__box">
+							<div class="quality-info">
+								<h5 class="quality-info__tit">기존 평가 등급과는 <span class="color-point1">다른 우수한 차량 선별</span></h5>
+								<ul class="quality-info__list">
+									<li class="quality-info__item bullet-square">국내 주요 사이트의 매물을 통합으로 비교분석하여 순위와 점수를 부여합니다. </li>
+									<li class="quality-info__item bullet-square">AI기술을 통한 각 항목별 평가 가중치를 두어 품질평가에 반영합니다.</li>
+									<li class="quality-info__item bullet-square">종합평가를 통하여 제시된 등급별 분포 비율은 매일마다 정기적으로 업데이트 됩니다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<p class="content__noti bullet-square">해당 평가 등급은 온라인상으로 확인가능한 정보만으로 산정됩니다. 실제의 정보와 수집된 정보가 상이한 경우 실제 차량평가는 달라질 수 있습니다.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include ../_include/_footer %>

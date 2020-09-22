@@ -1,0 +1,165 @@
+<%
+page_type = "mycar"
+	page = "mycar"
+	header = "true"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="mycar1">
+        <section class="mycar1__header">
+            <div class="wrap">
+                <div class="container__wrap">
+
+                    <div class="fl mycar1__header-box">
+                        <h3 class="mycar1__title">
+                            <img src="../../img/mycar/my_car_tit.png" alt="내차어때 서비스 베타">
+                        </h3>
+                        <p class="mycar1__tit-sub ft ft-700">
+                            <span class="mycar1__counter-box">
+                                <span class="mycar1__counter-origin">60,548</span>
+                                <!--영역을 잡기위한 값 counter-copy 와 동일한 값 적용 -->
+                                <span class="mycar1__counter-copy js-counter">60,548</span>
+                            </span>
+                            대의 차량과<br>지금 내차를 비교해 보세요
+                        </p>
+                    </div>
+                    <div class="mycar1__header-box type-input fl">
+                        <form action="../mycar_step.php" method="post" class="mycar1-form">
+                            <label for="my_car_name" class="mycar1-form__tlabel ft ft-300">차량명</label>
+                            <input type="text" name="car_name" class="mycar1-form__tinput auto_input" id="my_car_name" placeholder="예시) 그랜저 HG" required>
+							<button type="submit" class="mycar1-form__sinput button-v2"><span class="btn-span">등록하기</span></button>
+                        </form>
+                        <!--                <p class="ft ft-300 sub_txt bld">찾으시려는 차량이 없으신가요? <span class="ft ft-500">전체차량 보기</span></p>-->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mycar1-slider-area">
+            <div class="wrap">
+                <div class="container__wrap">
+                    <div class="clb">
+                        <h4 class="mycar1-slider-area__tit ft ft-500 fl">최근 차량 시세</h4>
+                        <div class="fr">
+                            <div class="mycar1__slider-btn">
+                                <a href="" class="mycar1__slider-btn__prev js-plan-prev">prev</a>
+                                <a href="" class="mycar1__slider-btn__next js-plan-next">next</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-plan">
+                        <ul class="main-plan__list js-plan-slider">
+
+                            <li class="main-plan__item">
+                                <div class="main-plan__wrap">
+                                    <div class="main-plan__txtbox" style="background-image:url(../../img/mycar/logo_benz.png);">
+                                        <div class="main-plan__tit">
+                                            <p>기아 더뉴 쏘렌토</p>
+                                            <p class="ellipsis_1">디젤2.2 2WD 노블레스 스페셜</p>
+                                        </div>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">연식</span><span class="fr">2019년 06월식</span></p>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">주행거리</span><span class="fr">861,521km</span></p>
+                                        <p class="main-plan__info clb price ft ft-300"><span class="main-plan__info__num ft ft-500 fl">2,550 </span><span class="fl">&nbsp;만원</span> <span class="main-plan__info__alpha fr ft ft-500">A+</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main-plan__item">
+                                <div class="main-plan__wrap">
+                                    <div class="main-plan__txtbox" style="background-image:url(../../img/mycar/logo_benz.png);">
+                                        <div class="main-plan__tit">
+                                            <p>기아 더뉴 쏘렌토</p>
+                                            <p class="ellipsis_1">디젤2.2 2WD 노블레스 스페셜</p>
+                                        </div>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">연식</span><span class="fr">2019년 06월식</span></p>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">주행거리</span><span class="fr">861,521km</span></p>
+                                        <p class="main-plan__info clb price ft ft-300"><span class="main-plan__info__num ft ft-500 fl">2,550 </span><span class="fl">&nbsp;만원</span> <span class="main-plan__info__alpha fr ft ft-500">A+</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main-plan__item">
+                                <div class="main-plan__wrap">
+                                    <div class="main-plan__txtbox" style="background-image:url(../../img/mycar/logo_benz.png);">
+                                        <div class="main-plan__tit">
+                                            <p>기아 더뉴 쏘렌토</p>
+                                            <p class="ellipsis_1">디젤2.2 2WD 노블레스 스페셜</p>
+                                        </div>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">연식</span><span class="fr">2019년 06월식</span></p>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">주행거리</span><span class="fr">861,521km</span></p>
+                                        <p class="main-plan__info clb price ft ft-300"><span class="main-plan__info__num ft ft-500 fl">2,550 </span><span class="fl">&nbsp;만원</span> <span class="main-plan__info__alpha fr ft ft-500">A+</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main-plan__item">
+                                <div class="main-plan__wrap">
+                                    <div class="main-plan__txtbox" style="background-image:url(../../img/mycar/logo_benz.png);">
+                                        <div class="main-plan__tit">
+                                            <p>기아 더뉴 쏘렌토</p>
+                                            <p class="ellipsis_1">디젤2.2 2WD 노블레스 스페셜</p>
+                                        </div>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">연식</span><span class="fr">2019년 06월식</span></p>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">주행거리</span><span class="fr">861,521km</span></p>
+                                        <p class="main-plan__info clb price ft ft-300"><span class="main-plan__info__num ft ft-500 fl">2,550 </span><span class="fl">&nbsp;만원</span> <span class="main-plan__info__alpha fr ft ft-500">A+</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main-plan__item">
+                                <div class="main-plan__wrap">
+                                    <div class="main-plan__txtbox" style="background-image:url(../../img/mycar/logo_benz.png);">
+                                        <div class="main-plan__tit">
+                                            <p>기아 더뉴 쏘렌토</p>
+                                            <p class="ellipsis_1">디젤2.2 2WD 노블레스 스페셜</p>
+                                        </div>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">연식</span><span class="fr">2019년 06월식</span></p>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">주행거리</span><span class="fr">861,521km</span></p>
+                                        <p class="main-plan__info clb price ft ft-300"><span class="main-plan__info__num ft ft-500 fl">2,550 </span><span class="fl">&nbsp;만원</span> <span class="main-plan__info__alpha fr ft ft-500">A+</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main-plan__item">
+                                <div class="main-plan__wrap">
+                                    <div class="main-plan__txtbox" style="background-image:url(../../img/mycar/logo_benz.png);">
+                                        <div class="main-plan__tit">
+                                            <p>기아 더뉴 쏘렌토</p>
+                                            <p class="ellipsis_1">디젤2.2 2WD 노블레스 스페셜</p>
+                                        </div>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">연식</span><span class="fr">2019년 06월식</span></p>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">주행거리</span><span class="fr">861,521km</span></p>
+                                        <p class="main-plan__info clb price ft ft-300"><span class="main-plan__info__num ft ft-500 fl">2,550 </span><span class="fl">&nbsp;만원</span> <span class="main-plan__info__alpha fr ft ft-500">A+</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main-plan__item">
+                                <div class="main-plan__wrap">
+                                    <div class="main-plan__txtbox" style="background-image:url(../../img/mycar/logo_benz.png);">
+                                        <div class="main-plan__tit">
+                                            <p>기아 더뉴 쏘렌토</p>
+                                            <p class="ellipsis_1">디젤2.2 2WD 노블레스 스페셜</p>
+                                        </div>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">연식</span><span class="fr">2019년 06월식</span></p>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">주행거리</span><span class="fr">861,521km</span></p>
+                                        <p class="main-plan__info clb price ft ft-300"><span class="main-plan__info__num ft ft-500 fl">2,550 </span><span class="fl">&nbsp;만원</span> <span class="main-plan__info__alpha fr ft ft-500">A+</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main-plan__item">
+                                <div class="main-plan__wrap">
+                                    <div class="main-plan__txtbox" style="background-image:url(../../img/mycar/logo_benz.png);">
+                                        <div class="main-plan__tit">
+                                            <p>기아 더뉴 쏘렌토</p>
+                                            <p class="ellipsis">디젤2.2 2WD 노블레스 스페셜</p>
+                                        </div>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">연식</span><span class="fr">2019년 06월식</span></p>
+                                        <p class="main-plan__info clb ft ft-300"><span class="fl">주행거리</span><span class="fr">861,521km</span></p>
+                                        <p class="main-plan__info clb price ft ft-300"><span class="main-plan__info__num ft ft-500 fl">2,550 </span><span class="fl">&nbsp;만원</span> <span class="main-plan__info__alpha fr ft ft-500">A+</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<% include ../_include/_footer %>

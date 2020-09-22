@@ -1,0 +1,173 @@
+@charset "UTF-8";
+@import "mixins";
+@import "mycar/step";
+
+// 마이카1페이지 - mh
+.mycar1 {
+    &__header{height:510px; padding-top:180px; background-color:#0d5efe;}
+    &__header-box{width:50%;}
+    &__header-box{
+        &.type-input{margin-top: 23px; padding-left:20px;}
+    }
+    &__title{margin-bottom:25px;}
+    &__tit-sub{font-size:$sizeTit1;color:#fff;letter-spacing: -1px;}
+}
+.mycar1-form{
+    &__tlabel{font-size:$sizeTxt2;color:#fff;display: block;}
+    &__tinput{width:400px;border-bottom:2px solid #fff;height:60px;padding:18px 0;font-size:$sizeTxt2;padding-left:30px;background-image:url("../../img/mycar/serch_icon.png");background-size:20px 20px;background-repeat: no-repeat;background-position:0 20px;color:#fff; background-color: transparent; font-weight:$medium;
+        @include placeholder(#abc7ff,300);
+    }
+    &__sinput{margin-left:20px; background-color: transparent; color:#fff; border-color:#fff;}
+}
+/*슬라이드 부분*/
+.mycar1-slider-area{padding-top:88px;background-color:#fff;
+    &__tit{line-height:22px;margin-bottom:36px;font-weight:$medium;font-size:$sizeTit3;color:#000;}
+}
+.main-plan{overflow: hidden;
+    &__list { margin: 0 0 0 -20px; padding: 0; font-size: 0; }
+    &__item { display: inline-block; width: 20%; padding-left: 20px; list-style: none; box-sizing: border-box; outline: 0;vertical-align: top;}
+    &__txtbox{padding-left:54px;background-size:40px 40px;background-repeat: no-repeat;background-position:0 3px;}
+    &__tit{font-size:$sizeTxt2;color:#333;line-height:24px; margin-bottom:10px;}
+    &__info{font-size:$sizeTxt4;color:#888;line-height:24px;}
+    &__info.price{font-size:$sizeTxt1;margin-top:10px;}
+    // &__info__num{padding-top:1px;}
+    &__info__alpha{color:#0d5efe;}
+    &__wrap{border:1px solid $grey3;border-radius:8px;padding:24px 27px 28px 21px;}
+}
+.mycar1__slider-btn { position: relative;  font-size: 0;margin-top:-5px;
+    &__prev, &__next { overflow: hidden; display: inline-block; width: 40px; height: 40px; text-indent: -9999px; }
+    &__prev { background: url("../../img/mycar/slide_l_btn.png") no-repeat center center/contain;
+        &:hover{ background: url("../../img/mycar/slide_l_btn_on.png") no-repeat center center/contain; }
+    }
+    &__next { background: url("../../img/mycar/slide_r_btn.png") no-repeat center center/contain;
+        &:hover{ background: url("../../img/mycar/slide_r_btn_on.png") no-repeat center center/contain; }
+    }
+    &__prev + &__next {
+    margin-left: 5px;
+}
+}
+/*카운터*/
+.mycar1__counter{
+    &-box{position:relative; display:inline-block;}
+    &-copy{position:absolute; top:0; left:0; display:inline-block; white-space:nowrap;}
+    &-origin{opacity:0; }
+}
+
+/*7단계 - 결과 페이지*/
+
+.wrap_my_car_7{padding-top:60px}
+
+/*공통여부 미확정 태그 및 스타일*/
+.mycar7__header__tag{height:20px;line-height:18px;padding:0 5px;border-radius:2px;font-size:$sizeTxt9;font-weight:$light;border:1px solid #0d5efe;display: inline-block;margin-right:4px;
+    &.type-blue{background-color:#0d5efe;color:#fff;}
+    &.type-white{background-color:#fff;color:#0d5efe;}
+}
+
+.common-box{border:1px solid $grey3;border-radius:8px;background-color:#fff;padding:50px 60px 60px 60px;margin-right:20px;
+    &:last-child{margin-right:0;}
+}
+/*공통여부 미확정 태그 및 스타일 끝 --------------*/
+
+/*타이틀영역*/
+.mycar7__header{
+    margin-bottom:40px;
+    &__tagbox{margin-bottom:15px;}
+    &__carname{font-weight:$bold;font-size:$sizeTit2;color:#000;margin-bottom:25px;line-height:27px;}
+    &__subtxt{font-size:$sizeTxt3;color:#888;font-weight:$light;}
+    &__subtxt__btn{color:#000;cursor:pointer;}
+    &__subbox{margin-bottom:20px;}
+    &__data{font-size:$sizeTxt3;font-weight:$light;color:#888;display:inline-block;}
+    &__data:before{content:"";display:inline-block;width:8px;height:8px;border-radius: 50%;margin-right:5px;margin-top: -3px;vertical-align: middle;}
+    &__data.type-average{margin-left:17px;}
+    &__data.type-mine:before{background-color:#0d5efe;}
+    &__data.type-average:before{background-color:rgba(8, 76, 124, 0.5);}
+}
+/*평가영역*/
+
+.mycar7__evaluation_area {margin-bottom:40px;
+    .common-box{height:340px;width: calc(100% - 320px);}
+}
+.mycar7__evaluation-box{
+    &__tit{font-size:$sizeTxt1;color:#000;display: inline-block;height:35px;font-weight:$medium;}
+}
+
+.mycar7__chrt {margin-top:4px;margin-left:10px;
+    &___origin{margin-top:5px;}
+}
+.mycar7__slot{
+    padding:50px 0px 0 0px;
+    &__score{width:115px;
+        &__plus{width:60px;margin-left:10px;}
+    }
+    &__tit{margin-top:2px;font-size:$sizeTxt3;color:#888;text-align: center;font-weight:$light;}
+    &__score-box{height:auto;width:100%;text-align: center;color:#0d5efe;overflow: hidden;position:relative;}
+    &__score-origin{font-size:$sizeTxt7; font-weight:$medium; line-height:1; opacity:0;}
+    &__text, &__text2{position:absolute;width:100%;opacity:0;transition:opacity .3s}
+    &__word{display: block;line-height:1;font-size:$sizeTxt7;font-weight:$medium;}
+}
+.mycar7__evaluation-mine{margin-left:25px;}
+.mycar7__evaluation-box__tit.type-mine{margin-bottom:12px;}
+.mycar7__evaluation-mine{
+    &__price-wrap{height:40px;line-height:40px;font-size:$sizeTit2;color:#0d5efe;margin-bottom:20px;}
+    &__sub_txt{margin-bottom:34px;font-weight:$light;width:253px;}
+    &__btn{
+        & + &{margin-left:10px;}
+    }
+}
+.mycar7__mine-info {border:1px solid $grey3;border-radius:8px;background-color:#fff;width:300px;
+    &__tit-box{display:table-cell;height:84px;padding:0 28px 0 28px;vertical-align:middle;border-bottom: 1px solid #ebebeb;width:1%;}
+    &__tit-inbox{position:relative;padding-left:56px;}
+    &__logo{position:absolute;top:2px; left:0;}
+    &__tit{font-size:$sizeTxt3;color:#000;font-weight:$medium;margin-bottom:5px;height:auto;width:183px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap}
+    &__tit-sub{font-size:$sizeTxt4;color:#888;}
+    &__tit-txt{padding-top:3px;display: inline-block;}
+    &-box{padding:18px 29px 28px 29px;line-height:35px;font-size:$sizeTxt3}
+    &-name {color:#888;font-weight:$light;}
+    &-gap{color:#333;font-weight:$medium;}
+}
+/*비교영역*/
+.mycar1-slider-area{
+    &__tit{font-size:$sizeTit3;color:#333;font-weight:$medium;margin-bottom:36px;}
+}
+/*비교영역 공통*/
+.mycar7__compare-area {
+    .common-box{width:620px;}
+    &__price-tit, &__graph-tit{font-size:$sizeTxt1;color:#000;font-weight:$medium;}
+    &__sub_txt{color:#888;line-height:24px;}
+    &__price-tit{margin-right:53px;line-height:28px;}
+    &__price-box{margin-bottom:49px;}
+    &__price-box.type-last{margin-bottom:0px;}
+    &__txt_box{width:309px;}
+    &__price{font-size:$sizeTit2;color:#0d5efe;margin-bottom:20px;line-height:28px;}
+    &__price-num{font-weight:$bold;}
+    &__graph{margin-bottom:23px;position:relative;height:122px;margin-top:27px;
+        &-box{width:50%;
+            &.type-m{padding-right:16px;}
+            &.type-a{padding-left:16px;}
+
+        }
+        &-circle{text-align: center;font-size:$sizeTxt3;color:#fff;border-radius: 50%;position:absolute;
+            &.type-mine{top:50%;right:50%;width:120px;height:120px;line-height:120px;margin-right: -10px;background-color:rgba(13,94,254,0.8);
+                @include vendor('transform', 'translateY(-50%)');}
+            &.type-average{top:50%;left:50%;width:70px;height:70px;line-height:70px;margin-left: -10px;background-color:rgba(8, 76, 124, 0.5);
+                @include vendor('transform', 'translateY(-50%)');}
+        }
+    }
+    &__sub_txt.type-graph{letter-spacing: -1px;}
+    &__tit{font-size:$sizeTit3;color:#333;font-weight:$medium;margin-bottom:23px;}
+}
+.info_txt_7{font-size:$sizeTxt4;font-weight:$light;;color:#888;text-align: right;margin-top:20px;}
+
+.mycar7__popbox{position:absolute;left:0;top:60px;display:none;width:auto;padding:20px;border:1px solid $grey3; border-radius: 6px;background-color:#fff;z-index:5;  -webkit-box-shadow: 0px 20px 30px 0px rgba(12, 12, 12, 0.15);-moz-box-shadow: 0px 20px 30px 0px rgba(12, 12, 12, 0.15);box-shadow: 0px 20px 30px 0px rgba(12, 12, 12, 0.15);
+    $this:&;
+    &__list{margin-top:-10px;}
+    &__item{margin-top:10px;padding-left:46px;
+        &:hover #{$this}__link{color:#000;}
+        &.type-kko{background:url(../../img/mycar/kko_icon.png) no-repeat center left 0/30px 30px;}
+        &.type-fb{background:url(../../img/mycar/fb_icon.png) no-repeat center left 0/30px 30px;}
+        &.type-twt{background:url(../../img/mycar/twt_icon.png) no-repeat center left 0/30px 30px;}
+        &.type-url{background:url(../../img/mycar/url_icon.png) no-repeat center left 0/30px 30px;}
+    }
+    &__link{display:block;line-height: 30px;font-size:$sizeTxt3;color:#888;text-decoration: none;white-space: nowrap;margin:0; padding:0; border:none; background:none; outline:0; cursor:pointer;}
+    &__arrow{position:absolute; top:-8px;left:28px;}
+}

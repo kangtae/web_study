@@ -1,0 +1,554 @@
+<%
+page_type = "search"
+	page = "mycar"
+	header = "true"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="search">
+		<!-- 가격우선-->
+		<!-- <div class="content-banner type-price">
+			<div class="content-banner__vertical">
+				<div class="container__wrap">
+					<h3 class="content-banner__tit">합리적인 <strong class="content-banner__point">가격 우선 차량</strong></h3>
+					<p class="content-banner__txt">매일 착한 가격으로 찾아오는 가격우선 차량<i>!</i> 국내 주요 사이트에서 추천하는 가격우선 차량입니다.</p>
+				</div>
+			</div>
+		</div> -->
+		<!-- 품질우선-->
+		<!-- <div class="content-banner type-quality">
+			<div class="content-banner__vertical">
+				<div class="container__wrap">
+					<h3 class="content-banner__tit">베스트 <strong class="content-banner__point">품질 우선 차량</strong></h3>
+					<p class="content-banner__txt">중고차 가격과 품질을 함께 고려한 베스트 우수차량<i>!</i>  지금 가장 핫한 차량을 확인하세요.</p>
+				</div>
+			</div>
+		</div> -->
+        <div class="search-header">
+			<div class="container__wrap">
+				<div class="search-header__box">
+					<h3 class="search-header__tit">
+						카포라 등급별<br>
+						최근 차량 시세
+					</h3>
+					<div class="slider-btn search-header__btn type-v2">
+						<a href="" class="slider-btn__prev js-search-prev">prev</a>
+						<a href="" class="slider-btn__next js-search-next">next</a>
+					</div>
+				</div>
+				<div class="search-header__area">
+					<div class="search-header__body">
+						<ul class="search-header__list js-search-slider">
+							<% for (var i = 1; i < 3; i++){%>
+								<li class="search-header__item">
+									<div class="search-header__thumbnail img-border">
+										<a href="" class="search-header__link type-img">
+											<img src="../../img/search/search_banner_1.jpg" alt="" class="search-header__img"/>
+										</a>
+									</div>
+									<div class="search-header__realtive">
+										<div class="search-header__wrap">
+											<h4 class="search-header__name"><a href="" class="search-header__link"># 그랜저HG</a></h4>
+											<dl class="search-header__dl">
+												<dt class="search-header__dt"><a href="" class="search-header__link">SK엔카</a></dt>
+												<dd class="search-header__dd">
+													<a href="" class="search-header__link">
+														<span class="search-header__rank">SS+</span>
+														<span class="search-header__price type-down">769만원</span>
+													</a>
+												</dd>
+											</dl>
+											<dl class="search-header__dl">
+												<dt class="search-header__dt"><a href="" class="search-header__link">KB차차차</a></dt>
+												<dd class="search-header__dd">
+													<a href="" class="search-header__link">
+														<span class="search-header__rank">SS+</span>
+														<span class="search-header__price">769만원</span>
+													</a>
+												</dd>
+											</dl>
+											<dl class="search-header__dl">
+												<dt class="search-header__dt"><a href="" class="search-header__link">엠파크</a></dt>
+												<dd class="search-header__dd">
+													<a href="" class="search-header__link">
+														<span class="search-header__rank">SS+</span>
+														<span class="search-header__price">769만원</span>
+													</a>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+							<%}%>
+							<li class="search-header__item">
+								<div class="search-header__thumbnail img-border">
+									<a href="" class="search-header__link type-img">
+										<img src="../../img/search/search_banner_no_img.png" alt="" class="search-header__img"/>
+									</a>
+								</div>
+								<div class="search-header__realtive">
+									<div class="search-header__wrap">
+										<h4 class="search-header__name"><a href="" class="search-header__link"># 그랜저HG</a></h4>
+										<dl class="search-header__dl">
+											<dt class="search-header__dt"><a href="" class="search-header__link">SK엔카</a></dt>
+											<dd class="search-header__dd">
+												<a href="" class="search-header__link">
+													<span class="search-header__rank">SS+</span>
+													<span class="search-header__price type-down">769만원</span>
+												</a>
+											</dd>
+										</dl>
+										<dl class="search-header__dl">
+											<dt class="search-header__dt"><a href="" class="search-header__link">KB차차차</a></dt>
+											<dd class="search-header__dd">
+												<a href="" class="search-header__link">
+													<span class="search-header__rank">SS+</span>
+													<span class="search-header__price">769만원</span>
+												</a>
+											</dd>
+										</dl>
+										<dl class="search-header__dl">
+											<dt class="search-header__dt"><a href="" class="search-header__link">엠파크</a></dt>
+											<dd class="search-header__dd">
+												<a href="" class="search-header__link">
+													<span class="search-header__rank">SS+</span>
+													<span class="search-header__price">769만원</span></a>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="search-body">
+			<div class="container__wrap">
+				<div class="search__body">
+					<div class="search-result hash">
+						<p class="search-result__tit">
+							<strong class="search-result__strong">검색결과</strong> 총<span class="search-result__span"> 4,514대</span>의 차량이 있습니다.
+						</p>
+						<ul class="hash__list">
+							<li class="hash__item"><a href="" class="hash__link type-close">장거리출퇴근</a></li>
+							<li class="hash__item"><a href="" class="hash__link">기아</a></li>
+							<li class="hash__item"><a href="" class="hash__link">직장인</a></li>
+							<li class="hash__item"><a href="" class="hash__link">장거리출퇴근</a></li>
+							<li class="hash__item"><a href="" class="hash__link">기아</a></li>
+							<li class="hash__item"><a href="" class="hash__link">직장인</a></li>
+							<li class="hash__item"><a href="" class="hash__link">장거리출퇴근</a></li>
+							<li class="hash__item"><a href="" class="hash__link">기아</a></li>
+							<li class="hash__item"><a href="" class="hash__link">직장인</a></li>
+							<li class="hash__item"><a href="" class="hash__link">장거리출퇴근</a></li>
+							<li class="hash__item"><a href="" class="hash__link">기아</a></li>
+							<li class="hash__item"><a href="" class="hash__link">직장인</a></li>
+							<li class="hash__item"><a href="" class="hash__link">장거리출퇴근</a></li>
+							<li class="hash__item"><a href="" class="hash__link">기아</a></li>
+							<li class="hash__item"><a href="" class="hash__link">직장인</a></li>
+						</ul>
+					</div>
+					<div class="search__content">
+						<div class="tab-v1">
+							<ul class="tab-v1__list">
+								<li class="tab-v1__item is-active"><a href="" class="tab-v1__link">전체상품 <span class="tab-v1__num">4,514</span></a></li>
+								<li class="tab-v1__item"><a href="" class="tab-v1__link">엔카 <span class="tab-v1__num">4,514</span></a></li>
+								<li class="tab-v1__item"><a href="" class="tab-v1__link">KB차차차 <span class="tab-v1__num">4,514</span></a></li>
+								<li class="tab-v1__item"><a href="" class="tab-v1__link">AJ셀카 <span class="tab-v1__num">4,514</span></a></li>
+								<li class="tab-v1__item"><a href="" class="tab-v1__link">엠파크 <span class="tab-v1__num">4,514</span></a></li>
+							</ul>
+						</div>
+						<div class="inner-search">
+							<div class="inner-search__wrap">
+								<form class="inner-search__form" name="inner-search_form" id="inner-search_form" action="../../index.php">
+									<label class="sr-only" for="inputSearch">결과내 검색</label>
+									<button type="submit" class="inner-search__btn">검색</button>
+									<input type="text" class="inner-search__input js-tag-search ui-autocomplete-input" id="inputSearch" name="inputSearch" placeholder="태그추가" required="" autocomplete="off" maxlength="50">
+								</form>
+							</div>
+						</div>
+						<div class="tab-v1__content">
+							<div class="tab-v1__header">
+								<div class="align-style">
+									<ul class="align-style__list">
+										<li class="align-style__item is-active">
+											<a href="" class="align-style__link"><span class="align-style__wrap">최근등록순</span></a>
+										</li>
+										<li class="align-style__item">
+											<a href="" class="align-style__link"><span class="align-style__wrap">높은가격순</span></a>
+										</li>
+										<li class="align-style__item">
+											<a href="" class="align-style__link"><span class="align-style__wrap">낮은가격순</span></a>
+										</li>
+										<li class="align-style__item">
+											<a href="" class="align-style__link"><span class="align-style__wrap">품질순</span></a>
+										</li>
+										<li class="align-style__item">
+											<a href="" class="align-style__link"><span class="align-style__wrap">주행거리순</span></a>
+										</li>
+										<li class="align-style__item">
+											<a href="" class="align-style__link"><span class="align-style__wrap">연식순</span></a>
+										</li>
+									</ul>
+								</div>
+								<div class="view-style">
+									<input type="checkbox" name="smart" id="smart"  class="view-style__check checkbox-v2"><label for="smart"> 스마트 필터 제외</label>
+									<ul class="view-style__list">
+										<li class="view-style__item">
+											<button class="view-style__btn type-line">가로</button>
+										</li>
+										<li class="view-style__item is-active">
+											<button class="view-style__btn type-square">바둑판</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="product">
+								<ul class="product__list js-product-list">
+									<li class="product__item no-message">
+										<div class="notice">
+											<h4 class="notice__tit">최근 본 차량이 없습니다.</h4>
+											<p class="notice__txt">
+												최근 본 차량을 계속 보관하려면<br> 로그인 후 관심차량에 담아주세요.
+											</p>
+										</div>
+									</li>
+									<li class="product__item">
+										<div class="product__wrap">
+											<div class="product__img img-border">
+												<img src="../../img/search/product_img.jpg" class="img-w100" alt="">
+											</div>
+											<div class="product__box">
+												<div class="product__brand">
+													<img src="../../img/common/brand_kb.png" class="img-w100" alt="kb">
+												</div>
+												<p class="product__txt">
+													<span class="product__rank">BB+ </span>
+													<span class="product__price">170만원</span>
+												</p>
+												<p class="product__txt">
+													<span class="product__name">현대 아반떼 1.5 SPECIAL EDITION 1</span>
+												</p>
+												<p class="product__txt">
+													<span class="product__info info-style">15누4778</span>
+													<span class="product__info info-style">99년05월 (99년형)</span>
+													<span class="product__info info-style">160,592km</span>
+												</p>
+												<p class="product__txt">
+													<span class="product__mark mark-style type-eye">0</span>
+												</p>
+											</div>
+											<a href="../view.php?c_code=2154663" class="product__link">자세히보기</a>
+										</div>
+									</li>
+									<li class="product__item">
+										<div class="product__wrap">
+											<div class="product__img img-border">
+												<img src="https://carfora.co.kr/data/goods/kb/20191114011852_1.jpg" class="img-center" alt="">
+											</div>
+											<div class="product__box">
+												<div class="product__brand">
+													<img src="../../img/common/brand_kb.png" class="img-w100" alt="kb">
+												</div>
+												<p class="product__txt">
+													<span class="product__rank">BB+ </span>
+													<span class="product__price">170만원</span>
+												</p>
+												<p class="product__txt">
+													<span class="product__name">현대 아반떼 1.5 SPECIAL EDITION 1</span>
+												</p>
+												<p class="product__txt">
+													<span class="product__info info-style">15누4778</span>
+													<span class="product__info info-style">99년05월 (99년형)</span>
+													<span class="product__info info-style">160,592km</span>
+												</p>
+												<p class="product__txt">
+													<span class="product__mark mark-style type-eye">0</span>
+												</p>
+											</div>
+											<a href="../view.php?c_code=2154663" class="product__link">자세히보기</a>
+										</div>
+									</li>
+								</ul>
+								<a href="" class="product__btn button-v3 w-l">
+									<span class="button-v3__wrap">
+										검색결과 더 보기<span class="plus"><span class="plus__wrap">plus</span></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="search__menu">
+					<div class="tag">
+						<div class="clb">
+							<h3 class="tag__tit">검색 <span class="color-point1">#Tag</span></h3>
+							<button class="tag__reset"><span class="btn-span">전체 초기화</span></button>
+						</div>
+						<div class="tag__area">
+							<div class="tag__box">
+								<div class="tag__header">
+									<h4 class="tag__subject">차종</h4>
+									<button class="tag__btn js-tag-toggle">open/close</button>
+								</div>
+								<div class="tag__body">
+									<ul class="tag__outer-list">
+										<% for(var i = 1; i<=10; i++){%>
+											<li class="tag__outer-item">
+												<input type="checkbox" name="chkAgree2" id="vehicleType<%=i%>"  class="tag__checkbox js-tag-check">
+												<label for="vehicleType<%=i%>">
+													<div class="tag__outer-wrap">
+														<span class="tag__icon hash-icon">#</span>
+														<span class="tag__name">경차</span>
+														<span class="tag__number">8,864</span>
+													</div>
+												</label>
+											</li>
+										<% } %>
+									</ul>
+								</div>
+							</div>
+							<div class="tag__box is-active is-arrow">
+								<div class="tag__header">
+									<h4 class="tag__subject">제조사/모델</h4>
+									<button class="tag__btn js-tag-toggle">open/close</button>
+								</div>
+								<div class="tag__body js-custom-scrollbar">
+									<ul class="tag__outer-list">
+										<li class="tag__outer-item">
+											<input type="checkbox" name="chkAgree2" id="car1"  class="tag__checkbox js-tag-check" checked>
+											<label for="car1">
+												<div class="tag__outer-wrap is-active">
+													<span class="tag__icon hash-icon">#</span>
+													<span class="tag__name">현대</span>
+													<span class="tag__number">8,864</span>
+												</div>
+											</label>
+											<!-- <a href="" class="tag__outer-link is-active clb">
+
+											</a> -->
+											<ul class="tag__inner-list">
+												<li class="tag__inner-item">
+													<input type="checkbox" name="chkAgree2" id="car2"  class="tag__checkbox js-tag-check" checked>
+													<label class="tag__inner-wrap is-active" for="car2">
+														<span class="tag__icon hash-icon">#</span>
+														<span class="tag__name">현대</span>
+														<span class="tag__number">8,864</span>
+													</label>
+												</li>
+												<li class="tag__inner-item">
+													<input type="checkbox" name="chkAgree2" id="car3"  class="tag__checkbox js-tag-check" checked>
+													<label class="tag__inner-wrap is-active" for="car3">
+														<span class="tag__icon hash-icon">#</span>
+														<span class="tag__name">현대</span>
+														<span class="tag__number">8,864</span>
+													</label>
+												</li>
+											</ul>
+										</li>
+										<% for(var i = 4; i<50; i++){%>
+											<li class="tag__outer-item">
+												<input type="checkbox" name="chkAgree2" id="car<%=i%>"  class="tag__checkbox js-tag-check">
+												<label class="tag__inner-wrap" for="car<%=i%>">
+													<span class="tag__icon hash-icon">#</span>
+													<span class="tag__name">현대</span>
+													<span class="tag__number">8,864</span>
+												</label>
+											</li>
+										<%}%>
+									</ul>
+								</div>
+							</div>
+							<div class="tag__box">
+								<div class="tag__header">
+									<h4 class="tag__subject">연식</h4>
+									<button class="tag__btn js-tag-toggle">open/close</button>
+								</div>
+								<div class="tag__body">
+									<div class="period-style1">
+										<dl class="period-style1__dl">
+											<dt class="period-style1__dt">최소</dt>
+											<dd class="period-style1__dd">
+												<div class="period-style1__box">
+													<select name="year_year" class="select-v1 type-small" id="year_year" required="">
+														<option value="">년</option>
+														<% for(var i = 1989; i<=2021; i++){%>
+															<option value="<%=i%>"><%=i%></option>
+														<% } %>
+													</select>
+												</div>
+												<div class="period-style1__box">
+													<select name="year_year" class="select-v1 type-small" id="year_year" required="">
+														<option value="">월</option>
+														<% for(var i = 1; i<=12; i++){%>
+															<option value="<%=i%>"><%=i%></option>
+														<% } %>
+													</select>
+												</div>
+											</dd>
+										</dl>
+										<dl class="period-style1__dl">
+											<dt class="period-style1__dt">최대</dt>
+											<dd class="period-style1__dd">
+												<div class="period-style1__box">
+													<select name="year_year" class="select-v1 type-small" id="year_year" required="">
+														<option value="">년</option>
+														<% for(var i = 1989; i<=2021; i++){%>
+															<option value="<%=i%>"><%=i%></option>
+														<% } %>
+													</select>
+												</div>
+												<div class="period-style1__box">
+													<select name="year_year" class="select-v1 type-small" id="year_year" required="">
+														<option value="">월</option>
+														<% for(var i = 1; i<=12; i++){%>
+															<option value="<%=i%>"><%=i%></option>
+														<% } %>
+													</select>
+												</div>
+											</dd>
+										</dl>
+									</div>
+									<button class="period-style1__btn button-v1 w-100"><span class="btn-span">검색하기</span></button>
+								</div>
+							</div>
+							<div class="tag__box">
+								<div class="tag__header">
+									<h4 class="tag__subject">주행거리</h4>
+									<button class="tag__btn js-tag-toggle">open/close</button>
+								</div>
+								<div class="tag__body type-visible">
+									<div class="period-style2">
+										<div class="period-style2__slider" id="drive-slider">
+
+										</div>
+										<ul class="period-style2__list">
+											<li class="period-style2__item">
+												<select name="year_year" class="select-v1  type-small" id="drive-select1" required="">
+													<option value="">선택</option>
+												</select>
+											</li>
+											<li class="period-style2__item">
+												<select name="year_year" class="select-v1  type-small" id="drive-select2" required="">
+													<option value="">선택</option>
+												</select>
+											</li>
+										</ul>
+										<button class="period-style2__btn button-v1 w-100"><span class="btn-span">검색하기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="tag__box is-active">
+								<div class="tag__header">
+									<h4 class="tag__subject">가격</h4>
+									<button class="tag__btn js-tag-toggle">open/close</button>
+								</div>
+								<div class="tag__body type-visible">
+									<div class="period-style2">
+										<div class="period-style2__slider" id="price-slider">
+
+										</div>
+										<ul class="period-style2__list">
+											<li class="period-style2__item">
+												<select name="year_year" class="period-style2__select select-v1 type-small" id="price-select1" required="">
+													<option value="">선택</option>
+												</select>
+												<div class="period-style2__box">
+													<input class="input-v1 type-unit" type="number"/>
+													<p class="period-style2__unit">만원</p>
+												</div>
+											</li>
+											<li class="period-style2__item">
+												<select name="year_year" class="period-style2__select select-v1 type-small" id="price-select2" required="">
+													<option value="">선택</option>
+												</select>
+												<div class="period-style2__box">
+													<input class="input-v1 type-unit" type="number"/>
+													<p class="period-style2__unit">만원</p>
+												</div>
+											</li>
+										</ul>
+										<div class="period-style2__check">
+											<input type="checkbox" name="chkAgree2" id="chkAgree2"  class="checkbox-v2 js-directly"><label for="chkAgree2"> 직접입력</label>
+										</div>
+										<button class="period-style2__btn button-v1 w-100"><span class="btn-span">검색하기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="tag__box">
+								<div class="tag__header">
+									<h4 class="tag__subject">지역</h4>
+									<button class="tag__btn js-tag-toggle">open/close</button>
+								</div>
+								<div class="tag__body">
+									<ul class="tag__outer-list is-more">
+										<% for(var i = 1; i<=15; i++){%>
+											<li class="tag__outer-item">
+												<input type="checkbox" name="chkAgree2" id="area<%=i%>"  class="tag__checkbox js-tag-check">
+												<label for="area<%=i%>">
+													<div class="tag__outer-wrap">
+														<span class="tag__icon hash-icon">#</span>
+														<span class="tag__name">현대</span>
+														<span class="tag__number">8,864</span>
+													</div>
+												</label>
+											</li>
+										<% } %>
+									</ul>
+									<a href="" class="tag__more js-more">더보기</a>
+								</div>
+							</div>
+							<div class="tag__box">
+								<div class="tag__header">
+									<h4 class="tag__subject">색상</h4>
+									<button class="tag__btn js-tag-toggle">open/close</button>
+								</div>
+								<div class="tag__body">
+									<ul class="tag__outer-list is-more">
+										<% for(var i = 1; i<=20; i++){%>
+											<li class="tag__outer-item">
+												<input type="checkbox" name="chkAgree2" id="color<%=i%>"  class="tag__checkbox js-tag-check">
+												<label for="color<%=i%>">
+													<div class="tag__outer-wrap">
+														<span class="tag__icon hash-icon">#</span>
+														<span class="tag__name">파랑</span>
+														<span class="tag__number">8,864</span>
+													</div>
+												</label>
+											</li>
+										<% } %>
+									</ul>
+									<a href="" class="tag__more js-more">더보기</a>
+								</div>
+							</div>
+							<div class="tag__box">
+								<div class="tag__header">
+									<h4 class="tag__subject">연료</h4>
+									<button class="tag__btn js-tag-toggle">open/close</button>
+								</div>
+								<div class="tag__body">
+									<ul class="tag__outer-list is-more">
+										<% for(var i = 1; i<=20; i++){%>
+											<li class="tag__outer-item">
+												<input type="checkbox" name="chkAgree2" id="fuel<%=i%>"  class="tag__checkbox js-tag-check">
+												<label for="fuel<%=i%>">
+													<div class="tag__outer-wrap">
+														<span class="tag__icon hash-icon">#</span>
+														<span class="tag__name">현대</span>
+														<span class="tag__number">8,864</span>
+													</div>
+												</label>
+											</li>
+										<% } %>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+
+<% include ../_include/_footer %>

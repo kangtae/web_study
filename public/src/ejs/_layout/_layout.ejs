@@ -1,0 +1,63 @@
+<%
+	var data = jsonData
+%><!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title><%= subTitle = (page == "main") ? "":title+" | " %><%= data.site.name.kor %></title>
+<script type="text/javascript" src="../../js/webfont.js"></script>
+<script type="text/javascript" src="../../js/libs/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/libs/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="../../js/libs/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../../js/libs/jquery.dotdotdot.min.js"></script>
+<script type="text/javascript" src="../../js/libs/jquery.flexslider.js"></script>
+<script type="text/javascript" src="../../js/libs/jquery.selectBoxIt.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/<%= page %>.js"></script>
+<link rel="stylesheet" href="../../css/libs/normalize.css">
+<link rel="stylesheet" href="../../css/libs/jquery.bxslider.css">
+<link rel="stylesheet" href="../../css/libs/flexslider.css">
+<link rel="stylesheet" href="../../css/common.css">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/<%= page %>.css">
+<link rel="stylesheet" href="../../css/libs/jquery.selectBoxIt.css">
+</head>
+<body class="<%= page %>">
+<div class="skip">
+	<a href="#AnimalsContent">본문 바로가기</a>
+</div><!-- //skip -->
+<div class="wrapper" id="AnimalsWrap">
+	<div class="wrapper__row">
+		<% include ../_include/_header %>
+	</div>
+	<div class="wrapper__row type-full-height">
+		<% if (page == "main") { %>
+			<div class="content page-main">
+				<%- body  %>
+			</div><!-- //main -->
+		<% } else {%>
+		<div class="container">
+			<% if (page != "etc") { %>
+			<div class="page-visual" data-page="<%= data.pages[page].title.eng %>" data-header="true"></div><!-- //page-visual -->
+			<% } %>
+			<div class="page-header" id="fixedHeader">
+				<% include ../_include/_breadcrumb %>
+			</div><!-- //page-header -->
+			<div class="content" id="AnimalsContent">
+				<h1 class="page-tit"><%= title %></h1>
+			<%- body  %>
+			</div><!-- //content -->
+			<% include ../_include/_sidebar %>
+		</div><!-- //container -->
+		<% } %>
+	</div>
+	<div class="wrapper__row">
+		<% include ../_include/_footer %>
+	</div>
+</div><!-- //wrapper -->
+
+</body>
+</html>

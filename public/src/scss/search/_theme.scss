@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@import "variables";
+@import "mixins";
+@import "vendor";
+.theme-header{overflow:hidden; position:relative; height:400px;
+    &.type-theme-1{background:url('../../img/theme/theme_bg_1.jpg') no-repeat center center / cover;}
+    &__outer{position:absolute; top:50%; left:0; right:0; @include vendor('transform','translateY(-50%)');}
+    &__inner{position:relative; width:100%; height:0; padding-bottom:56.25%;}
+    &__iframe,&__wrap{position:absolute; top:0; left:0; width:100%; height:100%; z-index:10;}
+    &__wrap{right:0;  margin:0 auto; z-index:20; color:#fff;}
+    &__tit{margin:0; font-size:$sizeTit1; font-weight:$bold; line-height:1.3;}
+    &__txt{margin:30px 0 0 0; font-size:$sizeTit3; font-weight:$medium;}
+    &__txt2{margin:18px 0 0 0; font-size:$sizeTxt1; opacity:0.5;}
+    // &__line{overflow:hidden; position:absolute; bottom:0; left:0; right:0; height:1px; font-size:0; text-indent:-9999px;}
+}

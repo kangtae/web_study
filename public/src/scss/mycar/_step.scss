@@ -1,0 +1,160 @@
+// .mycar{min-width:$min-size; padding:0 10px; box-sizing:border-box;}
+.mycar-header{height:96px; text-align:center; border-bottom:1px solid #ddd;
+    $this:&;
+    .wrap{position: relative; height: inherit;}
+    &__tit{float:left; width:400px; margin:0; font-size:$sizeTxt1; font-weight:$medium; color:#000; box-sizing:border-box; vertical-align:middle; text-align:left; }
+    &__btn{position:absolute; top:0; bottom:0; left:0; display:inline-block; height:25px; margin:auto 0; vertical-align:top;}
+    &__wrap{display:table-cell; width:1%; padding-left:40px; box-sizing:border-box; height:inherit; vertical-align:middle;
+        &:after{display:block; clear:both; content:'';}
+    }
+    &__list{position:absolute; top:22px; left:0; right:0; margin:0; padding:0;}
+    &__item{position:relative; display:inline-block; list-style:none; text-align:center;
+        &.is-active{
+            &:before{border-color:$point1;}
+            #{$this}__dot{background-color:$point1; border-color:$point1; color:#fff;}
+        }
+        & + &{padding-left:98px;}
+        &:first-child{
+            &:before{display:none;}
+        }
+        &:before{display:block; position:absolute; top:9px; left:8px; width:calc(98px - 16px); height:0; border-top:2px solid #ccc;  content:'';}
+        &.is-check{
+            #{$this}__dot{border:none;
+                &:after{display:block; position:absolute; top:0; left:0; width:100%; height:100%; background:url('../../img/mycar/mycar_check.png') #fff no-repeat center center;
+                    border-radius:50%; border:1px solid $point1; z-index:10; content:'';}
+            }
+        }
+    }
+    &__dot{position:relative; display:block; width:20px; height:20px; border-radius: 50%; border:1px solid #aaaaaa; font-size:$sizeTxt5; line-height:19px; color:#aaa; box-sizing:border-box;}
+    &__link{display:block; text-decoration:none; font-size:$sizeTxt4; color:#666; font-weight:$medium; white-space:nowrap;}
+    &__txt{position:absolute; padding-top:12px; @include vendor('transform','translateX(-50%)'); -ms-transform:translateX(-30%); box-sizing:border-box; }
+}
+
+.mycar-form{position:absolute; top:50%; left:50%;  @include vendor('transform','translate(-50%,-50%)'); text-align:center;
+    &.even-set{padding-top:1px; box-sizing:border-box;}
+}
+
+.mycar-body{background-color:#f8f9fa;
+    &__tit{margin:0; font-size:$sizeTit2; font-weight:$medium; color:#666;}
+    &__txt{position:absolute; left:0; right:0;  margin:0; bottom:100px; font-size:$sizeTxt3; color:#888; font-weight:$light;}
+    &__list{overflow:hidden; position:relative; height:790px; margin:0; padding:0;}
+    &__item{position:absolute; top:0; left:0;  width:100%; height:100%; padding-top:90px;  text-align:center; box-sizing:border-box; list-style:none; background-color:#f8f9fa;
+        transition:all .6s cubic-bezier(0.25, 0.25, 0.6, 1.1); opacity:0; @include vendor('transform','translateY(100%)');
+        &.is-active{position:relative;  opacity:1; z-index:10; @include vendor('transform','translateY(0)');}
+    }
+    &__wrap{width:320px; margin:0 auto;  text-align:left;}
+    &__box{display:block; width:100%; margin:0 auto;
+        & + &{margin-top:32px;}
+    }
+    &__label{display: block; font-size:$sizeTxt2; color:#000; margin-bottom:16px; font-weight:$medium;}
+}
+
+
+.mycar-distance{position:relative; border-bottom:1px solid #ccc; line-height:48px; height:48px; color:#ccc; font-size:$sizeTxt3;
+    &:before{display:block; position:absolute; top:0; left:0; width:100%; height:100%; z-index:10; content:'';}
+    &.is-active{color:#000; border-bottom-color:#000;
+        &:before{display:none;}
+    }
+    &__input{background: transparent; width:100%; height:100%; @include placeholder-color(#ccc); font-size:$sizeTxt3; line-height:100%;}
+    &__span{float:right; position:absolute; right:0;}
+}
+
+.radio-v1{
+    $this:&;
+    &__list{margin:0; padding:0; font-size:0;}
+    &__item{display:inline-block; list-style:none;
+        & + &{margin-left:20px;}
+        &.type-new{
+            #{$this}__label{background-image:url('../img/mycar/key_icon.png');
+                &:hover{background-image:url('../img/mycar/key_icon_hover.png');}
+            }
+            #{$this}__input{
+                &:checked{
+                    & + #{$this}__label{background-image:url('../img/mycar/key_icon_on.png');}
+                }
+            }
+        }
+        &.type-used{
+            #{$this}__label{background-image:url('../img/mycar/panel_icon.png');
+                &:hover{background-image:url('../img/mycar/panel_icon_hover.png');}
+            }
+            #{$this}__input{
+                &:checked{
+                    & + #{$this}__label{background-image:url('../img/mycar/panel_icon_on.png');}
+                }
+            }
+        }
+    }
+    &__input{position: absolute;width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+        &:checked{
+            & + #{$this}__label{border-color:$point1; background-color: $point1;
+                #{$this}__tit{color:#fff;}
+                #{$this}__txt{color:#fff;}
+            }
+        }
+    }
+    &__label{display:inline-block; width:300px; height:260px; border-radius: 4px; border:1px solid #ddd; background-color:#fff; cursor:pointer; box-sizing:border-box;
+    background-position:50% 18%; background-repeat: no-repeat;  line-height:24px;padding-top:97px; text-align: center;
+        &:hover{border-color:$point1;
+            #{$this}__tit{color:$point1;}
+            #{$this}__txt{color:$point1;}
+        }
+        &.error{border-color:red;}
+    }
+    &__tit{margin:0; font-size:$sizeTit3; font-weight:$medium; color:#000;}
+    &__txt{margin:15px 0 0 0; font-size:14px; color:#888; font-weight:$light; line-height:1.7;}
+}
+
+.mycar-option{
+    $this:&;
+    &__list{margin:-10px 0 0 -10px; padding:0; font-size:0;
+        &.type-two{margin-left:-20px;
+            #{$this}__item{width:50%; padding-left:20px;}
+        }
+    }
+    &__item{display:inline-block; width:33.33%; margin-top:10px; padding-left:10px; box-sizing:border-box; list-style:none;}
+    &__input{position: absolute;width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+        &:checked{
+            & + #{$this}__label{border-color:$black1; color:$black1;}
+        }
+    }
+    &__label{ display:block; width:100%; height:46px; line-height:44px; border:1px solid #ddd; border-radius: 4px; background-color:#fff; font-size:$sizeTxt2; color:#888; text-align: center; font-weight:$medium;
+    cursor:pointer;
+        &:hover{border-color:$point1;}
+    }
+}
+
+.checkbox-v2{overflow: hidden; position: absolute; top: auto; width: 1px; height: 1px; padding: 0; margin: -1px; border: 0; clip: rect(0, 0, 0, 0);
+    & + label { display: inline-block; position: relative; margin:0; line-height:15px;  padding-left: 24px;  font-size: $sizeTxt3; color: #888; ; vertical-align:middle; cursor: pointer;
+        &:before{ position: absolute; top: -1px; bottom: 0; left: 0; box-sizing: border-box; width: 15px; height: 15px; margin: auto; border:1px solid #d8d8d8;  border-radius: 1px;
+            cursor: pointer; content: '';}
+    }
+    &:checked{
+        & + label{
+            &:before{background:url('../../img/common/check_icon.png') $point1 no-repeat center center; border-color:$point1;}
+        }
+    }
+}
+.error-message{display:none; position:absolute; color:red; font-size:$sizeTxt3;
+    &.is-active{display:block;}
+}
+
+
+.submit-v1{display:block; width:100%; height:50px; margin-top:60px; line-height:48px; text-align: center; color:#fff; outline:0; border:none;
+    background-color:#ccc; border:1px solid #ccc; border-radius: 25px; font-size:$sizeTxt2; font-weight:$medium; text-decoration:none; cursor:pointer;
+    &.type-white{color:#888; border:1px solid #888; background-color:#fff;}
+    &.is-active{background:#000; border-color:#000;}
+    & + &{margin-top:20px;}
+}
+
+.mycar-split{margin:0 0 0 -20px; padding:0; font-size:0;
+    &__item{display:inline-block; position:relative; width:50%; padding-left:20px; list-style:none; box-sizing:border-box;
+        & + &{
+            &:before{display:block; position:absolute; top:50%;; left:0; width:20px; text-align:center; font-size:$sizeTxt3; @include vendor('transform','translateY(-50%)'); content:'~'}
+        }
+    }
+}
+
+// .error + .radio-v1__label{border:1px solid red;}
+// .select-v1.error{border:1px solid red;}
+label.error{float:left; display:block; margin-top:5px; color:red; font-size:$sizeTxt3;}

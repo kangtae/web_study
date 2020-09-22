@@ -1,0 +1,204 @@
+<%
+page_type = "mycar"
+	page = "mycar"
+	header = "true"
+%>
+<% include ../_include/_header %>
+<div class="container type-grey">
+	<div class="wrap_my_car_7">
+        <section class="mycar7__header">
+            <div class="wrap">
+                <div class="container__wrap">
+                    <div class="mycar7__header__tagbox">
+                        <span class="mycar7__header__tag type-blue">내차어때</span>
+                        <span class="mycar7__header__tag type-white">분석결과</span>
+                    </div>
+                    <h3 class="mycar7__header__carname">아우디 콰트로 2WD 디젤</h3>
+                    <div class="mycar7__header__subbox">
+                        <div class="mycar7__header__subtxt clb">
+                            <span class="fl">업계 최초로 중고차의 품질을 등급화하여 정확하고 최적화된 차량시세를 평가합니다.</span>
+                            <span class="mycar7__header__subtxt__btn bld">종합평가 더 알아보기 > </span>
+                            <div class="fr">
+                                <span class="mycar7__header__data type-mine">내차수치</span>
+                                <span class="mycar7__header__data type-average">평균수치</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="mycar7__evaluation_area">
+            <div class="wrap">
+                <div class="container__wrap clb">
+                    <h4 class="bld">해당차량 평가</h4>
+                    <div class="mycar7__evaluation-box common-box fl clb js-height">
+                        <div class="fl">
+                            <h4 class="mycar7__evaluation-box__tit">종합평가</h4>
+                            <div class="mycar7__slot slot clb">
+                                <div class="fl mycar7__slot__score score">
+                                    <div class="mycar7__slot__score-box score_box">
+                                        <span class="mycar7__slot__score-origin origin">A</span>
+                                        <div class="mycar7__slot__text slot_text">
+                                            <p class="mycar7__slot__alpha alpha bld">SS</p>
+                                            <% for(i=0; i<4; i++){ %>
+                                            <span class="mycar7__slot__word">SS</span>
+                                            <span class="mycar7__slot__word">A</span>
+                                            <span class="mycar7__slot__word">B</span>
+                                            <span class="mycar7__slot__word">C</span>
+                                            <span class="mycar7__slot__word">D</span>
+                                            <span class="mycar7__slot__word">E</span>
+                                            <span class="mycar7__slot__word">F</span>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                    <p class="mycar7__slot__tit">품질등급</p>
+                                </div>
+                                <div class="fl mycar7__slot__score_plus score">
+                                    <div class="mycar7__slot__score-box score_box">
+                                        <span class="mycar7__slot__score-origin origin">0</span>
+                                        <div class="mycar7__slot__text2 slot_text2">
+                                            <p class="mycar7__slot__alpha alpha2 bld">+</p>
+                                            <% for(i=0; i<7; i++){ %>
+                                            <span class="mycar7__slot__word">+</span>
+                                            <span class="mycar7__slot__word">0</span>
+                                            <span class="mycar7__slot__word">-</span>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                    <p class="mycar7__slot__tit">사고내역</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="mycar7__chrt fl" style="width:333px; height:227px; margin-top:5px;">
+                            <canvas id="myChart" class="mycar7__chrt__origin" width="333" height="227"></canvas>
+                        </div>
+                        <div class="mycar7__evaluation-mine fl">
+                            <h4 class="mycar7__evaluation-box__tit type-mine">내차시세</h4>
+                            <div class="mycar7__evaluation-mine__price-wrap">
+                                <span class="ft-600 counter">10,500,400</span>
+                                <span class="ft-500" style="line-height:36px;">원</span>
+                            </div>
+                            <p class="mycar7__evaluation-mine__sub_txt">차량을 직거래 할 경우 품질등급 A에 적정한 금액을 추천해 드립니다.</p>
+                            <div class="mycar7__evaluation-mine__btn button-v1 type-register">공유하기
+								<div class="mycar7__evaluation-mine__popbox mycar7__popbox">
+									<img src="../../img/mycar/box_arrow.png" class="mycar7__popbox__arrow" alt=""/>
+									<div class="mycar7__popbox__wrap">
+										<ul class="mycar7__popbox__list">
+											<li class="mycar7__popbox__item type-kko">
+												<button class="mycar7__popbox__link js-url-copy" id="kakao-link-btn"><span class="btn-span">카카오톡 공유</span></button>
+											</li>
+											<li class="mycar7__popbox__item type-fb">
+												<a href="" class="mycar7__popbox__link" target="_blank">페이스북 공유</a>
+											</li>
+											<li class="mycar7__popbox__item type-twt">
+												<a href="" class="mycar7__popbox__link" target="_blank">트위터 공유</a>
+											</li>
+											<li class="mycar7__popbox__item type-url">
+												<button class="mycar7__popbox__link js-url-copy"><span class="btn-span">주소 복사하기</span></button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<a href="../mycar_main.php" class="mycar7__evaluation-mine__btn button-v1 type-border">
+								<span class="button-v1__wrap type-replay">다시하기</span>
+							</a>
+                        </div>
+                    </div>
+                    <div class="fl mycar7__mine-info js-height">
+                        <div class="mycar7__mine-info__tit-box clb">
+                            <div class="mycar7__mine-info__tit-inbox fl">
+                                <p class="mycar7__mine-info__tit js-dot">아우디 콰트로 2WD 디젤아우디 콰트로 2WD 디젤</p>
+                                <img src="../../img/mycar/logo_benz.png" alt="차량 로고 이미지" class="mycar7__mine-info__logo fl">
+                                <p class="mycar7__mine-info__tit-sub ft-300">
+                                    <span class="mycar7__mine-info__tit-txt ft-300 img-normal">2018</span>
+                                    <span class="img-normal">년</span>
+                                    <span class="mycar7__mine-info__tit-txt ft-300 img-normal">08</span>
+                                    <span class="mycar7__mine-info__tit-txt img-normal">월식 /</span>
+                                    <span class="mycar7__mine-info__tit-txt ft-300 img-normal">452,400km</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mycar7__mine-info-box">
+                            <ul>
+                                <li class="clb">
+                                    <span class="mycar7__mine-info-name fl">구매방식</span>
+                                    <span class="mycar7__mine-info-gap fr">신차구매</span>
+                                </li>
+                                <li class="clb">
+                                    <span class="mycar7__mine-info-name fl">연식</span>
+                                    <span class="mycar7__mine-info-gap fr">2018년 08월</span>
+                                </li>
+                                <li class="clb">
+                                    <span class="mycar7__mine-info-name fl">특수사고</span>
+                                    <span class="mycar7__mine-info-gap fr">없음</span>
+                                </li>
+                                <li class="clb">
+                                    <span class="mycar7__mine-info-name fl">사고횟수</span>
+                                    <span class="mycar7__mine-info-gap fr">없음</span>
+                                </li>
+                                <li class="clb">
+                                    <span class="mycar7__mine-info-name fl">내차 피해금액</span>
+                                    <span class="mycar7__mine-info-gap fr">500만원 ~ 1,000만원</span>
+                                </li>
+                                <li class="clb">
+                                    <span class="mycar7__mine-info-name fl">주행거리</span>
+                                    <span class="mycar7__mine-info-gap fr">452,400km</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mycar7__compare-area cont">
+            <div class="wrap">
+                <div class="container__wrap">
+                    <h4 class="mycar7__compare-area__tit">동일차량 비교</h4>
+                    <div class="clb">
+                        <div class="mycar7__compare-area__price-wrap fl common-box js-height2">
+                            <div class="mycar7__compare-area__price-box clb">
+                                <h5 class="mycar7__compare-area__price-tit fl">딜러 판매 금액</h5>
+                                <div class="fl mycar7__compare-area__txt_box">
+                                    <p class="mycar7__compare-area__price"><span class="mycar7__compare-area__price-num">10,157,500</span> 원</p>
+                                    <p class="mycar7__compare-area__sub_txt ft-300">중고차 딜러에게 판매시 상품화 및 수수료<br>등을 제외한 시세의 약 70~80%의 금액이 산정됩니다.</p>
+                                </div>
+                            </div>
+                            <div class="clb mycar7__compare-area__price-box type-last">
+                                <h5 class="mycar7__compare-area__price-tit fl">차량 평균 가격</h5>
+                                <div class="fl mycar7__compare-area__txt_box">
+                                    <p class="mycar7__compare-area__price"><span class="mycar7__compare-area__price-num">15,000,000</span> 원</p>
+                                    <p class="mycar7__compare-area__sub_txt ft-300">동일차량 쏘나타 XD 하이브리드 차량의 평균 시세 입니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mycar7__compare-area__graph-wrap fl common-box clb js-height2">
+                            <div class="mycar7__compare-area__graph-box type-m fl">
+                                <h5 class="mycar7__compare-area__graph-tit">주행거리</h5>
+                                <div class="mycar7__compare-area__graph">
+                                    <p class="mycar7__compare-area__graph-circle type-mine" style="width:120px; height:120px; line-height:120px">115,464원</p>
+                                    <p class="mycar7__compare-area__graph-circle type-average" style="width:50px; height:50px; line-height:50px">0원</p>
+                                </div>
+                                <p class="mycar7__compare-area__sub_txt type-graph ft-300">평균 주행거리보다 약 500km 더 많습니다. 하루에 약 5km씩 주행거리를 절감해 보세요!</p>
+                            </div>
+                            <div class="mycar7__compare-area__graph-box type-a fl">
+                                <h5 class="mycar7__compare-area__graph-tit">사고이력</h5>
+                                <div class="mycar7__compare-area__graph">
+                                    <p class="mycar7__compare-area__graph-circle type-mine" style="width:120px; height:120px; line-height:120px">115,464원</p>
+                                    <p class="mycar7__compare-area__graph-circle type-average" style="width:50px; height:50px; line-height:50px">0원</p>
+                                </div>
+                                <p class="mycar7__compare-area__sub_txt type-graph ft-300">평균 주행거리보다 약 500km 더 많습니다. 하루에 약 5km씩 주행거리를 절감해 보세요!</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <p class="info_txt_7">해당 자료는 통계파악을 위한 참고자료 용도로만 사용하시기 바랍니다.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<% include ../_include/_footer %>

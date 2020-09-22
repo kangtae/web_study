@@ -1,0 +1,36 @@
+<%
+page_type = "register"
+	page = "register"
+	header = "true"
+%>
+<% include ../_include/_header %>
+    <!--container-->
+    <div class="container type-grey type-fullbg">
+        <div class="wrap">
+            <div class="container__wrap">
+                <div class="register">
+                    <h3 class="register__tit">비밀번호 찾기</h3>
+                    <div class="register__box register-2">
+                        <form action="../../html/register/done_pw.html" id="register_form" class="registerform" method="get" class="registerform">
+                            <ul class="registerform__list">
+                            	<li class="registerform__item">
+                            	    <label htmlFor="register__id" class="register__label">아이디</label>
+                            	    <input type="email" id="register__id" class="input-v2 js-r-input js-error-check form-4__input" placeholder="카포라 아이디로 등록된 이메일을 입력하세요" autocomplete="off" name="">
+                            	    <!-- 형식 오류시 -->
+                            	    <!-- <p class="input-errortxt">아이디 형식이 올바르지 않습니다. (이메일 형식)</p> -->
+                            	</li>
+                            	<li class="registerform__item">
+                            	    <label htmlFor="num_certify" class="register__label">자동등록 방지 숫자 입력</label>
+                            	    <input type="text" id="num_certify" class="input-v2 js-r-input js-error-check form-4__input type-num" placeholder="자동등록 방지숫자를 순서대로 입력하세요" autocomplete="off" name="">
+									<!-- 형식 오류시 -->
+                            	    <!-- <p class="input-errortxt">번호가 일치하지 않습니다. 확인후 재입력 해주세요.</p> -->
+                            	</li>
+                            </ul>
+							<button type="submit" class="register__submit js-register-submit button-v2 is-disabled w-100" disabled><span class="btn-span">비밀번호 변경링크 받기</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<% include ../_include/_footer %>

@@ -1,0 +1,35 @@
+<div class="history">
+	<div class="history__header">
+		<h3 class="history__tit">최근 본 차량</h3>
+		<button class="history__close js-history-close">닫기</button>
+	</div>
+	<div class="history__scroll">
+		<div class="remove-box">
+			<input type="checkbox" name="chkAll" id="chkAll" class="checkbox-v2"><label for="chkAll">전체선택</label>
+			<button class="button-v4 is-disabled remove-box__btn js-check-remove">선택차량 삭제</button>
+		</div>
+		<div class="history-product">
+			<ul class="history-product__list">
+				<% for(var i = 1; i<=5; i++){%>
+					<li class="history-product__item">
+						<div class="history-product__wrap">
+							<div class="remove-check">
+								<input type="checkbox" name="productChk" id="productChk<%=i%>" class="checkbox-only"><label for="productChk<%=i%>">선택</label>
+							</div>
+							<div class="history-product__img img-border">
+								<img src="../../img/search/product_img.jpg" class="img-w100" alt=""/>
+							</div>
+							<p class="history-product__name">현대 아반떼 MD M16 GDI 럭셔리</p>
+							<p class="history-product__txt">
+								<span class="product__rank">SA+</span>
+								<span class="product__price"> 1,960만원</span>
+							</p>
+							<a href="" class="history-product__link">자세히보기</a>
+						</div>
+					</li>
+				<% }%>
+
+			</ul>
+		</div>
+	</div>
+</div>

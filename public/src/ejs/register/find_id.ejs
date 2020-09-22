@@ -1,0 +1,68 @@
+<%
+page_type = "register"
+	page = "register"
+	header = "true"
+%>
+<% include ../_include/_header %>
+    <!--container-->
+    <div class="container type-grey type-fullbg">
+        <div class="wrap">
+            <div class="container__wrap">
+                <div class="register">
+                    <h3 class="register__tit">아이디(이메일) 찾기</h3>
+                    <div class="register__box register-2">
+                        <form action="../../html/register/done_id.html" id="register_form" class="registerform" method="get" class="registerform">
+                            <ul class="registerform__list">
+                            	<li class="registerform__item">
+                            	    <label htmlFor="register__name" class="register__label">이름</label>
+                            	    <input type="text" id="register__name" class="input-v2 js-r-input js-error-check type-check1 form-4__input" placeholder="한글 2자 이상 입력" autocomplete="off" name="">
+                            	</li>
+                            	<li class="registerform__item">
+                            	    <label htmlFor="" class="register__label">생년월일</label>
+                            	    <div class="register__innerbox type-birth">
+                            	        <div class="register__inputwrap type-3">
+                            	            <input type="text" id="register__birth" class="input-v2 js-r-input type-center  type-check1 type-num form-4__input" placeholder="******" autocomplete="off"  name="" maxlength="6">
+                            	        </div>
+                            	        <div class="register__inputwrap type-3 type-before">
+                            	            <select id="register__birth2" class="type-birth select-v1 type-register type-check1 js-r-input" name="" >
+                            	                <option value="">선택</option>
+                            	                <option value="1">1</option>
+                            	                <option value="2">2</option>
+                            	                <option value="3">3</option>
+                            	                <option value="4">4</option>
+                            	            </select>
+                            	        </div>
+                            	    </div>
+									<!-- 형식 오류시 -->
+                            	    <!-- <p class="input-errortxt">생년월일을 확인후 재입력 해주세요.</p> -->
+                            	</li>
+                            	<li class="registerform__item">
+                            	    <label htmlFor="" class="register__label">연락처</label>
+                            	    <div class="register__innerbox">
+                            	        <div class="register__inputwrap type-3 ">
+                            	            <select id="register__phone1" class="type-birth select-v1 type-register type-check1 js-r-input" name="" >
+                            	                <option value="">선택</option>
+                            	                <option value="010">010</option>
+                            	                <option value="011">011</option>
+                            	                <option value="019">019</option>
+                            	            </select>
+                            	        </div>
+                            	        <div class="register__inputwrap type-3 type-before">
+                            	            <input type="text" id="register__phone2" class="input-v2 js-r-input type-center  type-check1 type-num form-4__input" placeholder="****" autocomplete="off" maxlength="4"  name="">
+                            	        </div>
+                            	        <div class="register__inputwrap type-3 type-before">
+                            	            <input type="text" id="register__phone3" class="input-v2 js-r-input type-center  type-check1 type-num form-4__input" placeholder="****" autocomplete="off" maxlength="4"  name="">
+                            	        </div>
+                            	    </div>
+									<!-- 형식 오류시 -->
+                            	    <!-- <p class="input-errortxt">연락처를 확인후 재입력 해주세요.</p> -->
+                            	</li>
+                            </ul>
+							<button type="submit" class="register__submit js-register-submit button-v2 is-disabled w-100" disabled><span class="btn-span">아이디 찾기</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<% include ../_include/_footer %>

@@ -1,0 +1,18 @@
+@charset "UTF-8";
+@import "mixins";
+
+//로그인
+.loginbox{width:320px;margin:0 auto;padding:150px 0;
+    &__tit{margin-bottom:40px;font-size:$sizeTit1;font-weight:$light;color:#fff;
+        &__point{font-weight:$bold;}
+    }
+    //로그인폼
+    &__btn{margin:20px 0;}
+    &__findbox{display:inline-block;position:relative;
+        &__pw{font-size:$sizeTxt3; color:#fff;text-decoration: none;
+            &.type-before:before{content:""; display:inline-block;width:1px; height:10px;margin:0 10px;background-color:#fff;}
+        }
+        &__id{font-size:$sizeTxt3; color:#fff;text-decoration: none;}
+    }
+    &__inputwrap + &__inputwrap{margin-top:10px;}
+}

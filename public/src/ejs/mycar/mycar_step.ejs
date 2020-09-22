@@ -1,0 +1,279 @@
+<%
+page_type = "mycar"
+	page = "mycar"
+	header = "true"
+%>
+<% include ../_include/_header %>
+
+	<div class="mycar">
+		<div class="mycar-header">
+			<div class="wrap">
+				<div class="mycar-header__wrap">
+					<p class="mycar-header__tit"><a href="" class="mycar-header__btn"><img src="../../img/mycar/back_icon.png" class="img-normal" alt="뒤로가기"/></a>쏘나타 XD 하이브리드 드 쏘나타</p>
+					<ul class="mycar-header__list">
+						<li class="mycar-header__item is-active">
+							<a href="page-1" class="mycar-header__link">
+								<span class="mycar-header__dot">1</span>
+								<span class="mycar-header__txt">구매방식</span>
+							</a>
+						</li>
+						<li class="mycar-header__item">
+							<a href="page-2" class="mycar-header__link">
+								<span class="mycar-header__dot">2</span>
+								<span class="mycar-header__txt">연식</span>
+							</a>
+						</li>
+						<li class="mycar-header__item">
+							<a href="page-3" class="mycar-header__link">
+								<span class="mycar-header__dot">3</span>
+								<span class="mycar-header__txt">사고이력</span>
+							</a>
+						</li>
+						<li class="mycar-header__item">
+							<a href="page-4" class="mycar-header__link">
+								<span class="mycar-header__dot">4</span>
+								<span class="mycar-header__txt">주행거리</span>
+							</a>
+						</li>
+						<li class="mycar-header__item">
+							<a href="page-5" class="mycar-header__link">
+								<span class="mycar-header__dot">5</span>
+								<span class="mycar-header__txt">옵션</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="mycar-body">
+			<div class="wrap">
+				<form  class="mycar-step__form" action="../mycar_result.html" method="post">
+					<ul class="mycar-body__list">
+						<!-- 구매방식-->
+						<li class="mycar-body__item page-1 is-active">
+							<div class="wrap">
+								<h4 class="mycar-body__tit">본인 차량의 구매방식을 선택해 주세요</h4>
+								<div class="mycar-form">
+									<input type="hidden" value="" name="car_name">
+									<div class="radio-v1">
+										<ul class="radio-v1__list">
+											<li class="radio-v1__item type-new">
+												<input type="radio" id="new" name="purchase" value="new" class="radio-v1__input" required="">
+												<label for="new" class="radio-v1__label">
+													<p class="radio-v1__tit">신차 구매</p>
+													<p class="radio-v1__txt">본인의 차량을 신차로 구매하셨나요?<br>신차로 내차량을 비교분석하여<br>차량평가를 해보세요.</p>
+												</label>
+											</li>
+											<li class="radio-v1__item type-used">
+												<input type="radio" id="used" name="purchase" value="used" class="radio-v1__input" required="">
+												<label for="used" class="radio-v1__label">
+													<p class="radio-v1__tit">중고차 구매</p>
+													<p class="radio-v1__txt">본인의 차량을 중고차로 구매하셨나요?<br>중고차로 내차량을 비교분석하여<br>차량평가를 해보세요.</p>
+												</label>
+											</li>
+										</ul>
+										<p class="error-message nth-1">구매방식을 입력해주세요</p>
+									</div>
+									<div class="mycar-body__wrap">
+										<a href="" class="submit-v1 js-step-next">다음</a>
+									</div>
+							    </div>
+								<p class="mycar-body__txt">해당 자료는 통계에 의한 결과이므로 참고 용도로만 활용하시길 바랍니다</p>
+							</div>
+						</li>
+						<!-- //구매방식-->
+						<!-- 연식 -->
+						<li class="mycar-body__item page-2">
+							<div class="wrap">
+								<h4 class="mycar-body__tit">연식을 선택해 주세요.</h4>
+								<div class="mycar-form">
+									<div class="mycar-body__wrap">
+										<div class="mycar-body__box">
+											<label for="year_year" class="mycar-body__label select-v1__label">출시년도</label>
+											<select name="year_year" class="select-v1" id="year_year" required="">
+												<option value="">선택</option>
+												<% for(var i = 1980; i<=2020; i++){%>
+													<option value="<%=i%>"><%=i%></option>
+												<% } %>
+											</select>
+											<p class="error-message">출시년도를 선택해주세요</p>
+										</div>
+										<div class="mycar-body__box">
+											<label for="year_month" class="mycar-body__label">월</label>
+											<select name="year_month" id="year_month" class="select-v1" required="">
+												<option value="">선택</option>
+												<option value="01">1월</option>
+												<option value="02">2월</option>
+												<option value="03">3월</option>
+												<option value="04">4월</option>
+												<option value="05">5월</option>
+												<option value="06">6월</option>
+												<option value="07">7월</option>
+												<option value="08">8월</option>
+												<option value="09">9월</option>
+												<option value="10">10월</option>
+												<option value="11">11월</option>
+												<option value="12">12월</option>
+											</select>
+											<p class="error-message">월을 선택해주세요</p>
+										</div>
+										<a href="" class="submit-v1 js-step-next">다음</a>
+										<a href="" class="submit-v1 type-white js-step-prev">이전</a>
+									</div>
+								</div>
+								<p class="mycar-body__txt">해당자료는 통계파악을 위한 참고자료 용도로만 사용하시기 바랍니다.</p>
+							</div>
+						</li>
+						<!-- //연식 -->
+						<!-- 사고이력 -->
+						<li class="mycar-body__item page-3">
+							<h4 class="mycar-body__tit">사고이력을 선택해 주세요.</h4>
+							<div class="mycar-form even-set">
+								<div class="mycar-body__wrap">
+									<label for="" class="mycar-body__label select-v1__label">특수사고</label>
+									<div class="mycar-body__box">
+										<div class="mycar-option" id="special_accident">
+											<ul class="mycar-option__list">
+												<li class="mycar-option__item">
+													<input type="checkbox" name="special_accident_0" value="없음" id="special_accident_0" class="mycar-option__input cs-accident js-all-acci" checked>
+													<label for="special_accident_0" class="mycar-option__label">없음</label>
+													<!-- 숨긴값 -->
+													<input type="checkbox" name="special_accident" value="없음" id="special_accident_3" class="mycar-option__input cs-accident js-all-acci" required>
+												</li>
+												<li class="mycar-option__item">
+													<input type="checkbox" name="special_accident" value="전손" id="special_accident_1" class="mycar-option__input cs-accident js-one-acci" required>
+													<label for="special_accident_1" class="mycar-option__label">전손</label>
+												</li>
+												<li class="mycar-option__item">
+													<input type="checkbox" name="special_accident" value="침수" id="special_accident_2" class="mycar-option__input cs-accident js-one-acci" required>
+													<label for="special_accident_2" class="mycar-option__label">침수</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mycar-body__box">
+										<label for="pg_default_label" class="mycar-body__label">사고횟수</label>
+										<select name="accident_count" class="select-v1" id="accident_count">
+											<option value="">선택</option>
+											<option value="0">없음</option>
+											<option value="1">1회</option>
+											<option value="2">2회</option>
+											<option value="3">3회</option>
+											<option value="4">4회</option>
+											<option value="5">5회</option>
+											<option value="6">6회</option>
+											<option value="7">7회</option>
+											<option value="8">8회</option>
+											<option value="9">9회</option>
+											<option value="10">10회이상</option>
+										</select>
+									</div>
+									<div class="mycar-body__box">
+										<label for="" class="mycar-body__label">내차 피해금액</label>
+										<ul class="mycar-split js-accident-area">
+											<li class="mycar-split__item">
+												<select name="accident_price" id="accident_price_1" class="select-v1">
+													<option value="">선택</option>
+							                         <% for($i=0; $i<=20; $i++){ %>
+							                         <option value="<%=$i*100%>"><%=$i*100%>만원</option>
+							                         <% }%>
+							                     </select>
+											</li>
+											<li class="mycar-split__item">
+												<select name="accident_price" id="accident_price_2" class="select-v1">
+													<option value="">선택</option>
+													 <% for($i=0; $i<=20; $i++){ %>
+													 <option value="<%=$i*100%>"><%=$i*100%>만원</option>
+													 <% }%>
+												 </select>
+											</li>
+										</ul>
+									</div>
+									<a href="" class="submit-v1 is-active js-step-next">다음</a>
+									<a href="" class="submit-v1 type-white js-step-prev">이전</a>
+								</div>
+							</div>
+							<p class="mycar-body__txt">해당자료는 통계파악을 위한 참고자료 용도로만 사용하시기 바랍니다.</p>
+						</li>
+						<!-- //사고이력 -->
+						<!-- 주행거리 -->
+						<li class="mycar-body__item page-4">
+							<h4 class="mycar-body__tit">주행거리를 선택해 주세요.</h4>
+							<div class="mycar-form">
+								<div class="mycar-body__wrap">
+									<div class="mycar-body__box">
+										<label for="pg_default_label" class="mycar-body__label">주행거리</label>
+										<select class="select-v1" name="mileage" id="mileage" required>
+											<option value="">선택</option>
+											<% for($i=1; $i<=20; $i++){ %>
+					                         <option value="<%=$i%>0000"><%=$i%>만 km</option>
+					                         <% }%>
+					                     </select>
+									</div>
+									<div class="mycar-body__box">
+										<input type="checkbox" id="write_check" class="checkbox-v2">
+										<label for="write_check">직접입력</label>
+										<div class="mycar-distance">
+											<input type="number" name="mileageText" class="mycar-distance__input is-active" id="mileageText" placeholder="주행거리를 입력해 주세요" readonly maxlength="7" autocomplete="off">
+											<span class="mycar-distance__span">km</span>
+										</div>
+									</div>
+									<p class="error-message">주행거리를 선택해주세요</p>
+									<a href="" class="submit-v1 js-step-next">다음</a>
+									<a href="" class="submit-v1 type-white js-step-prev">이전</a>
+								</div>
+							</div>
+							<p class="mycar-body__txt">해당자료는 통계파악을 위한 참고자료 용도로만 사용하시기 바랍니다.</p>
+						</li>
+						<!-- 주행거리 -->
+						<!-- 옵션 -->
+						<li class="mycar-body__item page-5">
+							<h4 class="mycar-body__tit">옵션을 선택해 주세요.</h4>
+							<div class="mycar-form">
+								<div class="mycar-body__wrap">
+									<label for="" class="mycar-body__label select-v1__label">주요옵션</label>
+									<div class="mycar-body__box">
+										<div class="mycar-option">
+											<ul class="mycar-option__list type-two">
+												<li class="mycar-option__item">
+													<input type="checkbox" name="option" value="풀옵션" id="option0" class="mycar-option__input js-all-check">
+													<label for="option0" class="mycar-option__label">풀옵션</label>
+												</li>
+												<li class="mycar-option__item">
+													<input type="checkbox" name="option" value="네비게이션" id="option1" class="mycar-option__input js-one-check">
+													<label for="option1" class="mycar-option__label">네비게이션</label>
+												</li>
+												<li class="mycar-option__item">
+													<input type="checkbox" name="option" value="선루프" id="option2" class="mycar-option__input js-one-check">
+													<label for="option2" class="mycar-option__label">선루프</label>
+												</li>
+												<li class="mycar-option__item">
+													<input type="checkbox" name="option" value="고급시트" id="option3" class="mycar-option__input js-one-check">
+													<label for="option3" class="mycar-option__label">고급시트</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mycar-body__box">
+										<label for="car_color" class="mycar-body__label select-v1__label">색상</label>
+										<select name="car_color" class="select-v1" id="car_color" required=>
+											<option value="">선택</option>
+											<option value="1">무채색(흰색,검정 등)</option>
+				                            <option value="2">유채색(금색, 빨간색, 파란색 등)</option>
+										</select>
+										<p class="error-message">색상을 선택해주세요</p>
+									</div>
+									<button type="submit" class="submit-v1 js-total-submit"><span class="btn-span">다음</span></button>
+									<a href="" class="submit-v1 type-white js-step-prev">이전</a>
+								</div>
+							</div>
+							<p class="mycar-body__txt">해당자료는 통계파악을 위한 참고자료 용도로만 사용하시기 바랍니다.</p>
+						</li>
+						<!-- //옵션 -->
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+
+<% include ../_include/_footer %>

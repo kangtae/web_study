@@ -1,0 +1,529 @@
+<%
+page_type = "main"
+	page = "main"
+	header = "true"
+%>
+<% include ../_include/_header %>
+	<!--container-->
+	<div class="container">
+		<div class="wrap">
+			<div class="container__wrap">
+				<div class="main">
+					<h3 class="main__tit"><img src="../../img/main/main_tit.png" alt="carfora DI.Bot" class="img-normal"/></h3>
+					<p class="main__txt">
+						클릭한번으로 충분합니다.<br>
+						지금 카포라 빅데이터에서 경험하세요.
+					</p>
+					<div class="main-search">
+						<form class="main-search__form" name="main-search_form" id="main-search_form" action="../../index.php">
+							<label class="sr-only" for="inputSearch">통합검색</label>
+							<button type="submit" class="main-search__btn">검색</button>
+							<input type="text" class="main-search__input js-total-search" id="inputSearch" name="inputSearch" placeholder="검색어를 입력하세요" required="">
+						</form>
+						<!-- <a href="" class="result-search__del" style="display: inline;">닫기</a> -->
+					</div>
+					<div class="section hash type-main">
+						<div class="section__box">
+							<div class="clb">
+								<h4 class="section-tit">인기 해시태그</h4>
+								<a href="" class="plus-btn">전체보기<span class="plus"><span class="plus__wrap">plus</span></span></a>
+							</div>
+							<div class="hash">
+								<ul class="hash__list">
+									<li class="hash__item"><a href="" class="hash__link">장거리출퇴근</a></li>
+									<li class="hash__item"><a href="" class="hash__link">기아</a></li>
+									<li class="hash__item"><a href="" class="hash__link">직장인</a></li>
+									<li class="hash__item"><a href="" class="hash__link">장거리출퇴근</a></li>
+									<li class="hash__item"><a href="" class="hash__link">기아</a></li>
+									<li class="hash__item"><a href="" class="hash__link">직장인</a></li>
+									<li class="hash__item"><a href="" class="hash__link">장거리출퇴근</a></li>
+									<li class="hash__item"><a href="" class="hash__link">기아</a></li>
+									<li class="hash__item"><a href="" class="hash__link">직장인</a></li>
+									<li class="hash__item"><a href="" class="hash__link">장거리출퇴근</a></li>
+									<li class="hash__item"><a href="" class="hash__link">기아</a></li>
+									<li class="hash__item"><a href="" class="hash__link">직장인</a></li>
+									<li class="hash__item"><a href="" class="hash__link">장거리출퇴근</a></li>
+									<li class="hash__item"><a href="" class="hash__link">기아</a></li>
+									<li class="hash__item"><a href="" class="hash__link">직장인</a></li>
+								</ul>
+							</div>
+							<ul class="hash-banner__list">
+								<li class="hash-banner__item">
+									<div class="hash-banner__wrap img-border">
+										<div class="hash-banner__box">
+											<h5 class="hash-banner__tit">국산차</h5>
+											<p class="hash-banner__txt">빅데이터 추천 갑 of 갑</p>
+										</div>
+										<img src="../../img/main/main_banner_1.jpg" class="img-w100" alt="국산차"/>
+										<a href="" class="hash-banner__link">상세보기</a>
+									</div>
+								</li>
+								<li class="hash-banner__item">
+									<div class="hash-banner__wrap img-border">
+										<div class="hash-banner__box">
+											<h5 class="hash-banner__tit">국산차</h5>
+											<p class="hash-banner__txt">빅데이터 추천 갑 of 갑</p>
+										</div>
+										<img src="../../img/main/main_banner_2.jpg" class="img-w100" alt="국산차"/>
+										<a href="" class="hash-banner__link">상세보기</a>
+									</div>
+								</li>
+								<li class="hash-banner__item">
+									<div class="hash-banner__wrap img-border">
+										<div class="hash-banner__box">
+											<h5 class="hash-banner__tit">국산차</h5>
+											<p class="hash-banner__txt">빅데이터 추천 갑 of 갑</p>
+										</div>
+										<img src="../../img/main/main_banner_3.jpg" class="img-w100" alt="국산차"/>
+										<a href="" class="hash-banner__link">상세보기</a>
+									</div>
+								</li>
+								<li class="hash-banner__item">
+									<div class="hash-banner__wrap img-border">
+										<div class="hash-banner__box">
+											<h5 class="hash-banner__tit">국산차</h5>
+											<p class="hash-banner__txt">빅데이터 추천 갑 of 갑</p>
+										</div>
+										<img src="../../img/main/main_banner_4.jpg" class="img-w100" alt="국산차"/>
+										<a href="" class="hash-banner__link">상세보기</a>
+									</div>
+								</li>
+								<li class="hash-banner__item">
+									<div class="hash-banner__wrap img-border">
+										<div class="hash-banner__box">
+											<h5 class="hash-banner__tit">국산차</h5>
+											<p class="hash-banner__txt">빅데이터 추천 갑 of 갑</p>
+										</div>
+										<img src="../../img/main/main_banner_5.jpg" class="img-w100" alt="국산차"/>
+										<a href="" class="hash-banner__link">상세보기</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 추천차량 -->
+					<div class="section">
+						<div class="section__box">
+							<div class="section__relative clb">
+								<h4 class="section-tit">오늘의 추천차량</h4>
+								<div class="section__right">
+									<div class="slider-btn">
+										<button class="slider-btn__prev js-recommend-prev">prev</button>
+										<button class="slider-btn__next js-recommend-next">next</button>
+									</div>
+								</div>
+							</div>
+							<div class="main-recommend clb summary-v2">
+								<div class="main-recommend__header">
+									<ul class="main-recommend__list js-recommend-banner">
+
+										<li class="main-recommend__item nth-1">
+											<div class="main-recommend_wrap">
+												<h5 class="main-recommend__tit">
+													종합평가 등급으로 <br>
+													우수한 차량 선별
+												</h5>
+												<p class="main-recommend__txt">
+													국내 매물차량을 한곳에 모아<br>
+													비교분석하여 평가합니다.
+												</p>
+												<a href="" class="main-recommend__btn button-v1 type-padding">자세히보기</a>
+											</div>
+										</li>
+										<!-- 추후 오픈예정 - 내차어때 배너
+										<li class="main-recommend__item nth-2">
+											<div class="main-recommend_wrap">
+												<h5 class="main-recommend__tit color-white">
+													<span class="main-recommend__subtit color-white">빅데이터BOT이 알려 주는 시세분석</span>
+													내차어때 서비스
+												</h5>
+												<p class="main-recommend__txt color-white">
+													60,548대의 차량과<br>
+													지금 내차를 비교해 보세요.
+												</p>
+												<a href="" class="main-recommend__btn button-v1 type-padding type-white">자세히보기</a>
+											</div>
+										</li> -->
+									</ul>
+								</div>
+								<div class="main-recommend__body">
+									<div class="main-recommend__wrap">
+										<ul class="main-recommend__list js-recommend-product">
+
+											<li class="main-recommend__item">
+												<p class="main-recommend__emphasis">가성비와 최저가를 동시에</p>
+												<h5 class="main-recommend__subject">
+													카포라가 엄선한 <strong class="ft-medium">인기판매 차량</strong>
+												</h5>
+												<ul class="summary-v2__list">
+													<% for (var i = 0; i < 4; i++){%>
+														<li class="summary-v2__item">
+															<div class="summary-v2__relative">
+																<div class="summary-v2__wrap">
+																	<div class="summary-v2__thumbnail img-border">
+																		<img src="../../img/main/main_thumbnail_1.png" alt="아우디 Q5 2.0 TDI 콰트로 다이나믹 8R" class="summary-v2__img img-normal">
+																	</div>
+																</div>
+																<div class="car-info">
+																	<p class="car-info__txt">
+																		<span class="car-info__rank">SA+</span>
+																		<span class="car-info__price"> 1,960만원</span>
+																	</p>
+																	<h6 class="car-info__name">현대 아반떼 MD M16 GDI 럭셔리</h6>
+																</div>
+																<a href="" class="summary-v2__link">자세히 보기</a>
+															</div>
+														</li>
+													<%}%>
+												</ul>
+											</li>
+											<li class="main-recommend__item">
+												<p class="main-recommend__emphasis">주행거리 5,000km 미만 차량</p>
+												<h5 class="main-recommend__subject">
+													신차급 차량 빠르게 득템하기
+												</h5>
+												<ul class="summary-v2__list">
+													<% for (var i = 0; i < 4; i++){%>
+														<li class="summary-v2__item">
+															<div class="summary-v2__wrap">
+																<div class="summary-v2__thumbnail img-border">
+																	<img src="../../img/main/main_thumbnail_1.png" alt="아우디 Q5 2.0 TDI 콰트로 다이나믹 8R" class="summary-v2__img img-normal">
+																</div>
+															</div>
+															<div class="car-info">
+																<p class="car-info__txt">
+																	<span class="car-info__rank">SA+</span>
+																	<span class="car-info__price"> 1,960만원</span>
+																</p>
+																<h6 class="car-info__name">현대 아반떼 MD M16 GDI 럭셔리</h6>
+															</div>
+														</li>
+													<%}%>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //추천차량 -->
+					<div class="section type-two">
+						<!-- 가격우선 -->
+						<div class="section__box">
+							<div class="clb">
+								<h4 class="section-tit">가격 우선</h4>
+								<a href="" class="plus-btn">전체보기<span class="plus"><span class="plus__wrap">plus</span></span></a>
+							</div>
+							<div class="summary">
+								<ul class="summary__list">
+									<li class="summary__item">
+										<div class="summary__rank type-a">AA+</div>
+										<div class="summary__thumbnail img-border">
+											<img src="../../img/main/main_thumbnail_1.png" alt="아우디 Q5 2.0 TDI 콰트로 다이나믹 8R" class="summary__img img-normal"/>
+										</div>
+										<div class="summary__box">
+											<h5 class="summary__tit ellipsis">아우디 Q5 2.0 TDI 콰트로 다이나믹 8R 아우디 Q5 2.0 TDI 콰트로 다이나믹 8R 아우디 Q5 2.0 TDI 콰트로 다이나믹 8R</h5>
+											<p class="summary__txt">
+												<span class="info-style summary__info">19러9780</span>
+												<span class="info-style summary__info">10년04월</span>
+												<span class="info-style summary__info">197,458km</span>
+											</p>
+											<p class="summary__txt">
+												<span class="summary__hash">#인천</span>
+												<span class="summary__hash">#주차지원</span>
+												<span class="summary__hash">#검정</span>
+												<span class="summary__hash">#블랙</span>
+												<span class="summary__hash">#검은색</span>
+											</p>
+											<p class="summary__txt">
+												<span class="mark-style summary__mark type-eye">113</span>
+												<span class="mark-style summary__mark type-top">상위 10%</span>
+												<span class="mark-style summary__mark type-graph">가격변동</span>
+												<span class="mark-style summary__mark type-price">최저가격</span>
+											</p>
+										</div>
+										<p class="summary__price">
+											<span class="summary__number">2,550</span><span class="summary__unit">만원</span>
+										</p>
+										<a href="" class="summary__link" target="_blank">상세보기</a>
+									</li>
+									<li class="summary__item">
+										<div class="summary__rank type-a">AA+</div>
+										<div class="summary__thumbnail img-border">
+											<img src="../../img/main/main_thumbnail_1.png" alt="아우디 Q5 2.0 TDI 콰트로 다이나믹 8R" class="summary__img img-normal"/>
+										</div>
+										<div class="summary__box">
+											<h5 class="summary__tit ellipsis">아우디 Q5 2.0 TDI 콰트로 다이나믹 8R 아우디 Q5 2.0 TDI 콰트로 다이나믹 8R 아우디 Q5 2.0 TDI 콰트로 다이나믹 8R</h5>
+											<p class="summary__txt">
+												<span class="info-style summary__info">19러9780</span>
+												<span class="info-style summary__info">10년04월</span>
+												<span class="info-style summary__info">197,458km</span>
+											</p>
+											<p class="summary__txt">
+												<span class="summary__hash">#인천</span>
+												<span class="summary__hash">#주차지원</span>
+												<span class="summary__hash">#검정</span>
+												<span class="summary__hash">#블랙</span>
+												<span class="summary__hash">#검은색</span>
+											</p>
+											<p class="summary__txt">
+												<span class="mark-style summary__mark type-eye">113</span>
+												<span class="mark-style summary__mark type-top">상위 10%</span>
+												<span class="mark-style summary__mark type-graph">가격변동</span>
+												<span class="mark-style summary__mark type-price">최저가격</span>
+											</p>
+										</div>
+										<p class="summary__price">
+											<span class="summary__number">2,550</span><span class="summary__unit">만원</span>
+										</p>
+										<a href="" class="summary__link" target="_blank">상세보기</a>
+									</li>
+									<li class="summary__item">
+										<div class="summary__rank type-a">AA+</div>
+										<div class="summary__thumbnail img-border">
+											<img src="../../img/main/main_thumbnail_1.png" alt="아우디 Q5 2.0 TDI 콰트로 다이나믹 8R" class="summary__img img-normal"/>
+										</div>
+										<div class="summary__box">
+											<h5 class="summary__tit ellipsis">아우디 Q5 2.0 TDI 콰트로 다이나믹 8R 아우디 Q5 2.0 TDI 콰트로 다이나믹 8R 아우디 Q5 2.0 TDI 콰트로 다이나믹 8R</h5>
+											<p class="summary__txt">
+												<span class="info-style summary__info">19러9780</span>
+												<span class="info-style summary__info">10년04월</span>
+												<span class="info-style summary__info">197,458km</span>
+											</p>
+											<p class="summary__txt">
+												<span class="summary__hash">#인천</span>
+												<span class="summary__hash">#주차지원</span>
+												<span class="summary__hash">#검정</span>
+												<span class="summary__hash">#블랙</span>
+												<span class="summary__hash">#검은색</span>
+											</p>
+											<p class="summary__txt">
+												<span class="mark-style summary__mark type-eye">113</span>
+												<span class="mark-style summary__mark type-top">상위 10%</span>
+												<span class="mark-style summary__mark type-graph">가격변동</span>
+												<span class="mark-style summary__mark type-price">최저가격</span>
+											</p>
+										</div>
+										<p class="summary__price">
+											<span class="summary__number">2,550</span><span class="summary__unit">만원</span>
+										</p>
+										<a href="" class="summary__link" target="_blank">상세보기</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //가격우선 -->
+						<!-- 품질우선 -->
+						<div class="section__box">
+							<div class="clb">
+								<h4 class="section-tit">품질 우선</h4>
+								<a href="" class="plus-btn">전체보기<span class="plus"><span class="plus__wrap">plus</span></span></a>
+							</div>
+							<div class="summary">
+								<ul class="summary__list">
+									<li class="summary__item">
+										<div class="summary__rank type-a">AA+</div>
+										<div class="summary__thumbnail img-border">
+											<img src="../../img/main/main_thumbnail_1.png" alt="아우디 Q5 2.0 TDI 콰트로 다이나믹 8R" class="summary__img img-normal"/>
+										</div>
+										<div class="summary__box">
+											<h5 class="summary__tit ellipsis">아우디 Q5 2.0 TDI 콰트로 다이나믹 8R 아우디 Q5 2.0 TDI 콰트로 다이나믹 8R 아우디 Q5 2.0 TDI 콰트로 다이나믹 8R</h5>
+											<p class="summary__txt">
+												<span class="info-style summary__info">19러9780</span>
+												<span class="info-style summary__info">10년04월</span>
+												<span class="info-style summary__info">197,458km</span>
+											</p>
+											<p class="summary__txt">
+												<span class="summary__hash">#인천</span>
+												<span class="summary__hash">#주차지원</span>
+												<span class="summary__hash">#검정</span>
+												<span class="summary__hash">#블랙</span>
+												<span class="summary__hash">#검은색</span>
+											</p>
+											<p class="summary__txt">
+												<span class="mark-style summary__mark type-eye">113</span>
+												<span class="mark-style summary__mark type-top">상위 10%</span>
+												<span class="mark-style summary__mark type-graph">가격변동</span>
+												<span class="mark-style summary__mark type-price">최저가격</span>
+											</p>
+										</div>
+										<p class="summary__price">
+											<span class="summary__number">2,550</span><span class="summary__unit">만원</span>
+										</p>
+										<a href="" class="summary__link" target="_blank">상세보기</a>
+									</li>
+									<li class="summary__item">
+										<div class="summary__rank type-a">AA+</div>
+										<div class="summary__thumbnail img-border">
+											<img src="../../img/main/main_thumbnail_1.png" alt="아우디 Q5 2.0 TDI 콰트로 다이나믹 8R" class="summary__img img-normal"/>
+										</div>
+										<div class="summary__box">
+											<h5 class="summary__tit ellipsis">아우디 Q5 2.0 TDI 콰트로 다이나믹 8R 아우디 Q5 2.0 TDI 콰트로 다이나믹 8R 아우디 Q5 2.0 TDI 콰트로 다이나믹 8R</h5>
+											<p class="summary__txt">
+												<span class="info-style summary__info">19러9780</span>
+												<span class="info-style summary__info">10년04월</span>
+												<span class="info-style summary__info">197,458km</span>
+											</p>
+											<p class="summary__txt">
+												<span class="summary__hash">#인천</span>
+												<span class="summary__hash">#주차지원</span>
+												<span class="summary__hash">#검정</span>
+												<span class="summary__hash">#블랙</span>
+												<span class="summary__hash">#검은색</span>
+											</p>
+											<p class="summary__txt">
+												<span class="mark-style summary__mark type-eye">113</span>
+												<span class="mark-style summary__mark type-top">상위 10%</span>
+												<span class="mark-style summary__mark type-graph">가격변동</span>
+												<span class="mark-style summary__mark type-price">최저가격</span>
+											</p>
+										</div>
+										<p class="summary__price">
+											<span class="summary__number">2,550</span><span class="summary__unit">만원</span>
+										</p>
+										<a href="" class="summary__link" target="_blank">상세보기</a>
+									</li>
+									<li class="summary__item">
+										<div class="summary__rank type-a">AA+</div>
+										<div class="summary__thumbnail img-border">
+											<img src="../../img/main/main_thumbnail_1.png" alt="아우디 Q5 2.0 TDI 콰트로 다이나믹 8R" class="summary__img img-normal"/>
+										</div>
+										<div class="summary__box">
+											<h5 class="summary__tit ellipsis">아우디 Q5 2.0 TDI 콰트로 다이나믹 8R 아우디 Q5 2.0 TDI 콰트로 다이나믹 8R 아우디 Q5 2.0 TDI 콰트로 다이나믹 8R</h5>
+											<p class="summary__txt">
+												<span class="info-style summary__info">19러9780</span>
+												<span class="info-style summary__info">10년04월</span>
+												<span class="info-style summary__info">197,458km</span>
+											</p>
+											<p class="summary__txt">
+												<span class="summary__hash">#인천</span>
+												<span class="summary__hash">#주차지원</span>
+												<span class="summary__hash">#검정</span>
+												<span class="summary__hash">#블랙</span>
+												<span class="summary__hash">#검은색</span>
+											</p>
+											<p class="summary__txt">
+												<span class="mark-style summary__mark type-eye">113</span>
+												<span class="mark-style summary__mark type-top">상위 10%</span>
+												<span class="mark-style summary__mark type-graph">가격변동</span>
+												<span class="mark-style summary__mark type-price">최저가격</span>
+											</p>
+										</div>
+										<p class="summary__price">
+											<span class="summary__number">2,550</span><span class="summary__unit">만원</span>
+										</p>
+										<a href="" class="summary__link" target="_blank">상세보기</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //품질우선 -->
+					</div>
+					<div class="section">
+						<div class="section__box">
+							<div class="section__relative clb">
+								<h4 class="section-tit">맞춤 기획전</h4>
+								<div class="section__right">
+									<div class="slider-btn">
+										<button class="slider-btn__prev js-plan-prev">prev</button>
+										<button class="slider-btn__next js-plan-next">next</button>
+									</div>
+								</div>
+							</div>
+							<div class="main-plan">
+								<ul class="main-plan__list js-plan-slider">
+									<li class="main-plan__item">
+										<div class="main-plan__wrap">
+											<div class="main-plan__img img-border">
+												<img src="../../img/main/main_plan_1.jpg" alt="빅데이터 추천 갑 of 갑"/>
+											</div>
+											<h5 class="main-plan__tit">빅데이터 추천 갑 of 갑</h5>
+											<p class="main-plan__txt">
+												<span class="main-plan__hash">#가성비</span>
+												<span class="main-plan__hash">#인증차량</span>
+												<span class="main-plan__hash">#빅데이터</span>
+											</p>
+											<a href="" class="main-plan__link">상세보기</a>
+										</div>
+									</li>
+									<li class="main-plan__item">
+										<div class="main-plan__wrap">
+											<div class="main-plan__img img-border">
+												<img src="../../img/main/main_plan_2.jpg" alt="빅데이터 추천 갑 of 갑"/>
+											</div>
+											<h5 class="main-plan__tit">빅데이터 추천 갑 of 갑</h5>
+											<p class="main-plan__txt">
+												<span class="main-plan__hash">#가성비</span>
+												<span class="main-plan__hash">#인증차량</span>
+												<span class="main-plan__hash">#빅데이터</span>
+											</p>
+											<a href="" class="main-plan__link">상세보기</a>
+										</div>
+									</li>
+									<li class="main-plan__item">
+										<div class="main-plan__wrap">
+											<div class="main-plan__img img-border">
+												<img src="../../img/main/main_plan_2.jpg" alt="빅데이터 추천 갑 of 갑"/>
+											</div>
+											<h5 class="main-plan__tit">빅데이터 추천 갑 of 갑</h5>
+											<p class="main-plan__txt">
+												<span class="main-plan__hash">#가성비</span>
+												<span class="main-plan__hash">#인증차량</span>
+												<span class="main-plan__hash">#빅데이터</span>
+											</p>
+											<a href="" class="main-plan__link">상세보기</a>
+										</div>
+									</li>
+									<li class="main-plan__item">
+										<div class="main-plan__wrap">
+											<div class="main-plan__img img-border">
+												<img src="../../img/main/main_plan_3.jpg" alt="빅데이터 추천 갑 of 갑"/>
+											</div>
+											<h5 class="main-plan__tit">빅데이터 추천 갑 of 갑</h5>
+											<p class="main-plan__txt">
+												<span class="main-plan__hash">#가성비</span>
+												<span class="main-plan__hash">#인증차량</span>
+												<span class="main-plan__hash">#빅데이터</span>
+											</p>
+											<a href="" class="main-plan__link">상세보기</a>
+										</div>
+									</li>
+									<li class="main-plan__item">
+										<div class="main-plan__wrap">
+											<div class="main-plan__img img-border">
+												<img src="../../img/main/main_plan_4.jpg" alt="빅데이터 추천 갑 of 갑"/>
+											</div>
+											<h5 class="main-plan__tit">빅데이터 추천 갑 of 갑</h5>
+											<p class="main-plan__txt">
+												<span class="main-plan__hash">#가성비</span>
+												<span class="main-plan__hash">#인증차량</span>
+												<span class="main-plan__hash">#빅데이터</span>
+											</p>
+											<a href="" class="main-plan__link">상세보기</a>
+										</div>
+									</li>
+									<li class="main-plan__item">
+										<div class="main-plan__wrap">
+											<div class="main-plan__img img-border">
+												<img src="../../img/main/main_plan_5.jpg" alt="빅데이터 추천 갑 of 갑"/>
+											</div>
+											<h5 class="main-plan__tit">빅데이터 추천 갑 of 갑</h5>
+											<p class="main-plan__txt">
+												<span class="main-plan__hash">#가성비</span>
+												<span class="main-plan__hash">#인증차량</span>
+												<span class="main-plan__hash">#빅데이터</span>
+											</p>
+											<a href="" class="main-plan__link">상세보기</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //container-->
+<% include ../_include/_footer %>

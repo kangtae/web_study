@@ -1,0 +1,309 @@
+@charset "UTF-8";
+@import "mixins";
+
+.view{padding-top:50px; }
+.view-header{
+    &__wrap{min-height:225px;}
+    &__outer{
+        &.type-img{width:300px; }
+        &.type-txt{position:relative;width:915px; position:relative;font-size:0;}
+    }
+    &__tit{display:inline-block;line-height:44px;font-size:$sizeTit3;font-weight:$medium; color:#000;}
+
+
+
+    &__othersite-link{margin-left:10px;}
+}
+.header-box{
+    &.type-btn{position:absolute;right:0;top:0;}
+}
+.header-img{
+    &__box{overflow:hidden;position:relative;width:100%;border-radius:8px;}
+    &__img{width:100%; vertical-align: middle;}
+}
+.header-info{margin-left:-16px;font-size:0;
+    &__txt{position:relative; margin-left:16px;font-size:$sizeTxt3;font-weight:$light; color:$grey5;
+            &.type-dot:before{content:""; display: inline-block;position:absolute;left:-8px;top:8px; width:2px; height:2px; border-radius: 50%; background-color:#e1e1e1;}
+    }
+}
+.icon-info{
+    &__list{margin:40px 0 0 -46px; padding:0;}
+    &__item{margin:0 0 0 46px;padding-left:52px;background-position: 0px 50%;background-repeat: no-repeat;background-size:38px 40px;list-style: none;
+            &.type-price{background-image:url(../../img/view/price-icon.png);}
+            &.type-monthlyprice{background-image:url(../../img/view/monthlyprice-icon.png);}
+            &.type-local{background-image:url(../../img/view/local-icon.png);}
+            &.type-fuel{background-image:url(../../img/view/fuel-icon.png);}
+            &.type-displacement{background-image:url(../../img/view/displacement-icon.png);}
+        }
+    &__name{margin:0;padding:0;margin-bottom:3px;font-size:$sizeTxt4; font-weight:$light; color:$grey5;}
+    &__val{margin:0;padding:0;font-size:$sizeTxt1;color:#000;
+            &.type-blue{color:$point1;}
+    }
+}
+
+
+
+.add_btn{display:inline-block; width:18px;height:20px; padding:0;border:none;cursor:pointer;overflow:visible;white-space: nowrap;
+    background-position:center;background-repeat:no-repeat;background-size:18px 20px;background-color:transparent; vertical-align:middle;
+    & + &{margin-left:20px;}
+    &__btn-like{background-image:url(../../img/view/like-icon.png);
+        &.is-active{background-image:url(../../img/view/like-icon_on.png);}
+    }
+    &__btn-interest{background-image:url(../../img/view/interest-icon.png);
+        &.is-active{background-image:url(../../img/view/interest-icon_on.png);}
+    }
+}
+.othersite-link{display:inline-block; margin-left:30px; vertical-align:middle;}
+.view-outer{
+    &.type-left{width:940px;}
+    &.type-right{width:300px;}
+}
+.view-cont{position:relative;margin-top:80px;//모든섹션 공통 css
+    &__tit{display:inline-block;vertical-align: top;margin-bottom:20px; font-size:$sizeTit3;font-weight:$medium;color:#000;}
+
+    &__box{border:1px solid $grey3;border-radius: 8px;
+        &.type-a{padding:50px;}
+        &.type-b{margin-bottom:20px;}
+        &.type-c{margin-bottom:20px;padding:30px;}
+    }
+}
+.view-tab{display:inline-block;position:relative;top:6px;margin-left:38px;
+    &__item{display:inline-block;position:relative;height:46px;padding:0 5px;font-size:$sizeTxt2; color:$grey5;list-style: none;cursor:pointer;
+        &.is-active{color:$point1;
+            &:after{content:""; width:100%; height:2px;position:absolute;bottom:0; left:0; background-color:$point1;}
+        }
+        & + &{margin-left:32px;}
+    }
+
+}
+
+
+
+
+
+
+
+//가격비교
+.view-list{display:none;
+    &.is-active{display:block;}
+    &__box{display: block;border-collapse: collapse; border-top:2px solid $grey3;}
+    &__line{height:86px;border-bottom:1px solid #eee;cursor:pointer;
+            &:hover{background-color:#fafafa}
+    }
+
+}
+.list-img{display:inline-block;overflow:hidden;position:relative;width:56px; height:56px;border-radius: 50%;
+    &__item{position:absolute;top:50%;left:50%;height:100%;
+        @include vendor('transform','translate(-50%,-50%)');
+    }
+}
+
+.list-column{vertical-align: middle;font-size:0;
+    &.type-num{width:60px;font-size:$sizeTxt2; color:#aaa;text-align: center;}
+    &.type-carinfo{min-width:456px;padding:0 18px;}
+    &__name{font-size:$sizeTxt3;color:#000;}
+    &__box{margin-left:-20px;}
+    &__info{font-size:$sizeTxt4;color:$grey5;padding-left:20px;position:relative;
+            &.type-before:before{content:""; display: inline-block;position:absolute;left:9px;top:2px;width:1px; height:12px;background-color:#ebebeb;}
+    }
+    &.type-site{width:52px; height:24px;background-position:center;background-repeat: no-repeat;background-size:52px 24px;
+        &.type-encar{background-image:url(../../img/view/encar_logo_mini.png);}
+        &.type-kb{background-image:url(../../img/view/kb_logo_mini.png);}
+        &.type-aj{background-image:url(../../img/view/aj_logo_mini.png);}
+        &.type-mpark{background-image:url(../../img/view/mpark_logo_mini.png);}
+    }
+    &.type-score{width:110px;font-size:$sizeTxt3;color:$point1;text-align: right;}
+    &__score{display:inline-block;width:20px;text-align: left;}
+    &.type-price{width:210px;padding-right:50px;font-size:$sizeTxt3;color:#000;text-align:right;}
+    &__first{margin-right:6px;color:$point1;
+        &:before{content:"";display:inline-block;width:8px;height:10px;margin-right:4px;background-repeat: no-repeat;background-position: center;background-image:url(../../img/view/down_icon.png);}
+    }
+}
+.view-chart{display:none;padding:48px 48px 80px 48px;border-top:2px solid $grey3;border-bottom:1px solid #eee;background-color:#fafafa;
+    &.is-active{display:block;}
+    &__tit{font-size:$sizeTxt4;color:$grey5;}
+    &__wrap{margin:26px 0 0 42px;}
+    &__box{position:relative;height:252px;background-repeat: no-repeat;background-size:100%; background-image:url(../../img/view/view_chart_bg.png);
+    }
+    &__score{position:absolute;line-height:20px;margin-bottom:-12px;font-size:$sizeTxt3;color:$point1;
+        &.type-s1{bottom:100%; left:-42px;}
+        &.type-s2{bottom:80%; left:-42px;}
+        &.type-s3{bottom:60%; left:-42px;}
+        &.type-s4{bottom:40%; left:-42px;}
+        &.type-s5{bottom:20%; left:-42px;}
+    }
+    &__price{display:inline-block;position:absolute;width:68px;text-align: center;font-size:$sizeTxt4;color:$grey5;
+        &.type-p1{bottom:-28px; left:0%;}
+        &.type-p2{bottom:-28px; left:25%;}
+        &.type-p3{bottom:-28px; left:50%;}
+        &.type-p4{bottom:-28px; left:75%;}
+        &.type-p5{bottom:-28px; left:100%;}
+        &.type-first{text-align: left;}
+        &.type-center{margin-left:-34px;}
+        &.type-end{margin-left:-68px;text-align: right;}
+    }
+
+}
+//좌표 점css
+.dot{display: inline-block;position:absolute;width:10px; height:10px;    margin-left: -5px;
+margin-bottom: -5px;border:2px solid #aeaeae;border-radius: 50%;background-color:#fff;cursor:pointer;
+    $this:&;
+    &:hover{border: 2px solid $point1;background-color:#fff;
+        .dot-info{display:block;}
+    }
+}
+.dot-info{display:none;position:absolute;top:0;left:20px; width:180px;padding:20px 20px 14px 20px;border:1px solid $grey3;border-radius:8px;background-color:#fff;z-index:1;
+    &__item{margin-bottom:6px;}
+    &__name{font-size:$sizeTxt4;font-weight:$light;color:$grey5;}
+    &__val{font-size:$sizeTxt4;color:#000;}
+}
+
+//클러스터 부분
+.cluster{
+    &__tit{display:inline-block;margin-bottom:14px; font-size:$sizeTxt1;font-weight:$light;color:#000;vertical-align:top;}
+    &__box{width:100%;height:402px;}
+}
+
+//피드백
+.feed{
+    $this:&;
+    &__tit{display:inline-block;margin-bottom:22px;font-size:$sizeTit3; color:#000;vertical-align:top;}
+    &__sub{margin-bottom:32px;line-height:22px;font-size:$sizeTxt2; font-weight:$light;color:$grey5;}
+    &__textarea{width:100%; min-height:136px;margin-bottom:50px;padding:10px 18px;border:1px solid $grey3;border-radius:4px;font-family: $font-normal;font-weight:$light;resize: none;
+            @include placeholder(#ccc,$light);
+    }
+    &__submit{display:block; margin:0 auto;}
+
+}
+.feed-icon{
+    $this:&;
+    &__list{display:inline-block;position:relative;margin:0 0 30px -38px;}
+    &__item{margin-left:38px;}
+    &__label{display:inline-block;padding-top:50px;font-size:$sizeTxt2;color:$grey5;background-repeat: no-repeat;background-size:60px;background-position:50% 0;cursor:pointer;
+        &.type-5{background-image:url(../../img/view/feedback_icon_5.png);
+            &:hover{background-image:url(../../img/view/feedback_icon_5_h.png)}
+        }
+        &.type-4{background-image:url(../../img/view/feedback_icon_4.png);
+            &:hover{background-image:url(../../img/view/feedback_icon_4_h.png)}
+
+        }
+        &.type-3{background-image:url(../../img/view/feedback_icon_3.png);
+            &:hover{background-image:url(../../img/view/feedback_icon_3_h.png)}
+        }
+        &.type-2{background-image:url(../../img/view/feedback_icon_2.png);
+            &:hover{background-image:url(../../img/view/feedback_icon_2_h.png)}
+        }
+        &.type-1{background-image:url(../../img/view/feedback_icon_1.png);
+            &:hover{background-image:url(../../img/view/feedback_icon_1_h.png)}
+        }
+        &:hover{color:$point1;}
+    }
+    &__radio{left:50%;bottom:0;
+        &:checked + #{$this}__label{
+            &.type-5{color:$point1;background-image:url(../../img/view/feedback_icon_5_s.png);}
+            &.type-4{color:$point1;background-image:url(../../img/view/feedback_icon_4_s.png);}
+            &.type-3{color:$point1;background-image:url(../../img/view/feedback_icon_3_s.png);}
+            &.type-2{color:$point1;background-image:url(../../img/view/feedback_icon_2_s.png);}
+            &.type-1{color:$point1;background-image:url(../../img/view/feedback_icon_1_s.png);}
+        }
+    }
+}
+
+
+
+.carscore{
+    &__namebox{display: table;min-height:85px;padding-left:94px;background-repeat: no-repeat;background-position:40px 50%;background-size:40px;background-image:url(../../img/view/logo_benz.png);}
+    &__inbox{display:table-cell;    width: 1%;vertical-align: middle; }
+    &__model{max-width:174px;font-size:$sizeTxt3; color:#000;max-width:174px;}
+    &__grade{max-width:174px;font-size:$sizeTxt4;font-weight:$light; color:$grey5;}
+    &__level{padding:30px 40px;border-top:1px solid #ebebeb;border-bottom:1px solid #ebebeb;}
+    &__info{padding:40px 30px;}
+    &__listwrap + &__listwrap {margin-top:36px;}
+    &__tit{margin-bottom:24px;font-size:$sizeTxt2; color:#000;}
+    &__listitem{margin-top:20px;}
+    &__name{font-size:$sizeTxt3;font-weight:$light;color:$grey5}
+    &__val{min-width:18px;font-size:$sizeTxt3;color:#000;text-align:left;}
+
+    //슬롯 중심잡기
+    &__slot{
+        &__inbox{width:auto;margin:0 auto;}
+    }
+}
+
+.pricechange{
+    &__tit{margin-bottom:22px;font-size:$sizeTxt1;color:#000; }
+    &__list{margin-bottom:20px;}
+    &__item{min-width:100px;
+        &.type-before{position:relative;padding-left:18px;text-align: right;
+            &:before{content:"";display: inline-block;position:absolute;top:3px;left:0;width:1px; height:12px;background-color:#dfdfdf; }
+        }
+    }
+    &__name{font-size:$sizeTxt4;font-weight:$light;color:$grey5}
+    &__val{margin-left:12px;font-size:$sizeTxt4; color:$point1;}
+
+}
+.pricerange{border-left:1px solid $grey3;
+    &__box{padding-top:16px;}
+    &__limit{width:100%; height:30px; }
+    &__bar{height:100%;line-height:30px;padding-right:20px;border-radius: 0 15px 15px 0;text-align: right;
+        $this:&;
+        &.type-grey{background-color:#f5f5f5;}
+        &.type-blue{background-color:$point1;}
+    }
+    &__price{font-size:$sizeTxt4;font-weight:$light;
+        &.type-grey{color:$grey5;}
+        &.type-blue{color:#fff;}
+    }
+    &__date{padding:4px 0 0 6px;font-size:$sizeTxt4; color:#000; }
+}
+
+.gomycar{
+    &__top{border-bottom:1px solid $grey3;}
+    &__wrap{display:table;min-height:50px;padding:16px 20px;
+            &.type-bottom{padding:20px 20px 24px 20px;}
+        }
+    &__inbox{display:table-cell;width:1%;font-size:$sizeTxt3; font-weight:$light; color:$grey5;vertical-align: middle;}
+    &__sub{font-size:$sizeTxt2;font-weight:$medium; color:#000;}
+    &__btn{overflow:visible;line-height:38px;padding:0 24px;border:none;border-radius:3px;background-color:$point1;font-size:$sizeTxt3;color:#fff; text-align: center;cursor:pointer;white-space: nowrap;}
+}
+
+.reply{
+    &__top{padding:30px;border-bottom:1px solid $grey3;}
+    &__tit{margin-bottom:20px;font-size:$sizeTxt1; color:#000;}
+    &__textarea{width:100%; height:96px;margin-bottom:14px;padding:10px 18px;border:1px solid $grey3;border-radius:4px;font-family: $font-normal;font-weight:$light;resize: none;
+        @include placeholder(#ccc,$light);
+    }
+    &__info{font-size:$sizeTxt4; margin-top:10px;}
+}
+.replylist{padding:30px;
+    &__tit{font-size:$sizeTxt4;}
+    &__item{margin-top:20px;}
+    &__bottom{padding:8px 0 0 12px;font-size:$sizeTxt9;font-weight:$light;}
+    &__writer{line-height:16px;color:#000;
+        &:before{content:"@";}
+    }
+    &__date{margin-left:16px;color:$grey5;
+        &:before{content:"·"; display: inline-block;margin:0 8px 0 -8px;color:$grey5;}
+    }
+    &__txt{padding:12px;border-radius:21px;background-color:#f5f5f5;font-size:$sizeTxt4; font-weight:$light;color:$grey5;}
+    &__morebtn{display:block;margin:0 auto;line-height:20px;margin-top:28px;}
+}
+
+
+
+//뷰페이지 툴팁 및 수정사항
+.levelscore{padding:40px 30px;border-bottom:1px solid $grey3;
+    $this:&;
+    &__box + &__box{margin-top:26px;}
+    &__tit{margin-bottom:20px; font-size:$sizeTxt2; color:#000;}
+}
+.scoreinfo{padding:30px;border-top:1px solid $grey3;
+    &__txt{line-height:20px;font-size:$sizeTxt4;font-weight:$light;color:$grey5;margin-bottom:20px;}
+    &__link{padding-right:15px;background:url(../../img/view/go_link_icon.png) no-repeat right center / 6px 12px;font-size:$sizeTxt4;font-weight:$medium;color:#000;}
+}
+.tinfo{
+    &__item{line-height:20px;margin-bottom:10px;font-size:$sizeTxt4;font-weight:$light;color:$grey5;}
+}
+.viewinfo{margin-top:30px;
+    &__txt{margin-top:10px;font-size:$sizeTxt3; color:$grey5;}
+}

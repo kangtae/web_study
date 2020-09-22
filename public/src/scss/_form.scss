@@ -1,0 +1,197 @@
+
+.plus-btn{float:right;  position:relative; margin-top:2px; padding-right:30px; font-size:$sizeTxt2; color:$grey5; text-decoration:none; cursor:pointer; box-sizing:border-box; vertical-align:middle;}
+
+.button-v1{position:relative; display:inline-block;  height:40px; padding:0 26px; line-height:38px; background:$point1; color:#fff;  border-radius:4px; border:1px solid $point1;
+    text-align:center; cursor:pointer; font-size:$sizeTxt3; font-family:$font-normal; cursor:pointer;
+    &.type-border{color:$black; border:1px solid $grey3; border-radius:4px; background-color:transparent;}
+    &.type-radius{border-radius:20px; color:$grey5; border-color:$grey5;  background-color:transparent;
+        &:hover{color:$point1; border-color:$point1;}
+    }
+    &.type-encar{border-radius:20px;  border-color:$encar; background-color:$encar; color:#fff;}
+    &.type-kb{border-radius:20px;  border-color:$kb; background-color:$kb; color:#fff;}
+    &.type-aj{border-radius:20px;  border-color:$aj; background-color:$aj; color:#fff;}
+    &.type-mpark{border-radius:20px;  border-color:$mpark; background-color:$mpark; color:#fff;}
+    &:disabled{border-color:$grey4; background-color:$grey4; color:#fff; cursor:auto;}
+    &__wrap{position:relative; padding-left:26px; box-sizing:border-box;
+        &.type-replay{
+            &:before{display:block; position:absolute; top:0; left:0; bottom:0; margin: auto 0; width:16px; height:16px;
+                background:url('../../img/common/replay_icon.png') no-repeat center  center / contain; content:'';}
+        }
+    }
+}
+
+.button-v2{position:relative; display:inline-block; height:50px; padding:0 26px; line-height:50px;
+    background:$black; color:#fff; font-size:$sizeTxt2; border-radius:25px; border:1px solid $black;
+    text-align:center; cursor:pointer; font-family:$font-normal; cursor:pointer; box-sizing:border-box; font-weight:$medium;
+    &.type-border{color:$black; border-color:$grey3; background-color:#fff; color:#000;}
+    &.type-no-radius{border-radius:4px; color:$grey5; border-color:$grey3;  background-color:transparent;
+        &:hover{color:$point1; border-color:$point1;}
+    }
+    &.type-blue{background-color:$point1;border:1px solid $point1;color:#fff;}
+    &.is-disabled,&:disabled{border-color:$grey4; background-color:$grey4; color:#fff;}
+}
+
+.button-v3{display:inline-block; height:50px; padding:0 26px; line-height:50px; font-size:$sizeTxt2; color:$grey5; border:1px solid $grey3; background:$grey1; text-align:center; border-radius:25px;
+    &__wrap{position:relative; display:inline-block; padding-right:30px; box-sizing:border-box;}
+    &.type-alarm{width:100%;border:0;text-align: center;background-color:$grey1; }
+}
+
+.button-v4{display:inline-block; height:34px; padding:0 12px; line-height:34px;
+    font-size:$sizeTxt3; color:#fff; border:1px solid $point1; background:$point1; text-align:center; border-radius:4px;
+    &:disabled,&.is-disabled{background:$grey4; border-color:$grey4;}
+    &.type-border{border-color:#000; color:#000; background:#fff;}
+}
+
+
+
+.select-v1{width:100%; height:46px; padding:0 24px; border:1px solid #ddd; border-radius: 4px;  line-height:46px; @include vendor('appearance','none');
+    background:url('../img/common/select_bg.png') #fff no-repeat center right 14px / 11px 6px; font-size:$sizeTxt3; color:$grey5; font-weight:$medium;font-family: "Apple SD Gothic","Roboto","noto-kr",sans-serif;
+    &.type-small{height:40px; padding:0 14px; line-height:40px; letter-spacing:-1px;}
+    &::-ms-expand { display: none; }
+    // &:hover{border-color:$point1;}
+    &:focus{border-color:#000; color:#000;}
+    // &.is-check{border-color:#000; color:#000;}
+    &:disabled{background-color:#f5f5f5; color:#ddd;}
+    &.error{border-color:$red;
+        &:focus{border-color:#000; color:#000;}
+    }
+    &.type-register{padding:0 16px;}
+}
+
+
+.checkbox-v2{ overflow: hidden; position: absolute; top: auto; width: 1px; height: 1px; padding: 0; margin: -1px; border: 0; clip: rect(0, 0, 0, 0);
+    & + label{position: relative;  display: inline-block; margin-bottom: 0; margin-left: 0; padding-left: 30px; cursor: pointer; font-size:$sizeTxt4; color: $grey5; vertical-align:middle; font-weight:$light;
+        &:before{position: absolute; top: 1px; left: 0; -webkit-box-sizing: border-box; box-sizing: border-box; width: 15px; height: 15px; margin: auto;
+            border: 1px solid $grey3; content: ''; border-radius: 2px; cursor: pointer;}
+    }
+    &:checked{
+        & + label{
+            &:before{background:url('../../img/common/check_icon.png') $point1 no-repeat center center; border-color:$point1;}
+        }
+    }
+    &:disabled{
+        & + label{
+            &:before{background:$grey4; }
+        }
+    }
+}
+
+.checkbox-only{ overflow: hidden; position: absolute; top: auto; width: 1px; height: 1px; padding: 0; margin: -1px; border: 0; clip: rect(0, 0, 0, 0);
+    & + label{position: relative;  display: inline-block; margin-bottom: 0; margin-left: 0; width:100%; height:100%; cursor: pointer;font-size:0;
+        &:before{position: absolute; top: 10px; left: 10px; -webkit-box-sizing: border-box; box-sizing: border-box; width: 15px; height: 15px; margin: auto; background-color:#fff;
+            border: 1px solid $grey3; content: ''; border-radius: 3px; cursor: pointer;}
+    }
+    &:checked{
+        & + label{
+            &:before{background:url('../../img/common/check_icon.png') $point1 no-repeat center center; border-color:$point1;}
+        }
+    }
+    &:disabled{
+        & + label{
+            &:before{background:$grey4; }
+        }
+    }
+}
+
+.input-v1{width:100%; height:46px; padding:0 24px; border:1px solid $grey3; border-radius:4px; line-height:46px;  @include vendor('appearance','none'); font-size:$sizeTxt3; color:$grey5; font-weight:$medium; box-sizing:border-box;
+    &.type-unit{padding-right:40px;}
+    &:focus{color:#000; border-color:#000;}
+    &.error{color:$red; border-color:$red;}
+}
+
+
+.tab-v1{margin-top:30px;
+    $this:&;
+    &__header{position:relative;  z-index:10;}
+    &__list{margin:0 ; padding:0; border-bottom:1px solid #000; font-size:0;}
+    &__item{position:relative; display:inline-block; border:1px solid $grey3; border-right:none; border-bottom:none;  list-style:none; font-weight:$light;
+        &:last-child{border-right:1px solid $grey3;}
+        &.is-active{border-color:#000; font-weight:$medium;
+            #{$this}__link{background:#fff; }
+            #{$this}__num{color:$point1;}
+            &:after{display:block; position:absolute; left:0; bottom:-1px; width:100%; height:0; border-bottom:1px solid #fff; z-index:1; content:'';}
+            & + #{$this}__item{border-left-color:#000;}
+        }
+    }
+    &__link{display:block; height:48px; padding:0 20px; font-size:$sizeTxt2; line-height:48px; text-decoration:none; cursor:pointer; box-sizing:border-box; color:#000; background:#fafafa; cursor:pointer;}
+    &__num{margin-left:2px; font-size:$sizeTxt4; vertical-align:middle; color:$grey5; }
+    &__content{padding-top:30px; box-sizing:border-box;}
+}
+
+.tab-v2{margin-top:50px;
+    $this:&;
+    &__header{position:relative;  z-index:10;}
+    &__list{margin:0 ; padding:0; border-bottom:2px solid $grey3; font-size:0;}
+    &__item{position:relative; display:inline-block;
+        & + &{margin-left:40px;}
+        &.is-active{
+            &:after{content:""; width:100%; height:2px;position:absolute; bottom:-2px; left:0; background-color:$point1;}
+            #{$this}__link{color:$point1;}
+        }
+    }
+    &__link{position:relative; display:block; padding-bottom:26px; font-size:$sizeTxt2; color:$grey5; text-decoration:none;}
+    &__content{position:relative; padding-top:30px; box-sizing:border-box;
+        &.type-alarm{padding:0}
+    }
+    &__select{position:absolute; right:0; top:16px; width:140px;}
+}
+
+
+.table-v1{position:relative; width:100%; padding:0; border-spacing:0px; border:0; border-collapse:collapse;
+    &:before{position:absolute; display:block; width:100%; height:0; border-top:1px solid #000; content:'';}
+    $this:&;
+    &__width{width:25%;}
+    &__row{
+        &:first-child{
+            #{$this}__th{ background:#f5f5f5; text-align:center; border-top:none;}
+        }
+    }
+    &__th,&__td{height:60px; padding:10px 30px; border:1px solid $grey3; font-size:$sizeTxt2; color:#000;  text-align:left;}
+    &__th{font-weight:$medium; background:#fafafa; border-left:none; }
+    &__td{font-weight:$light; border-right:none;}
+    &__td{box-sizing:border-box;}
+    &__caption{position:relative; margin-top:30px;  font-size:$sizeTxt2; color:#000; font-weight:$light;
+        #{$this}__noti{margin-top:4px;}
+    }
+    &__noti{display:block; color:$grey5;}
+}
+//언더보더 인풋 스타일
+.input-v2{width:100%; height:46px; line-height:46px; border-bottom:1px solid $grey3; font-size:$sizeTxt3; box-sizing:border-box;
+    &:focus{border-bottom:1px solid #000;}
+    // &.type-box{padding:16px;border:1px solid $grey3;border-radius: 4px; }
+    @include placeholder-color(#ccc);
+    //텍스트 가운데
+    &.type-center{text-align: center;}
+    //이미 입력되어있는값/수정불가/ 텍스트만 보이고 장식요소 없음
+    &.type-clear{border-bottom:2px solid transparent;}
+    //에러시
+    &.error{border-bottom: 1px solid $red;
+        &:focus{border-bottom:1px solid #000;}
+    }
+    //로그인 스타일
+    &.type-login{padding:15px 0;background-color:transparent;border-bottom:2px solid rgba(255, 255, 255,0.5);color:#fff;
+        @include placeholder-color(rgba(255, 255, 255,0.5));
+        &:focus{
+            &.type-login{border-bottom:2px solid #fff;
+            }
+        }
+    }
+}
+.input-errortxt{margin-top:8px;font-size:$sizeTxt4; font-weight:$light;color:$red;}
+
+//
+.radio-v2{ overflow: hidden; position: absolute; top: auto; width: 1px; height: 1px; padding: 0; margin: -1px;  border: 0; clip: rect(0, 0, 0, 0);
+    & + label{position: relative;  display: inline-block; margin-bottom: 0; margin-left: 0; padding-left: 28px; cursor: pointer; font-size:$sizeTxt3; color:$grey5; vertical-align:middle; font-weight:$light;
+        &:before{position: absolute; top: 1px; left: 0; -webkit-box-sizing: border-box; box-sizing: border-box; width: 15px; height: 15px; margin: auto; border: 1px solid $grey3; content: ''; border-radius: 50%; cursor: pointer;}
+    }
+    &:checked{
+        & + label{
+            &:before{background:url('../../img/login/check_icon.png') no-repeat center center /9px 9px; }
+        }
+    }
+    &:disabled{
+        & + label{
+            &:before{background:$grey4; }
+        }
+    }
+}

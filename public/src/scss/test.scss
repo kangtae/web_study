@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@import "mixins";
+
+.table-mh{width:500px; height:500px;border-collapse: collapse;border-left:1px solid #000;border-bottom:1px solid #000;
+    &__td{
+        border:1px solid $grey3;
+        }
+}
+.span-wrap{height:50px;border:1px solid blue;font-size:50px;}
+// .span-wrap__span{border:1px solid red;display:table-cell;}
+.span-wrap__span{font-size:15px; }
+.span-wrap__span:nth-child(1){vertical-align: bottom;}
+.span-wrap__span:nth-child(2){vertical-align: middle;}
+.span-wrap__span:nth-child(3){vertical-align: top;font-size:15px;}

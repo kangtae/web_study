@@ -1,0 +1,33 @@
+<%
+page_type = "register"
+	page = "register"
+	header = "true"
+%>
+<% include ../_include/_header %>
+    <!--container-->
+    <div class="container type-grey type-fullbg">
+        <div class="wrap">
+            <div class="container__wrap">
+                <div class="register">
+                    <h3 class="register__tit">카포라 시작하기</h3>
+                    <div class="register__box register-1">
+                        <p class="register__subtit__sub">복잡한 절차 없이 간편하게</p>
+                        <h4 class="register__subtit type-titv1">SNS 계정으로 가입</h4>
+                        <div class="buttonbox">
+                            <button type="button" class="buttonbox__btn button-v2 w-100 type-kakao"><span class="btn-span">카카오톡으로 회원가입</span></button>
+                            <button type="button" class="buttonbox__btn button-v2 w-100 type-facebook"><span class="btn-span">페이스북으로 회원가입</span></button>
+                        </div>
+                        <p class="login-or type-register"></p>
+                        <p class="register__subtit__sub">기존에 사용하던 이메일 주소로</p>
+                        <h4 class="register__subtit type-titv1">기본 정보 입력 후 가입</h4>
+                        <div class="buttonbox">
+                            <a href="../../html/register/register_2.html" class="buttonbox__btn button-v2 w-100">이메일로 가입하기</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="register__infotxt">계속 진행하면 carfora <a href="" class="register__infotxt__link">이용약관</a> 및 <a href="" class="register__infotxt__link">개인정보 취급방침</a>에 동의하는 것으로 간주됩니다.
+                </p>
+            </div>
+        </div>
+    </div>
+<% include ../_include/_footer %>

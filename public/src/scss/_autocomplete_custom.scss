@@ -1,0 +1,17 @@
+.ui-widget.ui-widget-content{overflow:auto; border:1px solid $grey3;  max-height: 400px;}
+.ui-menu-item{font-size:$sizeTxt3; color:#000; font-family: $font-normal; list-style-image:none !important; font-weight:$medium;}
+.ui-menu .ui-menu-item-wrapper{padding:11px 30px 10px; box-sizing:border-box;}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border:none;
+	background: #f2f2f2;
+	font-weight: inherit;
+	color: inherit;
+}
+.ui-menu .ui-state-focus, .ui-menu .ui-state-active{margin:0;}
+.search-match{color:$point1;}
+.search-model{float:right; font-size:$sizeTxt3; color:$grey5;}

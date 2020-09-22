@@ -1,0 +1,89 @@
+<%
+page_type = "mypage"
+	page = "mycar"
+	header = "true"
+%>
+<% include ../_include/_header %>
+<% include ./mypage_header %>
+
+		<div class="mypage-body">
+			<div class="container__wrap">
+				<div class="tab-v2">
+					<ul class="tab-v2__list">
+						<li class="tab-v2__item"><a href="myview.html" class="tab-v2__link">최근본차량 <span class="tab-v2__num">23</span></a></li>
+						<li class="tab-v2__item"><a href="wishlist.html" class="tab-v2__link">관심차량 <span class="tab-v2__num">23</span></a></li>
+                        <li class="tab-v2__item is-active"><a href="alarm_list.html" class="tab-v2__link">알림<span class="tab-v2__num">10</span></a></li>
+					</ul>
+				</div>
+				<div class="tab-v2__content type-alarm">
+					<div class="alarm-list">
+						<div class="alarm-list">
+							<table class="alarm-list__table">
+								<colgroup>
+									<col width="82"/>
+									<col width="60"/>
+									<col width="120"/>
+									<col width="*"/>
+									<col width="189"/>
+								</colgroup>
+								<tbody>
+									<tr class="alarm-list__tr" onclick="location.href='#'">
+										<td class="alarm-list__td type-center">
+											<div class="alarm-list__num">#54</div>
+										</td>
+										<td class="alarm-list__td">
+											<span class="img-border alarm-list__box type-img">
+												<img src="../../img/view/list_img.jpg" alt="해당 차량 이미지" class="alarm-list__img"/>
+											</span>
+										</td>
+										<td class="alarm-list__td type-center">
+											<div class="alarm-list__state">판매요청</div>
+										</td>
+										<td class="alarm-list__td type-left">
+											<div class="alarm-list__txt ">
+												<span class="alarm-list__point">카포라</span>님이 <span class="alarm-list__point">[45구6485] 현대 싼타페 2.0 VGT 디젤 2WD GOLD 프리미엄</span> 경매차량의 판매요청을 하였습니다.
+												<a href="" class="alarm-list__link"></a>
+											</div>
+										</td>
+										<td class="alarm-list__td type-center">
+											<div class="alarm-list__date">20.03.30 11:04</div>
+										</td>
+									</tr>
+									<tr class="alarm-list__tr">
+										<td class="alarm-list__td type-center">
+											<div class="alarm-list__num">#54</div>
+										</td>
+										<td class="alarm-list__td">
+											<span class="img-border alarm-list__box type-img">
+												<img src="../../img/search/product_no_img.png" alt="해당 차량 이미지" class="alarm-list__img"/>
+											</span>
+										</td>
+										<td class="alarm-list__td type-center">
+											<div class="alarm-list__state">판매요청</div>
+										</td>
+										<td class="alarm-list__td type-left">
+											<div class="alarm-list__txt">
+												<span class="alarm-list__point">카포라</span>님이 <span class="alarm-list__point">[45구6485] 현대 싼타페 2.0 VGT 디젤 2WD GOLD 프리미엄</span> 경매차량의 판매요청을 하였습니다.
+											</div>
+										</td>
+										<td class="alarm-list__td type-center">
+											<div class="alarm-list__date">20.03.30 11:04</div>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+						<a href="" class="product__btn button-v3 w-l">
+							<span class="button-v3__wrap">
+								더 보기<span class="plus"><span class="plus__wrap">plus</span></span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include ../_include/_footer %>
