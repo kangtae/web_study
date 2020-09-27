@@ -120,13 +120,13 @@ gulp.task("babel", (done) => {
 // image
 gulp.task('imgmin', function() {
 	gulp
-		.src([src+'/img/**/*.{png,jpg,gif,svg}'])
+		.src([src+'/images/**/*.{png,jpg,gif,svg}'])
 		// .pipe(imagemin({
 		// 	progressive: true,
 		// 	interlaced:true,
 		// 	use: [pngquant()]
 		// }))
-		.pipe(gulp.dest(dist+'/img'))
+		.pipe(gulp.dest(dist+'/images'))
 		.pipe(connect.reload())
 });
 
@@ -180,7 +180,7 @@ gulp.task('watch',[], function() {
 	watch([src+'/js/*.js',  '!' + src+'/js/libs/*.js'], function() {
 		gulp.start('babel');
 	});
-	 watch(src+'/img/**/*.{png,jpg,gif,svg}', function() {
+	 watch(src+'/images/**/*.{png,jpg,gif,svg}', function() {
 	 gulp.start('imgmin');
 	 });
 	//watch(src+'/index.html', function() {

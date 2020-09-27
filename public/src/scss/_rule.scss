@@ -1,4 +1,4 @@
-.img-normal{vertical-align:middle;}
+.img-normal{vertical-align:middle; max-width:100%;}
 .img-w100{width:100%; vertical-align:middle;}
 .img-center{position:absolute; top:50%; left:50%; width:100%; @include vendor('transform','translate(-50%,-50%)');}
 .sr-only { position: absolute;width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;}
