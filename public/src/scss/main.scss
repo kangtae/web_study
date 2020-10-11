@@ -2,7 +2,7 @@
 @import "mixins";
 .main-section{
     &__tit{display:inline-block; @include tit-v3; vertical-align: top; text-transform: uppercase;}
-    &__wrap{position:relative; max-width:1440px; width:100%; margin:0 auto;}
+    &__wrap{position:relative; max-width:1560px; width:100%; margin:0 auto; text-align: center;}
     &__subtit{@include txt-v2(); font-weight:$regular;}
     & + &{margin-top:180px;}
 }
@@ -15,7 +15,8 @@
         &:after{position:absolute; right:0; bottom:0; display:block; width:60px; height:550px; background-color:$point1; content:'';}
     }
     &__kor{margin:0; font-size:24px; font-weight:$bold; color:$point1;}
-    &__wrap{padding:148px 0 0 0; box-sizing:border-box; text-align: center;}
+    &__eng{font-weight:$regular;}
+    &__wrap{padding:148px 80px 0; box-sizing:border-box; text-align: center;}
     &__img{width:840px;}
 }
 
@@ -36,9 +37,44 @@
 }
 
 .celebrity{
-    &__list{overflow:hidden; margin:0; padding:0;}
-    &__item{display:inline-block; list-style:none; border:1px solid red;
-        & + &{margin-left:120px;}
-    }
+    &__list{overflow:hidden; margin:60px -60px 0; padding:0;}
+    &__item{display:inline-block; padding:0 60px; list-style:none; box-sizing:border-box;}
     &__link{display:block;}
+}
+.every{position:relative; padding-bottom:125px;
+    &:after{display:block; position:absolute; left:0; right:0; bottom:0; background-color:#f6f1eb; height:60%; content:''; z-index:-1;}
+    &__wrap{position: relative; box-sizing:border-box;
+        &:after{display:block; clear:both; content:'';}
+    }
+    &__tit{position:relative; display:block; padding-left:30px; text-align: left; font-weight:$regular; text-transform: inherit; z-index:10; box-sizing:border-box;}
+    &__sub{position:absolute; margin-top:-60px; width:440px;}
+    &__main{float:right; margin-top:120px;}
+    &__box{position:relative; width:920px; padding-left:160px; padding-bottom:40px; box-sizing:border-box; text-align: right;}
+}
+
+.main-product{text-align: left;
+    &__tit{margin-top:50px; font-size:30px; font-weight:$semiBold; }
+    &__img{position:relative;}
+    &__box{display:inline-block; padding-right:80px; box-sizing:border-box; text-align:left;}
+    &__price{font-size:16px; font-weight:$regular;}
+    &__sub{position:absolute; bottom:0; left:0;}
+}
+
+.footer-sns{
+    &__list{margin:0; padding:0;}
+    &__item{overflow:hidden; display:inline-block; width:20px; height:20px; list-style:none; text-indent:-9999px;
+        & + &{margin-left:20px;}
+        &.type-instargram{
+            @include background('../images/common/instargram_icon.png','no-repeat center center')
+        }
+        &.type-instargram{
+            @include background('../images/common/instargram_icon.png','no-repeat center center')
+        }
+        &.type-instargram{
+            @include background('../images/common/instargram_icon.png','no-repeat center center')
+        }
+        &.type-instargram{
+            @include background('../images/common/instargram_icon.png','no-repeat center center')
+        }
+    }
 }

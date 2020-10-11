@@ -13,7 +13,7 @@
         font-family:$font-normal;
     }
 *{box-sizing: border-box;}
-h1, h2, h3, h4, h5, h6 {margin:0;font-family: $font-normal;font-weight:$medium;}
+h1, h2, h3, h4, h5, h6 {margin:0;font-family: $font-normal;}
 p{margin:0; word-break: keep-all;}
 ul,ol,li{margin: 0;padding:0; list-style: none;}
 a, button{border:0; outline:0;background:transpatrent;cursor:pointer;-webkit-tap-highlight-color:transparent;}
