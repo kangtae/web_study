@@ -3,6 +3,7 @@
 .main-section{
     &__tit{display:inline-block; @include tit-v3; vertical-align: top; text-transform: uppercase;}
     &__wrap{position:relative; max-width:1440px; width:100%; margin:0 auto;}
+    &__subtit{@include txt-v2(); font-weight:$regular;}
     & + &{margin-top:180px;}
 }
 .collection{
@@ -25,4 +26,19 @@
             &:after{position:absolute; bottom:0;}
         }
     }
+}
+.celebrity-nav{margin-top:44px;
+    &__list{margin:0; padding:0;}
+    &__item{display:inline-block; list-style:none;
+        & + &{margin-left:58px;}
+    }
+    &__link{display:block; text-transform: uppercase;}
+}
+
+.celebrity{
+    &__list{overflow:hidden; margin:0; padding:0;}
+    &__item{display:inline-block; list-style:none; border:1px solid red;
+        & + &{margin-left:120px;}
+    }
+    &__link{display:block;}
 }

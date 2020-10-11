@@ -54,8 +54,25 @@ page_type = "main"
 		</section>
 		<section class="main-section celebrity">
 			<div class="main-section__wrap collection__wrap">
-				<h2 class="main-section__tit celebrity__tit">celebrity item</h2>
-
+				<h2 class="main-section__tit celebrity__tit">
+					celebrity item
+				</h2>
+				<p class="main-section__subtit">눈에 띄는 컬렉션 아이템</p>
+				<nav class="celebrity-nav">
+					<ul class="celebrity-nav__list">
+						<li class="celebrity-nav__item"><a href="" class="celebrity-nav__link">silk item</a></li>
+						<li class="celebrity-nav__item"><a href="" class="celebrity-nav__link">SHOES</a></li>
+						<li class="celebrity-nav__item"><a href="" class="celebrity-nav__link">Bags</a></li>
+						<li class="celebrity-nav__item"><a href="" class="celebrity-nav__link">ACCESSORIES</a></li>
+					</ul>
+				</nav>
+				<div class="celebrity__content">
+					<ul class="celebrity__list js-celebrity1">
+						<% for(var i = 1; i < 7; i++){ %>
+							<li class="celebrity__item"><a href="" class="celebrity__link"><img src="../../images/main/main_silk_<%=i%>.png"  class="img-normal"alt=""></a></li>
+						<% } %>
+					</ul>
+				</div>
 			</div>
 		</section>
 	</div>
