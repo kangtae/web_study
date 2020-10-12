@@ -70,4 +70,36 @@ body{margin:0; padding:0; font-family: 'Zilla Slab', 'Noto Sans KR', sans-serif;
     }
 }
 
-.footer{text-align:center; background-color:#3b2e28;}
+.footer{position:relative; padding:80px 0; text-align:center; background-color:#3b2e28; box-sizing:border-box;
+    &__wrap{position:relative; max-width:1560px; width:100%; margin:0 auto; text-align: center;}
+    &__txt{margin-top:20px; font-size:12px; color:#fff; opacity: 0.2;}
+}
+
+.footer-sns{margin-top:20px;
+    &__list{margin:0; padding:0;}
+    &__item{overflow:hidden; display:inline-block; width:20px; height:20px; list-style:none; text-indent:-9999px;
+        & + &{margin-left:20px;}
+        &.type-instargram{
+            @include background('../images/common/instargram_icon.png','no-repeat center center')
+        }
+        &.type-facebook{
+            @include background('../images/common/facebook_icon.png','no-repeat center center')
+        }
+        &.type-twitter{
+            @include background('../images/common/twitter_icon.png','no-repeat center center')
+        }
+        &.type-youtube{
+            @include background('../images/common/youtube_icon.png','no-repeat center center')
+        }
+    }
+    &__link{display:block;}
+}
+.footer-nav{position:absolute; top:24px;
+    &.type-first{left:100px;}
+    &.type-second{right:100px;}
+    &__list{margin:0; padding:0;}
+    &__item{display:inline-block; list-style:none;
+        & + &{margin-left:80px;}
+    }
+    &__link{display:block; color:#fff; font-size:18px;}
+}
