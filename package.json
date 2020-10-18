@@ -10,8 +10,8 @@
     "less": "^3.11.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
     "browser-sync": "^2.26.12",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",

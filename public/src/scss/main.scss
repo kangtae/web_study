@@ -16,8 +16,8 @@
     }
     &__kor{margin:0; font-size:24px; font-weight:$bold; color:$point1;}
     &__eng{font-weight:$regular;}
-    &__wrap{padding:148px 80px 0; box-sizing:border-box; text-align: center;}
-    &__img{width:840px;}
+    &__wrap{padding:148px 0 0; box-sizing:border-box; text-align: center;}
+    &__img{width:57.81%}
 }
 
 .collection-nav{display:inline-block; margin-left:126px; @include txt-v1; text-align: left;
