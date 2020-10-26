@@ -1,8 +1,12 @@
-html{height:100%;}
-body{margin:0; padding:0; font-family: 'Zilla Slab', 'Noto Sans KR', sans-serif; font-weight: $semiBold;}
+html{height:100%;
+    @media only screen and (max-width: $mobile-size){font-size:10px;}
+}
+body{margin:0; padding:0; font-family: 'Zilla Slab', 'Noto Sans KR', sans-serif; font-weight: $semiBold;
+    @media only screen and (max-width: $mobile-size){font-size:10px;}
+}
 .header{position:fixed; top:0; left:0; right:0; z-index:50;
     $this:&;
-    &__nav{position:relative; margin-top:30px; padding:0 $sitePadding; box-sizing:border-box; text-align:center;}
+    &__nav{position:relative; padding:40px $sitePadding; box-sizing:border-box; text-align:center;}
     &__list{position:absolute; left:$sitePadding; top:20px; margin:0; padding:0;}
     &__item{display:inline-block; list-style:none; 
         & + &{margin-left:16px;}
@@ -12,23 +16,28 @@ body{margin:0; padding:0; font-family: 'Zilla Slab', 'Noto Sans KR', sans-serif;
     }
     &__link{text-transform: uppercase; @include txt-v1; color:#fff; opacity: 0.5;}
     &__logo{display:inline-block;}
-    &__right{position:absolute; top:18px; right:$sitePadding; z-index: 50;}
+    &__right{position:absolute; top:0; bottom:0; height:32px; margin:auto 0; right:$sitePadding; z-index: 50;}
+     @media only screen and (max-width: $min-size){
+         &__nav{padding:25px $sitePaddingM;}
+         &__logo{width:60px; margin:0 auto;}
+         &__right{right:$sitePaddingM}
+     }
 }
 
-.right-nav{
+.right-nav{height:100%;
     $this:&;
     &__list{margin:0; padding:0;}
-    &__item{display:inline-block; list-style:none; vertical-align: middle;
+    &__item{display:inline-block; width:32px; height:inherit; list-style:none; vertical-align: middle;
         & + &{margin-left:36px;}
     }
-    &__link{overflow:hidden; display:block; width:34px; height:34px; font-size:0;
+    &__link{display:block; overflow:hidden; font-size:0;
         &.type-mypage{
             @include background('../images/common/logon_icon.png','no-repeat center center')
         }
         &.type-basket{
             @include background('../images/common/basket_icon.png','no-repeat center center')
         }
-        &.type-all{position:relative; width:30px; height:30px;}
+        &.type-all{position:relative; width:24px; height:17px; margin:7px auto;}
         &.is-active{
             #{$this}__line{
                 &:nth-child(1){top:13px; transform: rotate(45deg);}
@@ -37,7 +46,7 @@ body{margin:0; padding:0; font-family: 'Zilla Slab', 'Noto Sans KR', sans-serif;
             }
         }
     }
-    &__line{position:absolute; left:0; width:100%; height:4px; background:#fff; transition: transform 0.5s;
+    &__line{position:absolute; left:0; width:100%; height:3px; background:#fff; transition: transform 0.5s;
         &:nth-child(1){top:0;}
         &:nth-child(2){top:0; bottom:0; margin:auto 0;}
         &:nth-child(3){bottom:0;}

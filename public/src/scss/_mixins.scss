@@ -68,10 +68,39 @@
 	@media only screen and (max-width: $mobile-size){padding-left:12px !important; padding-right:12px !important;}
 }
 
-@mixin txt-v1(){font-size:32px; line-height:1.75; font-weight:$semiBold;}
-@mixin txt-v2(){font-size:24px;}
+@mixin tit-v1(){font-size:84px; line-height:1.07;
+	 @media only screen and (max-width: $min-size){font-size:68px; line-height:1.11;}
+	 @media only screen and (max-width: $mobile-size){font-size:3rem; line-height:1.16}
+}
+@mixin tit-v2(){font-size:68px; line-height:1.11;
+	@media only screen and (max-width: $mobile-size){font-size:3rem; line-height:1.16}
+}
+@mixin tit-v3(){font-size:60px; line-height:1.33;
+	@media only screen and (max-width: $mobile-size){font-size:3rem;}
+}
 
 
-@mixin tit-v1(){font-size:100px;}
-@mixin tit-v2(){font-size:68px;}
-@mixin tit-v3(){font-size:62px;}
+@mixin txt-categori1(){font-size:32px; line-height:1.25;
+	@media only screen and (max-width: $mobile-size){font-size:1.5rem; line-height:1;}
+}
+@mixin txt-categori2(){font-size:24px; line-heighit:1.75;
+	@media only screen and (max-width: $mobile-size){font-size:1.8rem; line-height:1.16;}
+}
+
+@mixin txt-v1(){font-size:30px; line-height:1.26;
+	@media only screen and (max-width: $mobile-size){font-size:1.5rem;}
+}
+@mixin txt-v2(){font-size:24px; line-height:1.33;
+	@media only screen and (max-width: $mobile-size){font-size:1.4rem; line-height:1.14;}
+}
+
+@mixin txt-v3(){font-size:20px; line-height:1.6;
+	@media only screen and (max-width: $mobile-size){font-size:1.4rem; line-height:1.14;}
+}
+
+@mixin txt-v4(){font-size:18px; line-height:1.66;
+	@media only screen and (max-width: $mobile-size){font-size:1.4rem; line-height:1.14;}
+}
+
+
+
