@@ -4,8 +4,11 @@ html{height:100%;
 body{margin:0; padding:0; font-family: 'Zilla Slab', 'Noto Sans KR', sans-serif; font-weight: $semiBold;
     @media only screen and (max-width: $mobile-size){font-size:10px;}
 }
-.header{position:fixed; top:0; left:0; right:0; z-index:50;
+.header{position:fixed; top:0; left:0; right:0; z-index:50; transition: all 0.5s;
     $this:&;
+    &.is-active{background-color:#fff; 
+        #{$this}__logo{@include background('../images/common/logo_b.png','no-repeat center center')}
+    }
     &__nav{position:relative; padding:40px $sitePadding; box-sizing:border-box; text-align:center;}
     &__list{position:absolute; left:$sitePadding; top:20px; margin:0; padding:0;}
     &__item{display:inline-block; list-style:none; 
@@ -15,17 +18,23 @@ body{margin:0; padding:0; font-family: 'Zilla Slab', 'Noto Sans KR', sans-serif;
         }
     }
     &__link{text-transform: uppercase; @include txt-v1; color:#fff; opacity: 0.5;}
-    &__logo{display:inline-block;}
+    &__logo{overflow:hidden; display:inline-block; width:127px; height:74px; @include background('../images/common/logo.png','no-repeat center center'); text-indent:-999px;}
     &__right{position:absolute; top:0; bottom:0; height:32px; margin:auto 0; right:$sitePadding; z-index: 50;}
-     @media only screen and (max-width: $min-size){
-         &__nav{padding:25px $sitePaddingM;}
-         &__logo{width:60px; margin:0 auto;}
-         &__right{right:$sitePaddingM}
-     }
+    @media only screen and (max-width: $mobile-size){
+        &__nav{padding:25px $sitePaddingM;}
+        &__logo{width:60px; height:35px; margin:0 auto;  @include background('../images/common/logo_m.png','no-repeat center center / contain');}
+        &__right{right:$sitePaddingM}
+    }
 }
 
-.right-nav{height:100%;
+.right-nav{height:100%; transition: all 0.5s;
     $this:&;
+    &.is-active{
+        #{$this}__line{background-color:#000;}
+    }
+    &.type-white{
+        #{$this}__line{background-color:#fff !important;} 
+    }
     &__list{margin:0; padding:0;}
     &__item{display:inline-block; width:32px; height:inherit; list-style:none; vertical-align: middle;
         & + &{margin-left:36px;}
@@ -37,12 +46,13 @@ body{margin:0; padding:0; font-family: 'Zilla Slab', 'Noto Sans KR', sans-serif;
         &.type-basket{
             @include background('../images/common/basket_icon.png','no-repeat center center')
         }
-        &.type-all{position:relative; width:24px; height:17px; margin:7px auto;}
+        &.type-all{position:relative; width:24px; height:19px; margin:7px auto;}
         &.is-active{
+            &.type-all{height:24px;}
             #{$this}__line{
-                &:nth-child(1){top:13px; transform: rotate(45deg);}
-                &:nth-child(2){margin:auto 0; background: transparent;}
-                &:nth-child(3){bottom:13px; transform: rotate(-45deg);}
+                &:nth-child(1){top:9px; transform: rotate(45deg);}
+                &:nth-child(2){margin:auto 0; background: transparent !important;}
+                &:nth-child(3){bottom:12px; transform: rotate(-45deg);}
             }
         }
     }
@@ -54,27 +64,44 @@ body{margin:0; padding:0; font-family: 'Zilla Slab', 'Noto Sans KR', sans-serif;
 }
 
 .gnb{position:fixed; top:0; bottom:0; right:-420px; z-index:10; transition: right 0.5s;
+    $this:&;
     &.is-active{right:0;}
-    &__wrap{position:relative; height:100%; margin:0; width:420px; padding:130px 108px 130px 0; background-color:#333; box-sizing:border-box; z-index:20;}
-    &-depth1__list{height:100%; margin:0; padding:0; }
-    &-depth1__item{list-style:none; text-align:right;
+    &__wrap{overflow:auto; position:relative; height:100%; margin:0; width:420px; padding:112px 80px; background-color:#333; box-sizing:border-box; z-index:20;}
+    &-depth1__list{margin:0; padding:0; }
+    &-depth1__item{list-style:none; text-align:left;
         & + &{margin-top:20px;}
+        &.is-active{
+            #{$this}-depth1__link{position:relative;
+                &:after{position:absolute; left:0; bottom:0; width:100%; height:0; border-bottom:3px solid #fff; content:'';}
+            }
+        }
     }
-    &-depth1__link{display:block; @include txt-v1; line-height:1; text-transform: uppercase; font-weight:$semiBold; color:#8F8F8F;}
-    &-depth2__list{display:none; position:absolute; top:0; bottom:0; right:420px; width:330px; margin:0; padding:130px 40px 130px 0; background-color:rgba(51,51,51,0.9); transition: right 0.5s; z-index:-1;
+    &-depth1__link{display:inline-block; font-size:42px; line-height:1.14; text-transform: uppercase; font-weight:$regular; color:#fff;}
+    &-depth2__list{display:none;  margin:0; padding:10px 0 0 0; background-color:rgba(51,51,51,0.9);
         &.is-active{display:block;}
     }
     &-depth2__item{list-style:none;
-        & + &{margin-top:24px;}
+        & + &{margin-top:10px;}
     }
-    &-depth2__link{display:block; font-size:18px; color:#8F8F8F;}
+    &-depth2__link{display:block; font-size:18px; line-height:1.44; color:#fff; font-weight:$regular;}
+    @media only screen and (max-width: $mobile-size){font-size:10px; 
+        &__wrap{width:100%;}
+    }
 }
-.gnb-bottom{position:absolute; left:0; right:0; bottom:0; padding:0 130px 90px; 
-    &__list{margin:0; padding:20px 0 0 0; border-top:2px solid #EC6707;}
-    &__item{list-style:none; text-align: right;
-        & + &{margin-top:14px;}
+.gnb-top{
+    &__list{margin-bottom:72px; text-align:left;}
+    &__item{display:inline-block;
+        & + &{margin-left:20px;}
     }
-    &__link{display:block; font-size:18px; color:#8F8F8F; text-transform: uppercase;
+    &__link{color:rgba(255,255,255,0.3); font-size:20px; font-weight:$light; line-height:1.4; text-transform: uppercase;}
+}
+
+.gnb-bottom{margin-top:40px;
+    &__list{margin:0; padding:10px 0 0 0; border-top:2px solid #EC6707; font-size:0;  text-align: left;}
+    &__item{display:inline-block; width:50%; list-style:none; white-space: nowrap;
+        &:nth-child(2) + &{margin-top:10px;}
+    }
+    &__link{display:block; font-size:14px; line-height:1.85; color:#8F8F8F; text-transform: uppercase; font-weight:$regular;
         &.is-hover{color:#EC6707;}
     }
 }
