@@ -68,6 +68,19 @@
 	@media only screen and (max-width: $mobile-size){padding-left:12px !important; padding-right:12px !important;}
 }
 
+@mixin gnb-v1(){font-size:42px; line-height:1.14;
+	@media only screen and (max-width: $mobile-size){font-size:2.4rem; line-height:1;}
+}
+@mixin gnb-v2(){font-size:20px; line-height:1.4;
+	@media only screen and (max-width: $mobile-size){font-size:1.4rem; line-height:1;}
+}
+@mixin gnb-v3(){font-size:18px; line-height:1.44;
+	@media only screen and (max-width: $mobile-size){font-size:1.2rem; line-height:1.08}
+}
+
+
+
+
 @mixin tit-v1(){font-size:84px; line-height:1.07;
 	 @media only screen and (max-width: $min-size){font-size:68px; line-height:1.11;}
 	 @media only screen and (max-width: $mobile-size){font-size:3rem; line-height:1.16}
@@ -77,6 +90,9 @@
 }
 @mixin tit-v3(){font-size:60px; line-height:1.33;
 	@media only screen and (max-width: $mobile-size){font-size:3rem;}
+}
+@mixin tit-v4(){font-size:40px; line-height:1.25;
+	@media only screen and (max-width: $mobile-size){font-size:2rem;}
 }
 
 

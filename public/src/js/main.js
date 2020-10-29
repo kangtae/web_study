@@ -8,10 +8,10 @@ $(document).ready(function(){
         arrows:false,
         responsive: [
             {
-                breakpoint: 1600,
+                breakpoint: 680,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
+                    slidesToShow: 1,
+                    slidesToScroll: 1
                 }
             }
         ]

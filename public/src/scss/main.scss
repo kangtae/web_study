@@ -2,8 +2,8 @@
 @import "mixins";
 @import "grid";
 .container{
-    @media only screen and (max-width: $min-size){overflow:hidden; padding: 0 24px; box-sizing:border-box;}
-    @media only screen and (max-width: $min-size){padding: 0 12px;}
+    // @media only screen and (max-width: $min-size){overflow:hidden; padding: 0 24px; box-sizing:border-box;}
+    @media only screen and (max-width: $mobile-size){padding: 0 12px;}
 }
 .main-visual{display:block;
     @media only screen and (max-width: $min-size){margin: 0 -24px;}
@@ -28,7 +28,7 @@
     }
     &__outer{position:relative;}
     &__tit{width:$col-7; text-align: right;}
-    &__box{position:absolute; bottom:200px; left:$col-7; text-align: left;  }
+    &__box{position:absolute; bottom:200px; width:$col-4; left:$col-7; text-align: left;  }
     &__kor{margin:0; font-size:24px; line-height:40px; font-weight:$regular;}
     &__eng{@include tit-v3; font-weight:$light;}
     &__wrap{box-sizing:border-box; font-size:0;} 
@@ -37,19 +37,20 @@
         border-radius:50%; @include background('../images/main/collection_arrow.png','no-repeat center center'); z-index:20;
         background-color:#EC6707; text-indent:-999px;}
     &__img{width:$col-7;}
-    &__box{width:$col-4;}
-    // @media only screen and (max-width: $min-size){
-    //     &__tit{width:$col-12; text-align:center;}
-    //     &__list{margin-top:50px; padding:0 124px; box-sizing: border-box;}
-    //     &__img{width:$col-12;}
-    //     &__box{position:static; left:auto; width:$col-12; margin-top:-80px; padding:0 50px; box-sizing:border-box;}
-    //     &__arrow{bottom:-35px; left:0; right:0; width:70px; height:70px; margin:0 auto;}
-    // }
-    // @media only screen and (max-width: $mobile-size){
-    //     &__list{margin-top:25px; margin-left:-12px; margin-right:-12px; padding:0;}
-    //     &__box{margin-top:-30px; padding:0 12px;}
-    //     &__inner{padding:35px 45px 55px 45px;}
-    //  }
+    @media only screen and (max-width: $min-size){
+        &__area{margin-top:50px;}
+        &__tit{width:$col-12; text-align:center;}
+        &__outer{padding:0 124px; box-sizing: border-box;}
+        &__img{width:$col-12;}
+        &__box{position:relative; left:auto; width:$col-12; margin-top:-80px; bottom:auto; padding:0 50px; box-sizing:border-box; z-index:30;}
+        &__arrow{bottom:-35px; left:0; right:0; width:70px; height:70px; margin:0 auto;}
+    }
+    @media only screen and (max-width: $mobile-size){
+        &__area{margin-top:25px;}
+        &__outer{margin-left:-12px; margin-right:-12px; padding:0;}
+        &__box{margin-top:-30px; padding:0 12px;}
+        &__inner{padding:35px 45px 55px 45px;}
+     }
 }
 .collection-img{width:$col-7;
     &__list{position:relative; width:100%; height:0; margin:0; padding:0 0 88.28%; list-style:none;}
@@ -57,6 +58,9 @@
         &.is-active{width:100%; z-index:10;}
         &.is-past{width:100%; z-index:5;}
         img{height:100%;}
+    }
+    @media only screen and (max-width: $min-size){width:100%;
+
     }
 }
 .collection-txt{margin:0; padding:0;
@@ -110,7 +114,13 @@
     &__item{display:inline-block; list-style:none;
         & + &{margin-left:58px;}
     }
-    &__link{display:block; box-sizing:border-box; text-transform: uppercase;}
+    &__link{display:block; @include txt-categori2; box-sizing:border-box; text-transform: uppercase;}
+    @media only screen and (max-width: $mobile-size){
+        &__list{padding:0 18px; box-sizing:border-box; text-align:left; white-space: nowrap;}
+        &__item{
+            & + &{margin-left:30px;}
+        }
+    }
 }
 
 .celebrity{width:1400px; margin:0 auto;
@@ -118,8 +128,11 @@
     &__item{display:inline-block; padding:0 20px; list-style:none; box-sizing:border-box;}
     &__link{display:block; padding:60px; outline:0; background-color:rgba(246, 241, 235, 0.3); box-sizing:border-box; }
     @media only screen and (max-width: $min-size){width:100%;
-        &__list{margin-left:-8px; margin-right:-8px;}
-        &__item{padding:0 8px;}
+        &__list{margin-left:26px; margin-right:26px;}
+        &__item{padding:0 13px;}
+    }
+    @media only screen and (max-width: $mobile-size){
+        &__list{margin-top:30px;}
     }
 }
 .every{position:relative; padding-bottom:125px;
@@ -136,6 +149,9 @@
         &__sub{display:none;}
         &__main{float:none; margin-top:70px; padding:0 148px; box-sizing:border-box;}
         &__box{padding:0; width:100%;}
+    }
+    @media only screen and (max-width: $mobile-size){
+        &__main{padding:0;}
     }
 }
 

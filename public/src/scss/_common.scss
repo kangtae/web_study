@@ -21,6 +21,9 @@ body{margin:0; padding:0; font-family: 'Zilla Slab', 'Noto Sans KR', sans-serif;
     &__logo{overflow:hidden; display:inline-block; width:127px; height:74px; @include background('../images/common/logo.png','no-repeat center center'); text-indent:-999px;}
     &__right{position:absolute; top:0; bottom:0; height:32px; margin:auto 0; right:$sitePadding; z-index: 50;}
     @media only screen and (max-width: $mobile-size){
+        &.is-active{background-color:#fff; 
+            #{$this}__logo{@include background('../images/common/logo_b_m.png','no-repeat center center / contain')}
+        }
         &__nav{padding:25px $sitePaddingM;}
         &__logo{width:60px; height:35px; margin:0 auto;  @include background('../images/common/logo_m.png','no-repeat center center / contain');}
         &__right{right:$sitePaddingM}
@@ -76,14 +79,14 @@ body{margin:0; padding:0; font-family: 'Zilla Slab', 'Noto Sans KR', sans-serif;
             }
         }
     }
-    &-depth1__link{display:inline-block; font-size:42px; line-height:1.14; text-transform: uppercase; font-weight:$regular; color:#fff;}
+    &-depth1__link{display:inline-block; @include  gnb-v1; line-height:1.14; text-transform: uppercase; font-weight:$regular; color:#fff;}
     &-depth2__list{display:none;  margin:0; padding:10px 0 0 0; background-color:rgba(51,51,51,0.9);
         &.is-active{display:block;}
     }
     &-depth2__item{list-style:none;
         & + &{margin-top:10px;}
     }
-    &-depth2__link{display:block; font-size:18px; line-height:1.44; color:#fff; font-weight:$regular;}
+    &-depth2__link{display:block; @include gnb-v3; line-height:1.44; color:#fff; font-weight:$regular;}
     @media only screen and (max-width: $mobile-size){font-size:10px; 
         &__wrap{width:100%;}
     }
@@ -93,7 +96,7 @@ body{margin:0; padding:0; font-family: 'Zilla Slab', 'Noto Sans KR', sans-serif;
     &__item{display:inline-block;
         & + &{margin-left:20px;}
     }
-    &__link{color:rgba(255,255,255,0.3); font-size:20px; font-weight:$light; line-height:1.4; text-transform: uppercase;}
+    &__link{color:rgba(255,255,255,0.3); @include gnb-v2; font-weight:$light; line-height:1.4; text-transform: uppercase;}
 }
 
 .gnb-bottom{margin-top:40px;
