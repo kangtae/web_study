@@ -111,15 +111,19 @@ body{margin:0; padding:0; font-family: 'Zilla Slab', 'Noto Sans KR', sans-serif;
 
 .footer{position:relative; padding:80px 0; text-align:center; background-color:#3b2e28; box-sizing:border-box;
     &__wrap{position:relative; max-width:1560px; width:100%; margin:0 auto; text-align: center;}
-    &__txt{margin-top:20px; font-size:12px; color:#fff; opacity: 0.2;}
+    &__txt{margin-top:20px; font-size:12px; color:#7A7A7A; font-weight:$light;}
+    &__logo{display:inline-block; width:120px; height:69px; @include background('../images/common/footer_logo.png','no-repeat center center')    }
+    @media only screen and (max-width: $mobile-size){padding:30px 0;
+        &__logo{width:80px; height:48px;  @include background('../images/common/footer_logo.png','no-repeat center center / contain') }
+    }
 }
 
 .footer-sns{margin-top:20px;
     &__list{margin:0; padding:0;}
     &__item{overflow:hidden; display:inline-block; width:20px; height:20px; list-style:none; text-indent:-9999px;
         & + &{margin-left:20px;}
-        &.type-instargram{
-            @include background('../images/common/instargram_icon.png','no-repeat center center')
+        &.type-instagram{
+            @include background('../images/common/instagram_icon.png','no-repeat center center')
         }
         &.type-facebook{
             @include background('../images/common/facebook_icon.png','no-repeat center center')
@@ -132,6 +136,22 @@ body{margin:0; padding:0; font-family: 'Zilla Slab', 'Noto Sans KR', sans-serif;
         }
     }
     &__link{display:block;}
+    @media only screen and (max-width: $mobile-size){
+        &__item{width:24px; height:24px;
+            &.type-instagram{
+                @include background('../images/common/instagram_icon_m.png','no-repeat center center / contain')
+            }
+            &.type-facebook{
+                @include background('../images/common/facebook_icon_m.png','no-repeat center center / contain')
+            }
+            &.type-twitter{
+                @include background('../images/common/twitter_icon_m.png','no-repeat center center / contain')
+            }
+            &.type-youtube{
+                @include background('../images/common/youtube_icon_m.png','no-repeat center center / contain')
+            }
+        }
+    }  
 }
 .footer-nav{position:absolute; top:24px;
     &.type-first{left:100px;}
@@ -140,5 +160,17 @@ body{margin:0; padding:0; font-family: 'Zilla Slab', 'Noto Sans KR', sans-serif;
     &__item{display:inline-block; list-style:none;
         & + &{margin-left:80px;}
     }
-    &__link{display:block; color:#fff; font-size:18px;}
+    &__link{display:block; color:#fff; @include txt-v4; font-weight:$light;}
+    @media only screen and (max-width: $min-size){position:static; display:inline-block; top:auto; margin-top:30px;
+        & + &{margin-left:30px;}
+        &.type-first{left:auto;}
+        &.type-second{right:auto;}
+        &__item{
+            & + &{margin-left:30px;}
+        }
+    }
+    @media only screen and (max-width: $mobile-size){display:block;
+        & + &{margin:22px 0 0 0;}
+
+    }
 }

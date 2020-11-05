@@ -6,7 +6,8 @@
     @media only screen and (max-width: $mobile-size){padding: 0 12px;}
 }
 .main-visual{display:block;
-    @media only screen and (max-width: $min-size){margin: 0 -24px;}
+    // @media only screen and (max-width: $min-size){margin: 0 -24px;}
+    @media only screen and (max-width: $mobile-size){margin:0 -12px;}
 }
 .main-section{
     &__tit{display:inline-block; @include tit-v2; vertical-align: top; text-transform: uppercase;}
@@ -34,8 +35,7 @@
     &__wrap{box-sizing:border-box; font-size:0;} 
     &__inner{position:relative; padding:70px 60px 80px 60px; color:#fff; background-color:#3B2E28; box-sizing:border-box;}
     &__arrow{position:absolute; bottom:-70px; left:-70px; overflow:hidden; width:140px; height:140px; 
-        border-radius:50%; @include background('../images/main/collection_arrow.png','no-repeat center center'); z-index:20;
-        background-color:#EC6707; text-indent:-999px;}
+        border-radius:50%; @include background('../images/main/collection_arrow.png',':#EC6707 no-repeat center center'); z-index:20; text-indent:-999px;}
     &__img{width:$col-7;}
     @media only screen and (max-width: $min-size){
         &__area{margin-top:50px;}
@@ -43,7 +43,9 @@
         &__outer{padding:0 124px; box-sizing: border-box;}
         &__img{width:$col-12;}
         &__box{position:relative; left:auto; width:$col-12; margin-top:-80px; bottom:auto; padding:0 50px; box-sizing:border-box; z-index:30;}
-        &__arrow{bottom:-35px; left:0; right:0; width:70px; height:70px; margin:0 auto;}
+        &__arrow{bottom:-35px; left:0; right:0; width:70px; height:70px; margin:0 auto;
+            @include background('../images/main/collection_arrow.png','#EC6707 no-repeat center center / 22px 9px');
+        }
     }
     @media only screen and (max-width: $mobile-size){
         &__area{margin-top:25px;}
@@ -68,7 +70,7 @@
         &.is-active{display:block;}
     }
 }
-.collection-nav{overflow:hidden; position:absolute; display:inline-block; padding-left:$col-1; width:$col-5; @include txt-categori1; text-align: left; box-sizing: border-box; z-index: 20;
+.collection-nav{overflow:auto; position:absolute; display:inline-block; padding-left:$col-1; width:$col-5; @include txt-categori1; text-align: left; box-sizing: border-box; z-index: 20;
     &__item{position:relative; padding-left:50px; box-sizing:border-box;
         &.is-active{text-decoration: underline;
             &:before{display:block; position:absolute; top:18px; left:0; width:38px; height:7px; background-color:$point1; content:'';}
@@ -82,10 +84,15 @@
             &.is-active{display:inline-block; text-align: center;
                 &:before{top:0; left:0; right:0; margin:0 auto;}
             }
-            & + &{margin:0 0 0 42px;}
+            & + &{margin:0;}
         }
     }
     @media only screen and (max-width: $mobile-size){margin-top:45px;
+        &__item{padding-top:10px;
+            &.is-active{
+                &:before{height:3px;}
+            }
+        }
     }
 }
 
@@ -109,14 +116,14 @@
     }
 }
 
-.celebrity-nav{margin-top:44px;
+.celebrity-nav{overflow:auto; margin-top:44px;
     &__list{margin:0; padding:0;}
     &__item{display:inline-block; list-style:none;
         & + &{margin-left:58px;}
     }
     &__link{display:block; @include txt-categori2; box-sizing:border-box; text-transform: uppercase;}
     @media only screen and (max-width: $mobile-size){
-        &__list{padding:0 18px; box-sizing:border-box; text-align:left; white-space: nowrap;}
+        &__list{padding:0 18px; box-sizing:border-box; text-align:left; white-space: nowrap; overflow-x: auto; scroll-snap-type:block; -webkit-overflow-scrolling:touch; -webkit-scroll-snap-type :x mandatory;}
         &__item{
             & + &{margin-left:30px;}
         }
@@ -124,15 +131,25 @@
 }
 
 .celebrity{width:1400px; margin:0 auto;
+    $this:&;
     &__list{overflow:hidden; margin:60px -20px 0; padding:0;}
-    &__item{display:inline-block; padding:0 20px; list-style:none; box-sizing:border-box;}
+    &__item{display:inline-block; padding:0 20px; list-style:none; box-sizing:border-box;    }
     &__link{display:block; padding:60px; outline:0; background-color:rgba(246, 241, 235, 0.3); box-sizing:border-box; }
     @media only screen and (max-width: $min-size){width:100%;
         &__list{margin-left:26px; margin-right:26px;}
         &__item{padding:0 13px;}
     }
-    @media only screen and (max-width: $mobile-size){
+    @media only screen and (max-width: $mobile-size){margin-top:90px;
         &__list{margin-top:30px;}
+        &__dot{margin-top:35px;
+            li{display:inline-block; width:40px; height:0; border-top:4px solid #C4C4C4;
+                & + li{margin-left:20px;}
+            }
+            button{font-size:0;}
+        }
+        // &__item{
+        //     &:nth-child(3) ~ #{$this}__item{display:none;}
+        // }
     }
 }
 .every{position:relative; padding-bottom:125px;
@@ -144,19 +161,20 @@
     &__sub{position:absolute; margin-top:-60px; width:460px;}
     &__main{float:right; margin-top:120px;}
     &__box{position:relative; width:948px; padding-left:162px; padding-bottom:40px; box-sizing:border-box; text-align: left;}
-    @media only screen and (max-width: $min-size){margin:0 -24px;
+    @media only screen and (max-width: $min-size){
         &__tit{padding-left:0; text-align: center;}
         &__sub{display:none;}
         &__main{float:none; margin-top:70px; padding:0 148px; box-sizing:border-box;}
         &__box{padding:0; width:100%;}
     }
-    @media only screen and (max-width: $mobile-size){
+    @media only screen and (max-width: $mobile-size){padding-bottom:50px;
         &__main{padding:0;}
+        &:after{height:35%; margin:0 -12px;}
     }
 }
 
 .main-product{text-align: left;
-    &__tit{font-size:30px; font-weight:$light;}
+    &__tit{@include txt-v1(); font-weight:$light;}
     &__img{position:relative;}
     &__box{display:inline-block; margin-top:40px; padding-left:326px; box-sizing:border-box; text-align:left;}
     &__price{margin-top:5px; font-size:16px; font-weight:$regular;}
@@ -165,13 +183,21 @@
         &__box{display:block; padding-left:0; text-align:center;}
         &__sub{position:relative; left:0; right:0; width:100%; margin-top:-180px; padding:0 250px; box-sizing:border-box; z-index:10;}
     }
+    @media only screen and (max-width: $mobile-size){
+        &__sub{margin-top:-120px; padding:0 90px;}
+        &__box{margin-top:25px;}
+    
+    }
 }
 
 .main-banner{position:relative;
     &__txt{@include txt-categori1; text-transform: uppercase; color:#fff; font-weight:$light; letter-spacing: 0.72em;}
     &__box{display:flex; position:absolute; top:0; left:0; width:100%; height:100%; justify-content:center; align-items:center; text-align: center;}
-    @media only screen and (max-width: $min-size){margin:0 -24px;
-        &__list{margin-left:-8px; margin-right:-8px;}
-        &__item{padding:0 8px;}
+    // @media only screen and (max-width: $min-size){margin:0 -24px;
+    //     &__list{margin-left:-8px; margin-right:-8px;}
+    //     &__item{padding:0 8px;}
+    // }
+    @media only screen and (max-width: $mobile-size){margin:0 -12px;
+        &__txt{font-size:1.3rem; letter-spacing: 0.2em;}
     }
 } 

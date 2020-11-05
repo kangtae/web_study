@@ -11,11 +11,43 @@ $(document).ready(function(){
                 breakpoint: 680,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots:true,
+                    dotsClass:'celebrity__dot slide-dot'
                 }
             }
         ]
     });
+
+    //포커스픽
+    // $('.focus__list').slick({
+    //     autoplay: true,
+    //     prevArrow: '.js-focus-prev',
+    //     nextArrow: '.js-focus-next',
+    //     slidesToShow:3,
+    //     slidesToScroll: 3,
+    //     centerPadding:'10px',
+    //     infinite: true,
+    //     dots:true,
+    //     dotsClass:'focus__dot slide-dot',
+    //     responsive: [
+    //         {
+    //             breakpoint: 993,
+    //             arrows:false,
+    //             settings: {
+    //                 slidesToShow: 2,
+    //                 slidesToScroll: 2
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 681,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1
+    //             }
+    //         }
+    //     ]
+    // });
 
     //collection
     var collectionNum = 0;
